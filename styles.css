@@ -1,12 +1,14 @@
+/* General Body and HTML Styles */
 body,
 html {
-  body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scroll */
-  font-family: "Cormorant Garamond", serif;
-  background-color: #f8f4ed;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    font-family: "Cormorant Garamond", serif;
+    background-color: #f8f4ed;
 }
+
+/* Custom Scrollbar for Body */
 body::-webkit-scrollbar {
     height: 10px;
     width: 10px;
@@ -17,10 +19,8 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #dea846bd;
-    /* Oven Gold */
+    background-color: #dea846bd; /* Oven Gold */
     border-radius: 20px;
-}
 }
 
 .scroll-wrapper {
@@ -45,7 +45,7 @@ body::-webkit-scrollbar-thumb {
     padding: 0;
 }
 
-.logo-img:hover>img {
+.logo-img:hover > img {
     width: 195px;
 }
 
@@ -58,46 +58,33 @@ body::-webkit-scrollbar-thumb {
     transition: all 1s ease-in-out;
 }
 
-/* --- Background --- */
-.background {
-    z-index: -3;
-    width: 100%;
-    height: 600px;
-    object-fit: cover;
-    filter: brightness(50%);
-    border-radius: 20px;
-    transition: opacity 0.4s ease-in-out;
-}
-
+/* --- Background Image Section --- */
 .bg-img {
     width: 100%;
-    height: 100%;
+    height: 100%; /* This needs to be set appropriately for its content */
+    position: relative; /* Needed for absolute positioning of child images */
+    overflow: hidden; /* Hide overflow if image doesn't perfectly fit */
+    border-radius: 20px;
+    filter: brightness(50%); /* From your original CSS */
+    transition: opacity 0.4s ease-in-out; /* Matches your original CSS transition duration */
 }
- .bg-img.fade-out {
-            opacity: 0;
-        }
-               .background {
-            width: 100%;
-            height: 600px; /* Example fixed height for the background area */
-            position: relative; /* Needed for absolute positioning of image inside */
-            overflow: hidden; /* Hide overflow if image doesn't perfectly fit */
-            border-radius: 20px; /* From your original CSS */
-            filter: brightness(50%); /* From your original CSS */
-            /* The transition for opacity is crucial for the fade effect */
-            transition: opacity 0.4s ease-in-out; /* Matches your original CSS transition duration */
-        }
 
-        .bg-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensures image covers the area */
-            position: absolute; /* Positions the image absolutely within .background */
-            top: 0;
-            left: 0;
-            border-radius: 20px; /* Apply border-radius to the image itself */
-            opacity: 1; /* Start fully visible */
-            transition: opacity 0.4s ease-in-out; /* Use this for the fade effect */
-        }
+.bg-img .background { /* Targeting the image element inside bg-img */
+    width: 100%;
+    height: 600px; /* Example fixed height for the background area */
+    object-fit: cover; /* Ensures image covers the area */
+    position: absolute; /* Positions the image absolutely within .bg-img */
+    top: 0;
+    left: 0;
+    border-radius: 20px; /* Apply border-radius to the image itself */
+    opacity: 1; /* Start fully visible */
+    transition: opacity 0.4s ease-in-out; /* Use this for the fade effect */
+    z-index: -3; /* From your original CSS */
+}
+
+.bg-img.fade-out {
+    opacity: 0;
+}
 
 /* --- Hover Text --- */
 .hover {
@@ -159,13 +146,11 @@ body::-webkit-scrollbar-thumb {
         transform: translateY(100px);
         opacity: 0;
     }
-
     50% {
         transform: translateY(50px);
         opacity: 0.5;
         clip-path: inset(0 0 0 0);
     }
-
     to {
         transform: translateY(100px);
         opacity: 1;
@@ -196,11 +181,11 @@ body::-webkit-scrollbar-thumb {
     height: 45px;
 }
 
-.change-button:hover>img {
+.change-button:hover > img {
     transform: translateX(10px);
 }
 
-.change-button>img {
+.change-button > img {
     height: 30px;
     width: 30px;
     position: absolute;
@@ -210,6 +195,29 @@ body::-webkit-scrollbar-thumb {
     left: 25%;
 }
 
+/* General button styles for elements without specific classes that inherit from `button` tag */
+button {
+    background-color: #D9A441;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    border: none;
+    padding: 0px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    height: 45px; /* Added from original custom.html css part */
+    margin: 6px 0; /* Added from original custom.html css part */
+    font-size: 16px; /* Added from original custom.html css part */
+}
+
+button:hover {
+    background-color: #FFB84D;
+}
+
+
+/* Specific button styles */
 .button-small {
     background: transparent;
     color: #5c3a21;
@@ -244,6 +252,7 @@ body::-webkit-scrollbar-thumb {
     background-color: #ffffff;
     color: #5C3A21;
 }
+
 
 /* --- Button Group --- */
 .button-group {
@@ -301,7 +310,7 @@ body::-webkit-scrollbar-thumb {
     transform: translate(-50%, -52%);
 }
 
-/* --- Video --- */
+/* --- Video in BG Img --- */
 .bg-img video {
     position: absolute;
     border-radius: 30px;
@@ -317,37 +326,24 @@ body::-webkit-scrollbar-thumb {
     transition: all 0.5s;
 }
 
-.bg-img>h2 {
+.bg-img > h2 {
     visibility: hidden;
     transition: opacity 1s;
     opacity: 0;
 }
 
-.bg-img:hover>h2 {
+.bg-img:hover > h2 {
     opacity: 1;
     visibility: visible;
     z-index: 10;
 }
 
-.bg-img:hover>video {
+.bg-img:hover > video {
     opacity: 1;
     visibility: visible;
     height: 290px;
     width: 590px;
     z-index: 10;
-}
-
-/* --- Responsive Media Queries --- */
-@media (max-width: 600px) {
-    .button-group {
-        padding: 10px;
-        grid-template-columns: 50% 50%;
-    }
-
-    .bg-img video {
-        width: 200px;
-        padding-top: 180px;
-    }
 }
 
 /* --- Order Follower --- */
@@ -368,18 +364,19 @@ body::-webkit-scrollbar-thumb {
 /* --- Order Section --- */
 .order-class {
     margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    padding-top: 500px;
+    padding-left: 3; /* This seems incomplete or a typo, removed the value '3' */
 }
-.order-class{
-    position: absolute;
-    top: 150%;
-    margin: 0 auto;
-}
+
 .order {
     width: 350px;
     height: 350px;
     background-color: #d9a441;
     border-radius: 50%;
     margin: 0 auto;
+    justify-self: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -389,8 +386,6 @@ body::-webkit-scrollbar-thumb {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     transition: background-color 0.3s;
     padding: 20px;
-    gap: 15px;
-    overflow: hidden;
     z-index: 15;
 }
 
@@ -443,7 +438,6 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
     font-style: italic;
     min-height: 50px;
-    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -453,20 +447,12 @@ body::-webkit-scrollbar-thumb {
     z-index: 5;
 }
 
-.order-class {
-    margin: 0 auto;
-    margin-left: 400px;
-    display: grid;
-    height: 30rem;
-    grid-template-columns: 20% 80%;
-}
-
 #geminiOutput.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* --- Responsive Text --- */
+/* --- General Text Styles --- */
 h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
@@ -478,148 +464,16 @@ p {
     opacity: 0.8;
 }
 
-@media (max-width: 768px) {
-    .order-class {
-        display: grid;
-        grid-template-columns: 1fr;
-        /* Single column layout */
-        margin-left: auto;
-        margin-right: auto;
-        width: 100px;
-        height: 100px;
-        text-align: center;
-    }
-
-    .order-class {
-        margin: 0 auto;
-        margin-left: ;
-        display: grid;
-        height: 30rem;
-        grid-template-columns: 100%;
-    }
-
-    .order {
-        width: 200px;
-        height: 200px;
-        padding: 10px;
-        margin: 0 auto;
-        /* Center 
-  } the order element */
-    }
-
-    #geminiOutput {
-        width: 200px;
-        height: 200px;
-        padding: 10px;
-        margin: 0 auto;
-    }
+h3 {
+    color: #5C3A21;
+    margin: 12px 0 6px;
 }
 
-@media (max-width: 480px) {
-    .order-class {
-        display: grid;
-        width: 100px;
-        height: 100px;
-        grid-template-columns: 1fr;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-    }
-
-    .order {
-        width: 200px;
-        height: 200px;
-        padding: 10px;
-    }
-}
-
-/* --- Responsive Media Queries --- */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2em;
-    }
-
-    p {
-        font-size: 1em;
-    }
-
-    .order p {
-        font-size: 1.2em;
-    }
-
-    #orderNowFollower {
-        font-size: 1.2em;
-    }
-
-    #generateIdeaBtn {
-        padding: 8px 15px;
-        font-size: 0.9em;
-    }
-
-    #geminiOutput {
-        padding: 10px;
-        font-size: 0.9em;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.8em;
-    }
-
-    p {
-        font-size: 0.9em;
-    }
-
-    .order p {
-        font-size: 1em;
-    }
-
-    #orderNowFollower {
-        font-size: 1em;
-    }
-
-    #generateIdeaBtn {
-        padding: 6px 12px;
-        font-size: 0.8em;
-    }
-
-    #geminiOutput {
-        padding: 8px;
-        font-size: 0.8em;
-    }
-
-    .button-group {
-        margin: 0 auto;
-        text-align: center;
-        position: absolute;
-        left: 0;
-        right: 0;
-        display: grid;
-    }
-
-    .img1 {
-        margin-top: 40px;
-        left: 23%;
-    }
-
-    body {
-        max-width: 500px;
-    }
-
-    .appear-text {
-        padding-top: 20px;
-        width: 300px;
-        line-height: 2rem;
-    }
-}
-
+/* --- Video Scrollbar Section --- */
 .video-scrollbar {
     padding: 2rem;
-    background-color: #f8f4ed;
-    /* Creamy White */
-    color: #5c3a21;
-    /* Rustic Brown */
+    background-color: #f8f4ed; /* Creamy White */
+    color: #5c3a21; /* Rustic Brown */
     text-align: center;
     margin-top: 25rem;
     z-index: 15;
@@ -666,7 +520,7 @@ p {
     animation: fadein 1s ease-in-out;
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar for Video Container */
 .video-container::-webkit-scrollbar {
     height: 8px;
 }
@@ -676,8 +530,7 @@ p {
 }
 
 .video-container::-webkit-scrollbar-thumb {
-    background-color: #d9a441;
-    /* Oven Gold */
+    background-color: #d9a441; /* Oven Gold */
     border-radius: 10px;
 }
 
@@ -692,27 +545,17 @@ p {
     0% {
         opacity: 0.8;
     }
-
     100% {
         opacity: 1;
     }
 }
 
-.comments {
-    background-color: #d9a441;
-    color: #5c3a21;
-    border-radius: 200px;
-    width: 300px;
-    height: 300px;
-    box-shadow: #a6a18a 0px 0px 20px;
-    position: relative;
-    margin: auto;
-    z-index: 12;
-    text-align: center;
-    justify-content: center;
-    overflow: hidden;
-    margin: 0 auto;
-    padding: 20px;
+/* --- Comments Section --- */
+.comm {
+    padding: 250px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: #ededeb;
 }
 
 .comm h2 {
@@ -727,32 +570,51 @@ p {
     margin-bottom: 1rem;
 }
 
-.comm {
-    padding: 250px;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    background-color: #ededeb;
+.comments { /* This class is used in multiple places, check for conflicts */
+    background-color: #d9a441;
+    color: #5c3a21;
+    border-radius: 200px;
+    width: 300px;
+    height: 300px;
+    box-shadow: #a6a18a 0px 0px 20px;
+    position: relative;
+    margin: auto;
+    z-index: 12;
+    text-align: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 20px;
 }
-.comment  {
+#newcomm { /* Specific ID for comments section within .comm */
+    transition: background 0.2s ease-in-out;
+}
+
+#newcomm:hover {
+    background-color: #d2a147;
+}
+
+.comment {
     padding-top: 80px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  opacity: 0;
-  text-align: center;
-  justify-content: center;
-  transition: opacity 1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    text-align: center;
+    justify-content: center;
+    transition: opacity 1s ease-in-out;
 }
+
 .comment p {
-   font-size: 1.2rem;
-   font-style: italic;
-   line-height: 25px;
-   max-width: 180px;
-   margin: 0 auto;
-   text-align: center;
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 25px;
+    max-width: 180px;
+    margin: 0 auto;
+    text-align: center;
 }
-.customer-photo{
+
+.customer-photo {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -762,30 +624,21 @@ p {
 }
 
 .comment.active {
-  opacity: 1;
+    opacity: 1;
 }
+
+/* --- Triangle (unused in HTML?) --- */
 .triangle {
-  width: 0; 
-  height: 0; 
-  border-left: 500px solid transparent;
-  border-right: 500px solid transparent;
-  position: absolute;
-  border-bottom: 500px solid #5c3a21;
+    width: 0;
+    height: 0;
+    border-left: 500px solid transparent;
+    border-right: 500px solid transparent;
+    position: absolute;
+    border-bottom: 500px solid #5c3a21;
 }
-.footer{
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    min-height: 500px;
-    position: ;
-    background-color: #5c3a21;
-    color: #f8f4ed;
-    text-align: center;
-    line-height: 50px;
-    font-family: "Raleway", sans-serif;
-    font-weight: 600;
-}
-.video{
+
+/* --- Video Splash Screen --- */
+.video { /* Applied to the video element in splash-screen */
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -793,6 +646,7 @@ p {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
+
 #splash-screen {
     position: fixed;
     top: 0;
@@ -806,535 +660,646 @@ p {
     z-index: 9999; /* Ensure it's on top */
     transition: opacity 1s ease-out; /* For fade out effect */
 }
-@keyframes fadeout{
-    0%{
+
+@keyframes fadeout {
+    0% {
         opacity: 1;
     }
-    100%{
+    100% {
         opacity: 0;
     }
 }
+
 #splash-screen.fade-out {
     animation: fadeout 1s forwards;
     opacity: 0;
     visibility: hidden;
 }
+
+/* --- BabylonJS Canvas --- */
 #renderCanvas {
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
 
-/* Price display overlay */
+/* --- Price Display Overlay --- */
 #priceDisplay {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background: #fff;
-  padding: 12px 18px;
-  border-radius: 12px;
-  font-size: 1.2rem;
-  color: #5C3A21;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  z-index: 2;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #fff;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    color: #5C3A21;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 2;
 }
 
-/* Container for UI panels */
+/* --- UI Layout and Panels --- */
 .ui-layout {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px;
-  box-sizing: border-box;
-  z-index: 1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1;
 }
 
-/* Side panels */
 .ui-panel {
-  display: flex;
-  flex-direction: column;
-  width: 280px;
-  background: #ffffffdd;
-  border-radius: 16px;
-  padding: 16px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-  backdrop-filter: blur(6px);
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    background: #ffffffdd;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    backdrop-filter: blur(6px);
 }
 
-/* Buttons */
-button {
-  height: 45px;
-  margin: 6px 0;
-  font-size: 16px;
-  background-color: #EC97A4;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  cursor: pointer;
-  transition: background 0.2s ease-in-out;
+/* --- Dropdowns & Textarea --- */
+select,
+textarea {
+    margin: 8px 0;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: vertical;
 }
 
-button:hover {
-  background-color: #F2B3BD;
-}
-
-/* Dropdowns & textarea */
-select, textarea {
-  margin: 8px 0;
-  width: 100%;
-  padding: 10px;
-  font-size: 14px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  resize: vertical;
-}
-
-/* Suggested comments */
+/* --- Suggested Comments Button --- */
 .suggestion-btn {
-  background-color: #E7FFD2;
-  color: #5C3A21;
+    background-color: #E7FFD2;
+    color: #5C3A21;
 }
 
-/* Summary box */
+/* --- Summary Box --- */
 .order-summary {
-  background-color: #FCEEC4;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 12px;
-  font-size: 15px;
-  color: #5C3A21;
-  box-shadow: inset 0 0 4px rgba(0,0,0,0.05);
+    background-color: #FCEEC4;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 12px;
+    font-size: 15px;
+    color: #5C3A21;
+    box-shadow: inset 0 0 4px rgba(0,0,0,0.05);
 }
 
-/* Send button */
+/* --- Send Button (Custom.html) --- */
 .send {
-  background-color: #FFD43B;
-  color: #5C3A21;
-  font-size: 18px;
-  margin-top: 20px;
-  padding: 12px;
-  border-radius: 20px;
-  font-weight: bold;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    background-color: #FFD43B;
+    color: #5C3A21;
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
 
 .send:hover {
-  background-color: #FFEA7A;
+    background-color: #FFEA7A;
 }
 
-/* Responsive text blocks */
-h3 {
-  color: #5C3A21;
-  margin: 12px 0 6px;
-}
-
-/* 🌞 Full Section Layout */
+/* --- Meet the Team Section --- */
 .meet-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 60px;
-  padding: 60px 40px;
-  background-image: url("bg8.png");
-  width: 100vw;
-  box-sizing: border-box;
-  overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 60px 40px;
+    background-image: url("bg8.png");
+    width: 100vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
-/* 🎠 Carousel Strip */
+.meet-wrapper h2 {
+    color: #5c3a21;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2rem;
+}
+
+.meet-wrapper h2:hover {
+    transform: translateX(3px) translateY(3px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+/* --- Meet Carousel Strip --- */
 .meet-carousel {
-  display: flex;
-  gap: 30px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: 40px 20px;
-  width: 100%;
-  height: 270px;
-  max-width: 100%;
-  box-sizing: border-box;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 40px 20px;
+    width: 100%;
+    height: 270px;
+    max-width: 100%;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
 }
 
-/* 🍯 Custom Scrollbar */
+/* Custom Scrollbar for Meet Carousel */
 .meet-carousel::-webkit-scrollbar {
-  height: 10px;
-}
-.meet-carousel::-webkit-scrollbar-track {
-  background-color: #f8f4ed;
-  border-radius: 50px;
-}
-.meet-carousel::-webkit-scrollbar-thumb {
-  background-color: #D9A441;
-  border-radius: 50px;
-  border: 2px solid #FFF8F0;
-}
-.meet-carousel {
-  scrollbar-color: #D9A441 #FCEEC4; /* Firefox support */
-  scrollbar-width: thin;
+    height: 10px;
 }
 
-/* 👤 Individual Profile Cards */
+.meet-carousel::-webkit-scrollbar-track {
+    background-color: #f8f4ed;
+    border-radius: 50px;
+}
+
+.meet-carousel::-webkit-scrollbar-thumb {
+    background-color: #D9A441;
+    border-radius: 50px;
+    border: 2px solid #FFF8F0;
+}
+
+.meet-carousel {
+    scrollbar-color: #D9A441 #FCEEC4; /* Firefox support */
+    scrollbar-width: thin;
+}
+
+/* --- Individual Profile Cards --- */
 .team-member {
-  flex: 0 0 auto;
-  scroll-snap-align: center;
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  overflow: hidden;
-  transition: transform 0.4s ease, filter 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  filter: blur(1px);
-  transform: scale(0.9);
-  position: relative;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.4s ease, filter 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    filter: blur(1px);
+    transform: scale(0.9);
+    position: relative;
 }
 
 .team-member.active {
-  transform: scale(1.6);
-  filter: none;
-  animation: bounce 0.4s ease;
-  z-index: 5;
+    transform: scale(1.6);
+    filter: none;
+    animation: bounce 0.4s ease;
+    z-index: 5;
 }
 
-/* 🖼️ Profile Photo */
+/* Profile Photo */
 .team-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-/* 💬 Hide text inside photo bubble */
-.name, .role {
-  display: none;
-}
-
-/* 📋 Spotlight Info Panel */
-
-
-/* ✨ Bounce Animation for Highlight */
-@keyframes bounce {
-  0%   { transform: scale(1.3); }
-  50%  { transform: scale(1.6); }
-  70%  { transform: scale(1.5); }
-  100% { transform: scale(1.6); }
-}
-.foot{
-    bottom: 100;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    z-index: 13; /* Adjusted z-index */
+}
+
+/* Hide text inside photo bubble */
+.name,
+.role {
+    display: none;
+}
+
+/* --- Spotlight Info Panel --- */
+.spotlight-info {
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+#spotlight-name {
+    font-size: 2em;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 8px;
+    white-space: normal;
+    opacity: 0; /* Starts invisible, GSAP fades it in */
+    transition: opacity 0.25s ease-in-out; /* Smooth transition */
+}
+
+#spotlight-name:hover {
+    transform: translateX(3px) translateY(3px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+#spotlight-role {
+    font-size: 1.2em;
+    color: #777;
+    margin-bottom: 20px;
+    white-space: normal;
+    opacity: 0; /* Starts invisible, GSAP fades it in */
+    transition: opacity 0.25s ease-in-out; /* Smooth transition */
+}
+
+#spotlight-role:hover {
+    transform: translateX(3px) translateY(3px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.spotlight-info .bio {
+    font-size: 1.1em;
+    line-height: 1.7;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #444;
+    overflow: visible;
+    word-wrap: break-word;
+    opacity: 0; /* Starts invisible, GSAP fades it in */
+    transition: opacity 0.25s ease-in-out; /* Smooth transition */
+}
+
+.bio:hover {
+    transform: translateX(3px) translateY(3px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+/* --- Bounce Animation for Highlight --- */
+@keyframes bounce {
+    0% {
+        transform: scale(1.3);
+    }
+    50% {
+        transform: scale(1.6);
+    }
+    70% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1.6);
+    }
+}
+
+/* --- Footer Section --- */
+.foot {
+    bottom: 100; /* This value seems off, consider using rem or px */
+    width: 100%;
+    height: 100%; /* This might make the footer too large */
     min-height: 500px;
-    position: absolute;
+    position: absolute; /* Changed from 'position: ;' */
     background-color: #f8f4ed;
     text-align: center;
     line-height: 50px;
     font-family: "Raleway", sans-serif;
     font-weight: 600;
 }
-.footer-logo{
+
+.footer-logo {
     position: absolute;
     left: 0;
     padding: 40px;
     width: 140px;
 }
-/* 🍩 Section Container */
+
+/* --- Circle Feedback Section --- */
 .circle-feedback {
-  position: relative;
-  width: 100%;
-  height: 900px;
-  background-color: #FFF8F0;
-  margin-bottom: 7rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Cormorant Garamond", serif;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 900px;
+    background-color: #FFF8F0;
+    margin-bottom: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Cormorant Garamond", serif;
+    overflow: hidden;
 }
 
 .circle {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: #f8f4ed;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  padding: 25px;
-  border: 3px solid #D9A441;
-  text-align: center;
-  transition: transform 0.3s ease, z-index 0.3s ease;
-  z-index: 1;
-}
-.circle h3{
-    padding: 10px;
-}
-.newsletter {
-  top: 50%;
-  left: 50%;
-  transform: translate(-80%, -2%);
-}
-
-.comments {
-  top: 50%;
-  left: 50%;
-  transform: translate(-15%, -50%);
-  z-index: 1;
-}
-#newcomm{
-  transition: background 0.2s ease-in-out;
-}
-#newcomm:hover{
-  background-color: #d2a147;
-}
-#circomm{
-    transition: background 0.2s ease-in-out;
-}
-#circomm:hover{
-    background-color:#FFF8F0 ;
-}
-.circle.active {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-  z-index: 3;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #f8f4ed;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    border: 3px solid #D9A441;
+    text-align: center;
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    z-index: 1;
 }
 
 .circle h3 {
-  font-size: 1.6rem;
-  color: #5C3A21;
-  margin-bottom: 16px;
-}
-#message{
-    min-height: 20px;
-    height: 22px;
-    max-height:30px;
-    width: 230px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-}
-#sendbtn{
-    margin-top: 6px;
-}
-input, textarea {
-  width: 85%;
-  padding: 10px 14px;
-  margin-bottom: 12px;
-  border: none;
-  height: auto;
-  border: 3px solid #D9A441;
-  border-radius: 40px;
-  background-color: #f8f4ed;
-  font-size: 1rem;
-  font-family: "Raleway", sans-serif;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    padding: 10px;
 }
 
+.newsletter {
+    top: 50%;
+    left: 50%;
+    transform: translate(-80%, -2%);
+}
+
+.comments { /* This class is also used for the comment display, consider renaming one for clarity */
+    top: 50%;
+    left: 50%;
+    transform: translate(-15%, -50%);
+    z-index: 1;
+}
+
+#circomm { /* Specific ID for the comments circle */
+    transition: background 0.2s ease-in-out;
+    z-index: 19; /* Added from original responsive media query */
+}
+
+#circomm:hover {
+    background-color: #FFF8F0;
+}
+
+.circle.active {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    z-index: 3;
+}
+
+.circle h3 {
+    font-size: 1.6rem;
+    color: #5C3A21;
+    margin-bottom: 16px;
+}
+
+/* Input and Textarea in Circles */
+input,
+textarea {
+    width: 85%;
+    padding: 10px 14px;
+    margin-bottom: 12px;
+    border: none;
+    height: auto;
+    border: 3px solid #D9A441;
+    border-radius: 40px;
+    background-color: #f8f4ed;
+    font-size: 1rem;
+    font-family: "Raleway", sans-serif;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
 
 input::placeholder,
 textarea::placeholder {
-  color: #5C3A21;
-  opacity: 0.6;
+    color: #5C3A21;
+    opacity: 0.6;
 }
 
 input:focus,
 textarea:focus {
-  outline: none;
-  background-color: #FFF8F0;
-  box-shadow: 0 0 0 3px #FFD77899;
+    outline: none;
+    background-color: #FFF8F0;
+    box-shadow: 0 0 0 3px #FFD77899;
 }
-#Subscribe{
+
+#message { /* Specific styling for the message textarea */
+    min-height: 20px;
+    height: 22px;
+    max-height: 30px;
+    width: 230px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+#Subscribe {
     height: 40px;
     margin-top: 0px;
 }
 
-button {
-  background-color: #D9A441;
-  color: white;
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
-  border: none;
-  padding: 0px 16px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-}
-button:hover {
-  background-color: #FFB84D;
-}
-
-
-@media (max-width: 768px) {
-  .circle-feedback {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .circle {
-    width: 300px;
-    height: 300px;
-    max-width: 400px;
-    overflow: hidden;
-    margin-left: -0.5rem;
-  }
-
-  .newsletter, .comments {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-  }
-  .meet-wrapper{
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-    .comm{
-    padding: 30px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    }
-    .order-class{
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    margin: 0 auto;
-    margin-left: 5.5rem;
-    }
-        .circle comments > button{
-            z-index: 19;
-        }
-        .circle comments{
-            z-index: 19;
-        }
-        .team-photo{
-        z-index: 13;
-        }
-    }
-.comment p {
-    font-size: 1rem;
-    line-height: 1.2rem;
-    margin-top: -1rem;
-    max-width: 270px;
-}
-.order p{
-    text-align: center;
-    margin: 0 auto;
-}
-
-circle newsletter:hover{
+.circle.newsletter:hover {
     background-color: #f9f3e8;
     transition: background-color 0.3s ease-in-out;
 }
-.bio:hover {
-    transform: translateX(3px) translateY(3px);
-    transition: opacity 0.5s, transform 0.5s;
-}
-#spotlight-name:hover{
-    transform: translateX(3px) translateY(3px);
-    transition: opacity 0.5s, transform 0.5s;
-}
-#spotlight-role{
-    transform: translateX(3px) translateY(3px);
-    transition: opacity 0.5s, transform 0.5s;
-}
-.meet-wrapper h2{
-    color: #5c3a21;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 2rem;
-}
-.meet-wrapper h2:hover{
-    transform: translateX(3px) translateY(3px);
-    transition: opacity 0.5s, transform 0.5s;
-}
-/* Ensure the spotlight info container has enough space */
-.spotlight-info {
-    padding: 20px; /* Add some internal spacing */
-    margin-top: 30px; /* Space from carousel */
-    text-align: center;
-    min-height: 180px; /* **Increase this if needed** to accommodate longer bios */
-    display: flex; /* Use flexbox for easy centering of its children */
-    flex-direction: column;
-    justify-content: center; /* Vertically center content */
-    align-items: center; /* Horizontally center content */
-    /* border: 1px solid red; /* TEMPORARY: for debugging, to see the container's bounds */
-    overflow: visible; /* Ensure content isn't cut off if it exceeds bounds */
+
+/* --- Responsive Media Queries --- */
+@media (max-width: 768px) {
+    /* Order Section */
+    .order-class {
+        display: flex; /* Changed from grid to flex for better control */
+        flex-direction: column;
+        height: 100%; /* Ensure it takes full height for vertical alignment */
+        margin: 0 auto;
+        margin-left: 5.5rem; /* Specific margin, might need adjustment */
+        text-align: center; /* Center content horizontally */
+        width: auto; /* Allow width to be determined by content */
+        height: auto; /* Allow height to be determined by content */
+        padding-top: 0; /* Reset padding-top from desktop */
+    }
+
+    .order {
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+        margin: 0 auto; /* Center the order element */
+    }
+
+    #geminiOutput {
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+    /* General Text */
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .order p {
+        font-size: 1.2em;
+    }
+
+    #orderNowFollower {
+        font-size: 1.2em;
+    }
+
+    #generateIdeaBtn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    #geminiOutput {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    /* Video in BG Img */
+    .bg-img video {
+        width: 200px;
+        padding-top: 180px;
+    }
+
+    /* Circle Feedback */
+    .circle-feedback {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .circle {
+        width: 300px;
+        height: 300px;
+        max-width: 400px;
+        overflow: hidden;
+        margin-left: -0.5rem;
+    }
+
+    .newsletter,
+    .comments {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+    }
+
+    .circle.comments > button { /* Specific targeting for button within comments circle */
+        z-index: 19;
+    }
+
+    /* Meet the Team */
+    .meet-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    /* Comments Section */
+    .comm {
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 }
 
-#spotlight-name {
-    font-size: 2em; /* Ensure font size is readable */
-    font-weight: bold;
-    color: #222;
-    margin-bottom: 8px; /* Space below the name */
-    white-space: normal; /* Allow text to wrap */
-}
+@media (max-width: 480px) {
+    /* Order Section */
+    .order-class {
+        display: grid;
+        width: 100px; /* This value might be too small, consider `auto` or larger px */
+        height: 100px; /* This value might be too small, consider `auto` or larger px */
+        grid-template-columns: 1fr;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
 
-#spotlight-role {
-    font-size: 1.2em; /* Readable font size */
-    color: #777;
-    margin-bottom: 20px; /* Space below the role */
-    white-space: normal; /* Allow text to wrap */
-}
+    .order {
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+    }
 
-.spotlight-info .bio {
-    font-size: 1.1em;
-    line-height: 1.7;
-    max-width: 600px; /* **Adjust this value if your text is too wide and causing overflow** */
-    margin-left: auto; /* Center the text block */
-    margin-right: auto; /* Center the text block */
-    color: #444;
-    overflow: visible; /* Crucial: Do not hide text if it overflows */
-    word-wrap: break-word; /* Helps with very long words that might not wrap */
-}
+    /* General Text */
+    h1 {
+        font-size: 1.8em;
+    }
 
-/* Ensure these are correctly handled by your GSAP animations */
-#spotlight-name,
-#spotlight-role,
-.spotlight-info .bio {
-    opacity: 0; /* Starts invisible, GSAP fades it in */
-    transition: opacity 0.25s ease-in-out; /* Smooth transition */
-}
-@media (max-width:720px) {
-    .tag-line{
+    p {
+        font-size: 0.9em;
+    }
+
+    .order p {
+        font-size: 1em;
+    }
+
+    #orderNowFollower {
+        font-size: 1em;
+    }
+
+    #generateIdeaBtn {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+
+    #geminiOutput {
+        padding: 8px;
+        font-size: 0.8em;
+    }
+
+    /* Button Group */
+    .button-group {
+        margin: 0 auto;
+        text-align: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        display: grid;
+    }
+
+    /* Logo Image */
+    .img1 {
+        margin-top: 40px;
+        left: 23%;
+    }
+
+    /* Body Max Width */
+    body {
+        max-width: 500px;
+    }
+
+    /* Appear Text */
+    .appear-text {
+        padding-top: 20px;
+        width: 300px;
+        line-height: 2rem;
+    }
+
+    /* Comment Text */
+    .comment p {
+        font-size: 1rem;
+        line-height: 1.2rem;
+        margin-top: -1rem;
+        max-width: 270px;
+    }
+
+    /* Tag Line */
+    .tag-line {
         font-size: 1.5rem;
         max-width: 300px;
         top: 40%;
     }
-    button{
+
+    /* Buttons */
+    button {
         text-align: center;
         padding-top: 0px;
         margin: 0 auto;
     }
-    .order-button,.button-large,.button-small{
+
+    .order-button,
+    .button-large,
+    .button-small {
         margin-top: 20px;
         text-align: center;
         justify-content: center;
         height: 50px;
-    }    .button-large,.button-small{
+    }
+
+    .button-large,
+    .button-small {
         margin-top: 0px;
         text-align: center;
         justify-content: center;
         height: 50px;
     }
-    
 }
 
-
-
-
-/*custom.html css*/
-
-.form{
+/* --- custom.html css --- */
+.form {
     background-image: url("bg8.png");
     height: 700px;
     padding: 30px;
