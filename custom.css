@@ -13,7 +13,7 @@
   margin: 40px auto 40px; /* Adjusted margins */
   position: relative; /* Standard positioning */
   z-index: 2; /* Ensures form is above background */
-  overflow: hidden; /* Important to contain content within rounded borders */
+ /* Important to contain content within rounded borders */
   display: flex; /* Use flexbox for inner form alignment */
   flex-direction: column;
   justify-content: center; /* Center content vertically if space allows */
