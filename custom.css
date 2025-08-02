@@ -1,25 +1,8 @@
-/* General Body Styles - This manages the primary page scroll */
-html, body {
-  height: 100%; /* Ensure html and body take full height for consistent scrolling */
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f4ed; /*
+
 
 /* Scroll Wrapper - This should just wrap content, no scrolling */
 .scroll-wrapper {
-  flex-grow: 1;
-  /* IMPORTANT: Removed overflow-y: auto; */ /* Critical for single scrollbar */
-  position: relative;
-  z-index: 1;
-  padding-bottom: 50px;
-}
-
-/* Logo Styling - Fixed transparent header, but readable */
-.logo-img {
-  text-align: c
-/* Form Section - Styled with a circular/oval aesthetic */
+  f
 .form {
   background-color: #fff; /* Solid white background for the form content */
   padding: 30px; /* Reduced from 40px */
