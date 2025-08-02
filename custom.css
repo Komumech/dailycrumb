@@ -51,65 +51,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 /* Logo Styling - Fixed transparent header, but readable */
 .logo-img {
-  text-align: center;
-  padding: 15px 0; /* Slightly reduced padding */
-  background-color: rgba(255, 255, 255, 0); /* Semi-transparent white for readability over content */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0); /* Subtle shadow for depth */
-  position: fixed; /* Stays at the top */
-  top: 0;
-  left: 0;
-  width: 100%; /* Spans full width */
-  z-index: 100; /* High z-index to be on top of everything */
-}
-
-.logo-img .img1 {
-  max-width: 150px; /* Reduced from 180px */
-  height: auto;
-}
-.content{
-    background-image: url(https://brilliant-kleicha-4fa21a.netlify.app/bg9.png); /* Replace withh
-    a valid image URL */
-    background-size: cover; 
-
-}
-/* Background Image Carousel Section - Full viewport height hero */
-.background {
-  position: relative; /* Relative position to flow with content */
-  width: 100%;
-  height: 100vh; /* Full viewport height hero section */
-  overflow: hidden; /* Keep hidden for carousel image transitions */
-  z-index: 0; /* Behind other content */
-  margin-top: 65px; /* Adjusted to account for smaller fixed logo height */
-}
-
-.bg-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity 0.4s ease-in-out;
-  opacity: 1;
-}
-
-.bg-img.fade-out {
-  opacity: 0;
-}
-
-/* Button Group (e.g., "Step Inside Our Bakery") - positioned within the hero */
-.button-group {
-  position: absolute;
-  top: 50%; /* Center vertically within the background */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 5;
-  text-align: center;
-  width: 100%;
-}
-
-.button-small {
-  background-color: #b5651d; /* Earthy brown */
-  color: #fff;
-  padding: 10px 20px; /* Reduced padding */
-  border: 
+  text-align: c
 /* Form Section - Styled with a circular/oval aesthetic */
 .form {
   background-color: #fff; /* Solid white background for the form content */
