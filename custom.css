@@ -70,6 +70,7 @@ body::-webkit-scrollbar-thumb:hover {
     background-image: url('https://example.com/your-background-image.jpg'); /* Replace withh
     a valid image URL */
     background-size: cover; 
+    
 }
 /* Background Image Carousel Section - Full viewport height hero */
 .background {
