@@ -104,7 +104,7 @@ body {
 /* Form Section */
 /* Reconciling your original form styles with the new ones */
 .form {
-    
+
   /* Using values closer to what you had in the first block for the .form,
      but adding background image properties. */
   background-color: #fffffff7; /* Slightly transparent white for content to be readable over bg image */
@@ -121,7 +121,7 @@ body {
   max-width: 800px;
   width: 80%;
   position: relative;
-  z-index: 2;
+  z-index: 21;
 
   /* IMPORTANT: Remove max-height and overflow-y from .form */
   /* max-height: 70vh; */ /* This was causing another scrollbar */
