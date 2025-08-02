@@ -1342,5 +1342,5 @@ label{
 }
 #fllname, #email, #phone{
     width: 70px;
-    mar
+    margin: 0 auto;
 }
