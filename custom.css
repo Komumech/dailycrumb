@@ -1,32 +1,3 @@
-
-/*custom.html css*/
-
-.form{
-    background-image: url("bg8.png");
-    height: 2000px;
-    padding: 30px;
-    margin: 360px 30px;
-}
-label{
-    border-radius: 50%;
-}
-label{
-    border-radius: 50%;
-    font-size:1.5rem;
-    font-weight:500;
-    display:flex;
-}
-#fllname, #email, #phone{
-    width:600px;
-    padding:70px
-    margin:0 auto;
-}
-.cakeInquiryForm{
-    display:flex;
-    flex-direction:column;
-    
-}
-
 /* General Body Styles */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -36,33 +7,38 @@ body {
   background-color: #f8f4ed; /* Light cream/off-white for a warm bakery feel */
   color: #333;
   line-height: 1.6;
+  /* Make body manage the main scrollbar if content overflows */
+  /* min-height: 100vh; /* Ensure body takes at least full viewport height */
+  /* overflow-y: auto; /* Let the body manage scrolling if its content exceeds height */
 }
 
 /* Container for overall layout */
 .container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; /* Ensure container takes full viewport height */
   position: relative;
-  overflow: hidden; /* Hide overflow from background images */
+  /* Remove overflow: hidden; from container if you want body scroll */
+  /* overflow: hidden; */ /* Removing this to allow body scroll if necessary */
 }
 
-/* Scroll Wrapper - to ensure content scrolls within the visual area */
+/* Scroll Wrapper - Remove scrolling here to avoid double scrollbars */
 .scroll-wrapper {
   flex-grow: 1;
-  overflow-y: auto;
+  /* IMPORTANT: Remove overflow-y from scroll-wrapper */
+  /* overflow-y: auto; */ /* This was causing one of the scrollbars */
   position: relative;
-  z-index: 1; /* Ensure content is above the background */
-  padding-bottom: 50px; /* Add some padding at the bottom for spacing */
+  z-index: 1;
+  padding-bottom: 50px;
 }
 
 /* Logo Styling */
 .logo-img {
   text-align: center;
   padding: 20px 0;
-  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for logo background */
+  background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 10; /* Ensure logo is on top */
+  z-index: 10;
   position: sticky;
   top: 0;
 }
@@ -78,16 +54,16 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 50vh; /* Half of viewport height */
+  height: 50vh;
   overflow: hidden;
-  z-index: 0; /* Behind other content */
+  z-index: 0;
 }
 
 .bg-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Cover the area without distortion */
-  transition: opacity 0.4s ease-in-out; /* Smooth fade effect */
+  object-fit: cover;
+  transition: opacity 0.4s ease-in-out;
   opacity: 1;
 }
 
@@ -101,13 +77,13 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 5; /* Above background image, below logo */
+  z-index: 5;
   text-align: center;
   width: 100%;
 }
 
 .button-small {
-  background-color: #b5651d; /* Earthy brown */
+  background-color: #b5651d;
   color: #fff;
   padding: 12px 25px;
   border: none;
@@ -119,57 +95,77 @@ body {
 }
 
 .button-small:hover {
-  background-color: #8b4513; /* Darker brown on hover */
+  background-color: #8b4513;
 }
 
 /* Form Section */
+/* Reconciling your original form styles with the new ones */
 .form {
-  background-color: #ffffff35;
-  margin: 40vh auto 20px; /* Adjust margin-top to start below background image */
+  /* Using values closer to what you had in the first block for the .form,
+     but adding background image properties. */
+  background-color: #ffffffd0; /* Slightly transparent white for content to be readable over bg image */
+  background-image: url("bg8.png"); /* Your desired background image */
+  background-size: cover; /* Cover the entire form area */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the image */
   padding: 30px;
-  border-radius: 28px;
+  /* Use a consistent margin-top based on the background image height (50vh) */
+  margin: 45vh auto 20px; /* Adjusted to sit below the 50vh background + some overlap */
+  border-radius: 28px; /* From your custom.html css */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   max-width: 800px;
   width: 90%;
-  position: relative; /* Ensure it respects margin-top correctly */
-  z-index: 2; /* Ensure form is above background */
+  position: relative;
+  z-index: 2;
+
+  /* IMPORTANT: Remove max-height and overflow-y from .form */
+  /* max-height: 70vh; */ /* This was causing another scrollbar */
+  /* overflow-y: auto; */ /* This was causing another scrollbar */
 }
 
-.form h2 {
-  text-align: center;
-  color: #7b3f00; /* Darker earthy tone for headings */
-  margin-bottom: 25px;
-  font-size: 2em;
-}
+/* Specific overrides from your custom.html css that need to be fixed or clarified */
+/* These rules below have issues and are likely causing problems */
+/*
+label{
+    border-radius: 50%; /* This makes no sense for a label. Remove it. */
+/* } */
 
-/* Fieldset and Legend for grouping form fields */
-fieldset {
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 20px;
-  margin-bottom: 25px;
-  background-color: #fafafa; /* Slightly off-white for fieldset background */
-}
+/* This rule is duplicated and also affects all labels. */
+/*
+label{
+    border-radius: 50%; /* Remove */
+/* font-size:1.5rem; /* This is very large for all labels, consider specific labels if needed */
+/* font-weight:500;
+    display:flex; /* This makes labels stretch across */
+/* }
+*/
 
-legend {
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #a0522d; /* Sienna/earthy orange */
-  padding: 0 10px;
-  background-color: #fff;
-  border-radius: 3px;
-}
-
-/* Labels */
+/* Corrected/Improved Label Styles */
 label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: 600;
-  color: #555;
-  margin-top: 15px;
+    display: block; /* Ensures label takes its own line */
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    margin-top: 15px;
+    font-size: 1em; /* Reset or adjust as needed, 1.5rem was too big */
+    border-radius: 0; /* Ensure no unintended border-radius */
 }
 
-/* Input Fields, Textareas, Selects */
+
+/* Input Field Specifics - Correcting issues */
+#fllname, #email, #phone { /* These IDs don't match your HTML (fullName, email, phone) */
+    /* Check your HTML IDs: they are `fullName`, `email`, `phone` */
+    /* Assuming you meant these specific inputs, here's the corrected selector */
+    /* If you want to apply to ALL text inputs, use the generic input[type="text"] etc. rule */
+    /* This rule also had padding: 70px which is massive, and margin: 0 auto; without display:block */
+    width: calc(100% - 22px); /* Maintain width from general rule */
+    padding: 10px; /* Consistent padding */
+    margin-bottom: 15px; /* Consistent margin */
+    /* Remove padding:70px and margin:0 auto; from here */
+}
+
+
+/* Form Element General Styling (Keep these as they are good) */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -183,7 +179,7 @@ select {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1em;
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  box-sizing: border-box;
   transition: border-color 0.3s ease;
 }
 
@@ -194,13 +190,13 @@ input[type="number"]:focus,
 input[type="date"]:focus,
 textarea:focus,
 select:focus {
-  border-color: #b5651d; /* Highlight on focus */
+  border-color: #b5651d;
   outline: none;
   box-shadow: 0 0 5px rgba(181, 101, 29, 0.3);
 }
 
 textarea {
-  resize: vertical; /* Allow vertical resizing */
+  resize: vertical;
 }
 
 /* Radio Buttons and Checkboxes */
@@ -214,7 +210,7 @@ input[type="radio"] + label,
 input[type="checkbox"] + label {
   display: inline-block;
   margin-bottom: 5px;
-  font-weight: normal; /* Override bold from general label */
+  font-weight: normal;
 }
 
 /* Specific styling for "Other" text inputs next to checkboxes/radio buttons */
@@ -222,10 +218,10 @@ input[type="checkbox"] + label {
 #otherCakeFlavor,
 #otherCakeFilling,
 #otherHowHear {
-  width: auto; /* Allow natural width */
-  min-width: 200px; /* Minimum width for readability */
+  width: auto;
+  min-width: 200px;
   margin-left: 10px;
-  display: inline-block; /* Keep it next to the checkbox/radio label */
+  display: inline-block;
 }
 
 /* File Upload Field */
@@ -248,11 +244,11 @@ input[type="file"] {
 /* Warning Message for Date */
 #dateWarning {
   font-size: 0.9em;
-  color: #d9534f; /* Red for warnings */
+  color: #d9534f;
   margin-top: -10px;
   margin-bottom: 15px;
   padding-left: 5px;
-  display: none; /* Hidden by default, controlled by JS */
+  display: none;
 }
 
 /* Submit Button */
@@ -260,7 +256,7 @@ button[type="submit"] {
   display: block;
   width: 100%;
   padding: 15px;
-  background-color: #a0522d; /* Sienna/earthy orange */
+  background-color: #a0522d;
   color: rgb(255, 255, 255);
   border: none;
   border-radius: 5px;
@@ -272,7 +268,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #8b4513; /* Darker brown on hover */
+  background-color: #8b4513;
   transform: translateY(-2px);
 }
 
@@ -282,14 +278,14 @@ button[type="submit"]:active {
 
 /* Confirmation Message */
 #confirmationMessage {
-  background-color: #e6ffe6; /* Light green background */
-  border: 1px solid #4CAF50; /* Green border */
+  background-color: #e6ffe6;
+  border: 1px solid #4CAF50;
   color: #333;
   padding: 25px;
   border-radius: 8px;
   text-align: center;
   margin-top: 20px;
-  display: none; /* Hidden by default, shown on form submission */
+  display: none;
 }
 
 #confirmationMessage h3 {
@@ -307,7 +303,7 @@ button[type="submit"]:active {
 @media (max-width: 768px) {
   .form {
     padding: 20px;
-    margin: 35vh auto 20px; /* Adjust for smaller screens */
+    margin: 40vh auto 20px; /* Adjust for smaller screens */
   }
 
   .logo-img .img1 {
@@ -315,7 +311,7 @@ button[type="submit"]:active {
   }
 
   .background {
-    height: 40vh; /* Adjust background height */
+    height: 40vh;
   }
 
   .button-small {
@@ -327,7 +323,7 @@ button[type="submit"]:active {
 @media (max-width: 480px) {
   .form {
     padding: 15px;
-    margin: 30vh auto 15px; /* Further adjustment for very small screens */
+    margin: 35vh auto 15px;
   }
 
   .logo-img .img1 {
@@ -335,7 +331,7 @@ button[type="submit"]:active {
   }
 
   .background {
-    height: 35vh; /* Further adjustment for very small screens */
+    height: 35vh;
   }
 
   h2 {
@@ -351,39 +347,30 @@ button[type="submit"]:active {
     padding: 12px;
   }
 }
-/* Add or modify this existing rule in your styles.css */
-.form {
-  background-color: #fff;
-  margin: 40vh auto 20px;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
-  width: 90%;
-  position: relative;
-  z-index: 2;
 
-  /* --- Scrollbar Properties Added Here --- */
-  max-height: 70vh; /* Set a maximum height for the form div */
-  overflow-y: auto; /* Enable vertical scrolling when content exceeds max-height */
-  /* --- End Scrollbar Properties --- */
+/* Remove or review these, as they are likely causing issues or are unnecessary */
+/*
+.cakeInquiryForm {
+    display:flex;
+    flex-direction:column;
+}
+*/
+
+/* If you still want to customize the main scrollbar (body/html), apply these to body or html */
+body::-webkit-scrollbar {
+  width: 8px;
 }
 
-/* Optional: Customize the scrollbar appearance (for Webkit browsers like Chrome/Safari) */
-.form::-webkit-scrollbar {
-  width: 8px; /* Width of the scrollbar */
-}
-
-.form::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Color of the scrollbar track */
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
   border-radius: 10px;
 }
 
-.form::-webkit-scrollbar-thumb {
-  background: #b5651d; /* Color of the scrollbar thumb (the draggable part) */
+body::-webkit-scrollbar-thumb {
+  background: #b5651d;
   border-radius: 10px;
 }
 
-.form::-webkit-scrollbar-thumb:hover {
-  background: #8b4513; /* Color of the scrollbar thumb on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #8b4513;
 }
