@@ -168,7 +168,11 @@ label {
     margin-bottom: 15px; /* Consistent margin */
     /* Remove padding:70px and margin:0 auto; from here */
 }
-
+input::placeholder,
+textarea::placeholder {
+  color: #5C3A21;
+  opacity: 0.6;
+}
 
 /* Form Element General Styling (Keep these as they are good) */
 input[type="text"],
