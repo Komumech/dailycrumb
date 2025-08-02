@@ -187,11 +187,7 @@ select {
   box-sizing: border-box;
   transition: border-color 0.3s ease;
 }
-input::placeholder,
-textarea::placeholder {
-  color: #5C3A21;
-  opacity: 0.6;
-}
+
 
 input[type="text"]:focus,
 input[type="email"]:focus,
