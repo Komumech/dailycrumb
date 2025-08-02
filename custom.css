@@ -173,7 +173,7 @@ textarea::placeholder {
   color: #5C3A21;
   opacity: 1;
   border-radius: 15px;
-  border: ;
+  border: 3px s;
 }
 
 /* Form Element General Styling (Keep these as they are good) */
