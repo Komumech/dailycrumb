@@ -81,7 +81,7 @@ body::-webkit-scrollbar-thumb {
             width: 100%;
             height: 600px; /* Example fixed height for the background area */
             position: relative; /* Needed for absolute positioning of image inside */
-            overflow: hidden; /* Hide overflow if image doesn't perfectly fit */
+ /* Hide overflow if image doesn't perfectly fit */
             border-radius: 20px; /* From your original CSS */
             filter: brightness(50%); /* From your original CSS */
             /* The transition for opacity is crucial for the fade effect */
