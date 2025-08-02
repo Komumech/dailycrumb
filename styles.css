@@ -372,6 +372,7 @@ body::-webkit-scrollbar-thumb {
 .order-class{
     position: absolute;
     top: 150%;
+    margin: 0 auto;
 }
 .order {
     width: 350px;
