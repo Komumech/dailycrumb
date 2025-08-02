@@ -6,7 +6,7 @@
 
 }
 .form {
-  margin-top: 100vh;
+  margin-top: 10rem;
   background-color: #fff; /* Solid white background for the form content */
   padding: 30px; /* Reduced from 40px */
   border-radius: 10px / 40px; /* Adjusted for potentially more compact form */
