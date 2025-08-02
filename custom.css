@@ -67,7 +67,7 @@ body::-webkit-scrollbar-thumb:hover {
   height: auto;
 }
 .content{
-    background-image: ;
+    background-image: url(');
 }
 /* Background Image Carousel Section - Full viewport height hero */
 .background {
