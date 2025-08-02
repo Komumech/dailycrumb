@@ -1,5 +1,6 @@
 . background{
-  
+  background-size: cover;
+  height: 100vh;
 }
 .form {
   background-color: #fff; /* Solid white background for the form content */
