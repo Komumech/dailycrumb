@@ -6,7 +6,7 @@
   margin-top: 50vh;
   background-color: #fff; /* Solid white background for the form content */
   padding: 30px; /* Reduced from 40px */
-  border-radius: 80px / 40px; /* Adjusted for potentially more compact form */
+  border-radius: 10px / 40px; /* Adjusted for potentially more compact form */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Stronger, softer shadow for depth */
   max-width: 600px; /* Reduced from 700px */
   width: 88%; /* Slightly increased width percentage for better fill */
