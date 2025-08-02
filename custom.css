@@ -52,7 +52,7 @@ body::-webkit-scrollbar-thumb:hover {
 .logo-img {
   text-align: center;
   padding: 20px 0;
-  background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white for readability over content */
+  background-color: rgba(255, 255, 255, 0); /* Semi-transparent white for readability over content */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   position: fixed; /* Stays at the top */
   top: 0;
