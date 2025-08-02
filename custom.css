@@ -150,7 +150,7 @@ label {
     display: block; /* Ensures label takes its own line */
     margin-bottom: 8px;
     font-weight: 600;
-    color: #;
+    color: #8b4513;
     margin-top: 15px;
     font-size: 1em; /* Reset or adjust as needed, 1.5rem was too big */
     border-radius: 0; /* Ensure no unintended border-radius */
