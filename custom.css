@@ -1,49 +1,64 @@
-/* General Body Styles */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* General Body Styles - This manages the primary page scroll */
+html, body {
+  height: 100%; /* Ensure html and body take full height for consistent scrolling */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f8f4ed; /* Light cream/off-white for a warm bakery feel */
   color: #333;
   line-height: 1.6;
-  /* Make body manage the main scrollbar if content overflows */
-  /* min-height: 100vh; /* Ensure body takes at least full viewport height */
-  /* overflow-y: auto; /* Let the body manage scrolling if its content exceeds height */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto; /* Let HTML/body manage vertical scrolling */
+  scroll-behavior: smooth; /* Optional: smooth scrolling for anchor links */
 }
 
-.background{
-    height: 800px;
+/* Custom Scrollbar for Webkit browsers (Chrome, Safari, new Edge) */
+body::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
 }
-/* Container for overall layout */
+body::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #b5651d; /* Color of the scrollbar thumb (the draggable part) */
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: #8b4513; /* Color of the scrollbar thumb on hover */
+}
+
+
+/* Container for overall layout - No overflow properties here */
 .container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensure container takes full viewport height */
+  min-height: 100vh;
   position: relative;
-  /* Remove overflow: hidden; from container if you want body scroll */
-  /* overflow: hidden; */ /* Removing this to allow body scroll if necessary */
+  /* Remove overflow: hidden; */ /* Critical for single scrollbar */
 }
 
-/* Scroll Wrapper - Remove scrolling here to avoid double scrollbars */
+/* Scroll Wrapper - This should just wrap content, no scrolling */
 .scroll-wrapper {
   flex-grow: 1;
-  /* IMPORTANT: Remove overflow-y from scroll-wrapper */
-  /* overflow-y: auto; */ /* This was causing one of the scrollbars */
+  /* IMPORTANT: Removed overflow-y: auto; */ /* Critical for single scrollbar */
   position: relative;
   z-index: 1;
   padding-bottom: 50px;
 }
 
-/* Logo Styling */
+/* Logo Styling - Fixed transparent header, but readable */
 .logo-img {
   text-align: center;
   padding: 20px 0;
-  background-color: rgba(255, 255, 255, 0);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
-  z-index: 10;
-  position: fixed;
+  background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white for readability over content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  position: fixed; /* Stays at the top */
   top: 0;
+  left: 0;
+  width: 100%; /* Spans full width */
+  z-index: 100; /* High z-index to be on top of everything */
 }
 
 .logo-img .img1 {
@@ -51,15 +66,14 @@ body {
   height: auto;
 }
 
-/* Background Image Carousel Section */
+/* Background Image Carousel Section - Full viewport height hero */
 .background {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative; /* Relative position to flow with content */
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  z-index: 0;
+  height: 100vh; /* Full viewport height hero section */
+  overflow: hidden; /* Keep hidden for carousel image transitions */
+  z-index: 0; /* Behind other content */
+  margin-top: 80px; /* Pushes background down, accounting for fixed logo height (adjust if needed) */
 }
 
 .bg-img {
@@ -74,10 +88,10 @@ body {
   opacity: 0;
 }
 
-/* Button Group (e.g., "Step Inside Our Bakery") */
+/* Button Group (e.g., "Step Inside Our Bakery") - positioned within the hero */
 .button-group {
   position: absolute;
-  top: 50%;
+  top: 50%; /* Center vertically within the background */
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 5;
@@ -86,97 +100,94 @@ body {
 }
 
 .button-small {
-  background-color: #b5651d;
+  background-color: #b5651d; /* Earthy brown */
   color: #fff;
   padding: 12px 25px;
   border: none;
   border-radius: 5px;
   font-size: 1em;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .button-small:hover {
-  background-color: #8b4513;
+  background-color: #8b4513; /* Darker brown on hover */
+  transform: translateY(-2px);
 }
 
-/* Form Section */
-/* Reconciling your original form styles with the new ones */
+/* Form Section - Styled with a circular/oval aesthetic */
 .form {
-
-  /* Using values closer to what you had in the first block for the .form,
-     but adding background image properties. */
-  background-color: #fffffff7; /* Slightly transparent white for content to be readable over bg image */
-  background-image: url(https://brilliant-kleicha-4fa21a.netlify.app/bg8.png); /* Your desired background image */
-  background-size: cover; /* Cover the entire form area */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  padding: 30px;
-  
-  /* Use a consistent margin-top based on the background image height (50vh) */
-  margin: 100vh auto 20px; /* Adjusted to sit below the 50vh background + some overlap */
-  border-radius: 28px; /* From your custom.html css */
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
-  width: 80%;
-  position: sticky;
-  z-index: 11;
-
-  /* IMPORTANT: Remove max-height and overflow-y from .form */
-  /* max-height: 70vh; */ /* This was causing another scrollbar */
-  /* overflow-y: auto; */ /* This was causing another scrollbar */
+  background-color: #fff; /* Solid white background for the form content */
+  /* REMOVED background-image: url(https://brilliant-kleicha-4fa21a.netlify.app/bg8.png); */
+  /* The kitchen background conflicts with the new clean circular aesthetic */
+  padding: 40px; /* Increased padding for more space within the shape */
+  border-radius: 100px / 50px; /* Creates an oval shape (horizontal / vertical radius) */
+                                /* Adjust these values to control the roundness */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Stronger, softer shadow for depth */
+  max-width: 700px; /* Slightly narrower for a more contained look */
+  width: 85%; /* Responsive width */
+  margin: 50px auto 50px; /* Margin after the hero section, centered */
+  position: relative; /* Standard positioning */
+  z-index: 2; /* Ensures form is above background */
+  overflow: hidden; /* Important to contain content within rounded borders */
+  display: flex; /* Use flexbox for inner form alignment */
+  flex-direction: column;
+  justify-content: center; /* Center content vertically if space allows */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text within the form */
 }
 
-/* Specific overrides from your custom.html css that need to be fixed or clarified */
-/* These rules below have issues and are likely causing problems */
-/*
-label{
-    border-radius: 50%; /* This makes no sense for a label. Remove it. */
-/* } */
+.form h2 {
+  color: #7b3f00;
+  margin-bottom: 25px;
+  font-size: 2.2em; /* Slightly larger for prominence */
+  line-height: 1.2;
+}
 
-/* This rule is duplicated and also affects all labels. */
-/*
-label{
-    border-radius: 50%; /* Remove */
-/* font-size:1.5rem; /* This is very large for all labels, consider specific labels if needed */
-/* font-weight:500;
-    display:flex; /* This makes labels stretch across */
-/* }
-*/
+/* Fieldset and Legend for grouping form fields */
+fieldset {
+  border: 1px solid #e0e0e0; /* Lighter border for a softer look */
+  border-radius: 15px; /* Softer rounded corners for fieldsets */
+  padding: 25px; /* More padding inside fieldsets */
+  margin-bottom: 25px;
+  background-color: #fcfcfc; /* Very light background for fieldset */
+  width: 100%; /* Fieldset takes full width of the form padding */
+  box-sizing: border-box;
+}
 
-/* Corrected/Improved Label Styles */
+legend {
+  font-size: 1.3em; /* Slightly larger legend */
+  font-weight: bold;
+  color: #a0522d; /* Sienna/earthy orange */
+  padding: 5px 15px; /* More padding for legibility */
+  background-color: #f8f4ed; /* Match body background for a 'cut-out' effect */
+  border-radius: 8px; /* More rounded legend background */
+  text-align: center; /* Center legend text */
+  margin: 0 auto; /* Center the legend itself */
+}
+
+/* Labels - Consistent and readable */
 label {
-    display: block; /* Ensures label takes its own line */
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #8b4513;
-    margin-top: 15px;
-    font-size: 1em; /* Reset or adjust as needed, 1.5rem was too big */
-    border-radius: 0; /* Ensure no unintended border-radius */
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #8b4513; /* Earthy brown for labels */
+  margin-top: 20px; /* More space above labels */
+  font-size: 1.1em; /* Slightly larger font for labels */
+  text-align: left; /* Align labels to the left */
+  width: 100%; /* Ensure label spans its container */
 }
 
-
-/* Input Field Specifics - Correcting issues */
-#fllname, #email, #phone { /* These IDs don't match your HTML (fullName, email, phone) */
-    /* Check your HTML IDs: they are `fullName`, `email`, `phone` */
-    /* Assuming you meant these specific inputs, here's the corrected selector */
-    /* If you want to apply to ALL text inputs, use the generic input[type="text"] etc. rule */
-    /* This rule also had padding: 70px which is massive, and margin: 0 auto; without display:block */
-    width: calc(100% - 22px); /* Maintain width from general rule */
-    padding: 10px; /* Consistent padding */
-    margin-bottom: 15px; /* Consistent margin */
-    /* Remove padding:70px and margin:0 auto; from here */
-}
+/* Placeholder Styling */
 input::placeholder,
 textarea::placeholder {
-  color: #5C3A21;
-  opacity: 1;
-  border-radius: 15px;
-  border: 3px solid;
+  color: #888; /* Softer placeholder color */
+  opacity: 0.8;
+  font-style: italic; /* Optional: adds a subtle touch */
 }
 
-/* Form Element General Styling (Keep these as they are good) */
+/* Input Fields, Textareas, Selects - Refined borders and focus */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -184,16 +195,17 @@ input[type="number"],
 input[type="date"],
 textarea,
 select {
-  width: calc(100% - 22px); /* Account for padding and border */
-  padding: 10px;
+  width: 100%; /* Full width within its parent */
+  padding: 12px 15px; /* More padding for a better feel */
   margin-bottom: 15px;
-  border: 1px solid #b5651d;
-  border-radius: 4px;
+  border: 1px solid #d0d0d0; /* Softer border */
+  border-radius: 8px; /* Rounded corners for inputs */
   font-size: 1em;
   box-sizing: border-box;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff; /* Solid white background for inputs */
+  color: #333;
 }
-
 
 input[type="text"]:focus,
 input[type="email"]:focus,
@@ -202,13 +214,14 @@ input[type="number"]:focus,
 input[type="date"]:focus,
 textarea:focus,
 select:focus {
-  border-color: #b5651d;
+  border-color: #a0522d; /* Highlight on focus with sienna */
   outline: none;
-  box-shadow: 0 0 5px rgba(181, 101, 29, 0.3);
+  box-shadow: 0 0 8px rgba(160, 82, 45, 0.25); /* More prominent focus shadow */
 }
 
 textarea {
   resize: vertical;
+  min-height: 100px; /* Min height for textareas */
 }
 
 /* Radio Buttons and Checkboxes */
@@ -216,6 +229,8 @@ input[type="radio"],
 input[type="checkbox"] {
   margin-right: 8px;
   vertical-align: middle;
+  transform: scale(1.1); /* Slightly larger checkboxes/radios */
+  cursor: pointer;
 }
 
 input[type="radio"] + label,
@@ -223,6 +238,8 @@ input[type="checkbox"] + label {
   display: inline-block;
   margin-bottom: 5px;
   font-weight: normal;
+  color: #555;
+  text-align: left; /* Keep these aligned left with their inputs */
 }
 
 /* Specific styling for "Other" text inputs next to checkboxes/radio buttons */
@@ -230,19 +247,20 @@ input[type="checkbox"] + label {
 #otherCakeFlavor,
 #otherCakeFilling,
 #otherHowHear {
-  width: auto;
-  min-width: 200px;
-  margin-left: 10px;
+  width: 250px; /* Fixed width for better control */
+  min-width: unset; /* Override previous min-width */
+  margin-left: 15px; /* More spacing */
   display: inline-block;
 }
 
 /* File Upload Field */
 input[type="file"] {
-  border: 1px dashed #ccc;
+  border: 1px dashed #b5651d; /* Dashed border from your palette */
   padding: 10px;
   background-color: #fdfdfd;
-  width: calc(100% - 22px);
-  border-radius: 4px;
+  width: 100%; /* Full width */
+  border-radius: 8px; /* Consistent rounded corners */
+  text-align: left; /* Text alignment for file input */
 }
 
 .note {
@@ -251,6 +269,7 @@ input[type="file"] {
   margin-top: -10px;
   margin-bottom: 15px;
   padding-left: 5px;
+  text-align: left;
 }
 
 /* Warning Message for Date */
@@ -261,31 +280,36 @@ input[type="file"] {
   margin-bottom: 15px;
   padding-left: 5px;
   display: none;
+  text-align: left;
 }
 
-/* Submit Button */
+/* Submit Button - More prominent */
 button[type="submit"] {
   display: block;
-  width: 100%;
-  padding: 15px;
-  background-color: #a0522d;
-  color: rgb(255, 255, 255);
+  width: 80%; /* Slightly less than 100% to create space */
+  max-width: 300px; /* Max width for larger screens */
+  padding: 18px; /* Larger padding for a more inviting button */
+  background-color: #a0522d; /* Sienna/earthy orange */
+  color: white;
   border: none;
-  border-radius: 5px;
-  font-size: 1.2em;
+  border-radius: 12px; /* More rounded button */
+  font-size: 1.3em; /* Larger font */
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-top: 30px;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  margin-top: 40px; /* More space above the button */
+  box-shadow: 0 6px 10px rgba(160, 82, 45, 0.3); /* Subtle shadow */
 }
 
 button[type="submit"]:hover {
-  background-color: #8b4513;
-  transform: translateY(-2px);
+  background-color: #8b4513; /* Darker brown on hover */
+  transform: translateY(-3px); /* More pronounced lift */
+  box-shadow: 0 8px 15px rgba(139, 69, 19, 0.4); /* Stronger shadow on hover */
 }
 
 button[type="submit"]:active {
   transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Confirmation Message */
@@ -293,96 +317,125 @@ button[type="submit"]:active {
   background-color: #e6ffe6;
   border: 1px solid #4CAF50;
   color: #333;
-  padding: 25px;
-  border-radius: 8px;
+  padding: 30px; /* More padding */
+  border-radius: 15px; /* Rounded corners */
   text-align: center;
-  margin-top: 20px;
+  margin-top: 30px;
   display: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 #confirmationMessage h3 {
   color: #4CAF50;
   margin-top: 0;
-  font-size: 1.8em;
+  font-size: 2em;
 }
 
 #confirmationMessage p {
-  font-size: 1.1em;
+  font-size: 1.2em;
   line-height: 1.8;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .form {
-    padding: 20px;
-    margin: 40vh auto 20px; /* Adjust for smaller screens */
+  .logo-img {
+    padding: 15px 0;
   }
-
   .logo-img .img1 {
     max-width: 150px;
   }
 
   .background {
-    height: 40vh;
+    height: 70vh; /* Adjust hero height for smaller screens */
+    margin-top: 70px; /* Adjust for smaller fixed logo height */
+  }
+
+  .button-group {
+    top: 65%; /* Adjust button position in hero for smaller screens */
   }
 
   .button-small {
     padding: 10px 20px;
     font-size: 0.9em;
   }
+
+  .form {
+    padding: 25px; /* Less padding on smaller screens */
+    width: 90%; /* Wider form on smaller screens */
+    border-radius: 80px / 40px; /* Adjust roundness for smaller screens */
+    margin: 30px auto 30px; /* Adjust margin after hero */
+  }
+  fieldset {
+    padding: 18px;
+    border-radius: 10px;
+  }
+  legend {
+    font-size: 1.2em;
+    padding: 3px 10px;
+  }
+  label {
+    font-size: 1em;
+    margin-top: 15px;
+  }
+  input[type="text"], input[type="email"], input[type="tel"],
+  input[type="number"], input[type="date"], textarea, select {
+    padding: 10px 12px;
+    border-radius: 6px;
+  }
+  button[type="submit"] {
+    width: 90%;
+    padding: 15px;
+    font-size: 1.1em;
+    border-radius: 10px;
+  }
 }
 
 @media (max-width: 480px) {
-  .form {
-    padding: 15px;
-    margin: 35vh auto 15px;
+  .logo-img {
+    padding: 10px 0;
   }
-
   .logo-img .img1 {
     max-width: 120px;
   }
 
   .background {
-    height: 35vh;
+    height: 60vh;
+    margin-top: 60px;
   }
 
-  h2 {
-    font-size: 1.6em;
+  .button-small {
+    padding: 8px 15px;
+    font-size: 0.8em;
   }
 
-  legend {
-    font-size: 1.1em;
+  .form {
+    padding: 20px;
+    margin: 20px auto 20px;
+    border-radius: 60px / 30px; /* Even tighter roundness for very small screens */
   }
-
-  button[type="submit"] {
-    font-size: 1em;
+  fieldset {
     padding: 12px;
   }
-}
-
-/* Remove or review these, as they are likely causing issues or are unnecessary */
-/*
-.cakeInquiryForm {
-    display:flex;
-    flex-direction:column;
-}
-*/
-
-/* If you still want to customize the main scrollbar (body/html), apply these to body or html */
-body::-webkit-scrollbar {
-  width: 8px;
-}
-
-body::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: #b5651d;
-  border-radius: 10px;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-  background: #8b4513;
+  legend {
+    font-size: 1em;
+    padding: 2px 8px;
+  }
+  label {
+    font-size: 0.9em;
+    margin-top: 10px;
+  }
+  input[type="text"], input[type="email"], input[type="tel"],
+  input[type="number"], input[type="date"], textarea, select {
+    padding: 8px 10px;
+    border-radius: 5px;
+  }
+  button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    border-radius: 8px;
+  }
+  h2 {
+    font-size: 1.8em;
+  }
 }
