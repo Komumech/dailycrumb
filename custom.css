@@ -177,7 +177,7 @@ label {
   font-weight: 600;
   color: #8b4513; /* Earthy brown for labels */
   margin-top: 20px; /* More space above labels */
-  font-size: 1.em; /* Slightly larger font for labels */
+  font-size: 1.02em; /* Slightly larger font for labels */
   text-align: left; /* Align labels to the left */
   width: 100%; /* Ensure label spans its container */
 }
