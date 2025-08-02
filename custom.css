@@ -106,18 +106,19 @@ body {
 .form {
   /* Using values closer to what you had in the first block for the .form,
      but adding background image properties. */
-  background-color: #ffffffd0; /* Slightly transparent white for content to be readable over bg image */
+  background-color: #fffffff7; /* Slightly transparent white for content to be readable over bg image */
   background-image: url("bg8.png"); /* Your desired background image */
   background-size: cover; /* Cover the entire form area */
   background-position: center; /* Center the background image */
   background-repeat: no-repeat; /* Do not repeat the image */
   padding: 30px;
+  
   /* Use a consistent margin-top based on the background image height (50vh) */
-  margin: 45vh auto 20px; /* Adjusted to sit below the 50vh background + some overlap */
+  margin: 100vh auto 20px; /* Adjusted to sit below the 50vh background + some overlap */
   border-radius: 28px; /* From your custom.html css */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   max-width: 800px;
-  width: 90%;
+  width: 80%;
   position: relative;
   z-index: 2;
 
