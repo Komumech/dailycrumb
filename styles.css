@@ -1681,3 +1681,39 @@ button[type="submit"]:active {
     padding: 12px;
   }
 }
+/* Add or modify this existing rule in your styles.css */
+.form {
+  background-color: #fff;
+  margin: 40vh auto 20px;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 90%;
+  position: relative;
+  z-index: 2;
+
+  /* --- Scrollbar Properties Added Here --- */
+  max-height: 70vh; /* Set a maximum height for the form div */
+  overflow-y: auto; /* Enable vertical scrolling when content exceeds max-height */
+  /* --- End Scrollbar Properties --- */
+}
+
+/* Optional: Customize the scrollbar appearance (for Webkit browsers like Chrome/Safari) */
+.form::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.form::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+  border-radius: 10px;
+}
+
+.form::-webkit-scrollbar-thumb {
+  background: #b5651d; /* Color of the scrollbar thumb (the draggable part) */
+  border-radius: 10px;
+}
+
+.form::-webkit-scrollbar-thumb:hover {
+  background: #8b4513; /* Color of the scrollbar thumb on hover */
+}
