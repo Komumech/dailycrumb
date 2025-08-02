@@ -61,7 +61,7 @@ body::-webkit-scrollbar-thumb {
 /* --- Background --- */
 .background {
     z-index: -3;
-    margin-left: 0remh;
+    margin-left: 0rem;
     width: 100%;
     height: 600px;
     object-fit: cover;
