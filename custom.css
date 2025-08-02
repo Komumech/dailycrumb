@@ -8,6 +8,7 @@ html, body {
   background-color: #f8f4ed; /* Light cream/off-white for a warm bakery feel */
   color: #333;
   line-height: 1.6;
+  f
   overflow-x: hidden; /* Prevent horizontal scrolling */
   overflow-y: auto; /* Let HTML/body manage vertical scrolling */
   scroll-behavior: smooth; /* Optional: smooth scrolling for anchor links */
