@@ -1324,7 +1324,10 @@ circle newsletter:hover{
         justify-content: center;
         height: 50px;
     }
-    .ba
+    .background{
+        height: 100vh;
+        width: 100%;
+    }
     
 }
 
