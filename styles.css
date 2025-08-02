@@ -279,7 +279,7 @@ body::-webkit-scrollbar-thumb {
 /* --- Order Button --- */
 .order-button {
     position: absolute;
-    top: 20%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #d9a441;
@@ -369,9 +369,14 @@ body::-webkit-scrollbar-thumb {
 .order-class {
     margin: 0 auto;
 }
-
+.order-class{
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
 .order {
-    position: relative;
     width: 350px;
     height: 350px;
     background-color: #d9a441;
