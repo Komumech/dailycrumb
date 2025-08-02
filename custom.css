@@ -53,7 +53,7 @@ body::-webkit-scrollbar-thumb:hover {
 .logo-img {
   text-align: center;
   padding: 15px 0; /* Slightly reduced padding */
-  background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white for readability over content */
+  background-color: rgba(255, 255, 255, 0); /* Semi-transparent white for readability over content */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   position: fixed; /* Stays at the top */
   top: 0;
@@ -70,7 +70,7 @@ body::-webkit-scrollbar-thumb:hover {
     background-image: url('https://example.com/your-background-image.jpg'); /* Replace withh
     a valid image URL */
     background-size: cover; 
-    
+
 }
 /* Background Image Carousel Section - Full viewport height hero */
 .background {
