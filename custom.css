@@ -208,6 +208,464 @@ select {
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
   background-color: #fff; /* Solid white background for inputs */
   color: #333;
+}/* General Body Styles - This manages the primary page scroll */
+html, body {
+  height: 100%; /* Ensure html and body take full height for consistent scrolling */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f4ed; /* Light cream/off-white for a warm bakery feel */
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto; /* Let HTML/body manage vertical scrolling */
+  scroll-behavior: smooth; /* Optional: smooth scrolling for anchor links */
+}
+
+/* Custom Scrollbar for Webkit browsers (Chrome, Safari, new Edge) */
+body::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #b5651d; /* Color of the scrollbar thumb (the draggable part) */
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: #8b4513; /* Color of the scrollbar thumb on hover */
+}
+
+
+/* Container for overall layout - No overflow properties here */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  /* Removed overflow: hidden; */ /* Critical for single scrollbar */
+}
+
+/* Scroll Wrapper - This should just wrap content, no scrolling */
+.scroll-wrapper {
+  flex-grow: 1;
+  /* IMPORTANT: Removed overflow-y: auto; */ /* Critical for single scrollbar */
+  position: relative;
+  z-index: 1;
+  padding-bottom: 50px;
+}
+
+/* Logo Styling - Fixed transparent header, but readable */
+.logo-img {
+  text-align: center;
+  padding: 20px 0;
+  background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white for readability over content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  position: fixed; /* Stays at the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Spans full width */
+  z-index: 100; /* High z-index to be on top of everything */
+}
+
+.logo-img .img1 {
+  max-width: 180px;
+  height: auto;
+}
+
+/* Background Image Carousel Section - Full viewport height hero */
+.background {
+  position: relative; /* Relative position to flow with content */
+  width: 100%;
+  height: 100vh; /* Full viewport height hero section */
+  overflow: hidden; /* Keep hidden for carousel image transitions */
+  z-index: 0; /* Behind other content */
+  margin-top: 80px; /* Pushes background down, accounting for fixed logo height (adjust if needed) */
+}
+
+.bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease-in-out;
+  opacity: 1;
+}
+
+.bg-img.fade-out {
+  opacity: 0;
+}
+
+/* Button Group (e.g., "Step Inside Our Bakery") - positioned within the hero */
+.button-group {
+  position: absolute;
+  top: 50%; /* Center vertically within the background */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  text-align: center;
+  width: 100%;
+}
+
+.button-small {
+  background-color: #b5651d; /* Earthy brown */
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9em; /* Reduced from 1em */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button-small:hover {
+  background-color: #8b4513; /* Darker brown on hover */
+  transform: translateY(-2px);
+}
+
+/* Form Section - Styled with a circular/oval aesthetic */
+.form {
+  background-color: #fff; /* Solid white background for the form content */
+  padding: 40px; /* Increased padding for more space within the shape */
+  border-radius: 100px / 50px; /* Creates an oval shape (horizontal / vertical radius) */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Stronger, softer shadow for depth */
+  max-width: 700px; /* Slightly narrower for a more contained look */
+  width: 85%; /* Responsive width */
+  margin: 50px auto 50px; /* Margin after the hero section, centered */
+  position: relative; /* Standard positioning */
+  z-index: 2; /* Ensures form is above background */
+  overflow: hidden; /* Important to contain content within rounded borders */
+  display: flex; /* Use flexbox for inner form alignment */
+  flex-direction: column;
+  justify-content: center; /* Center content vertically if space allows */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text within the form */
+}
+
+.form h2 {
+  color: #7b3f00;
+  margin-bottom: 25px;
+  font-size: 1.8em; /* Reduced from 2.2em (approx. 18% reduction) */
+  line-height: 1.2;
+}
+
+/* Fieldset and Legend for grouping form fields */
+fieldset {
+  border: 1px solid #e0e0e0; /* Lighter border for a softer look */
+  border-radius: 15px; /* Softer rounded corners for fieldsets */
+  padding: 25px; /* More padding inside fieldsets */
+  margin-bottom: 25px;
+  background-color: #fcfcfc; /* Very light background for fieldset */
+  width: 100%; /* Fieldset takes full width of the form padding */
+  box-sizing: border-box;
+}
+
+legend {
+  font-size: 1.1em; /* Reduced from 1.3em (approx. 15% reduction) */
+  font-weight: bold;
+  color: #a0522d; /* Sienna/earthy orange */
+  padding: 5px 15px; /* More padding for legibility */
+  background-color: #f8f4ed; /* Match body background for a 'cut-out' effect */
+  border-radius: 8px; /* More rounded legend background */
+  text-align: center; /* Center legend text */
+  margin: 0 auto; /* Center the legend itself */
+}
+
+/* Labels - Consistent and readable */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #8b4513; /* Earthy brown for labels */
+  margin-top: 20px; /* More space above labels */
+  font-size: 0.9em; /* Reduced from 1.1em (approx. 18% reduction) */
+  text-align: left; /* Align labels to the left */
+  width: 100%; /* Ensure label spans its container */
+}
+
+/* Placeholder Styling */
+input::placeholder,
+textarea::placeholder {
+  color: #888; /* Softer placeholder color */
+  opacity: 0.8;
+  font-style: italic; /* Optional: adds a subtle touch */
+}
+
+/* Input Fields, Textareas, Selects - Refined borders and focus */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+textarea,
+select {
+  width: 100%; /* Full width within its parent */
+  padding: 12px 15px; /* More padding for a better feel */
+  margin-bottom: 15px;
+  border: 1px solid #d0d0d0; /* Softer border */
+  border-radius: 8px; /* Rounded corners for inputs */
+  font-size: 0.9em; /* Reduced from 1em */
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff; /* Solid white background for inputs */
+  color: #333;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #a0522d; /* Highlight on focus with sienna */
+  outline: none;
+  box-shadow: 0 0 8px rgba(160, 82, 45, 0.25); /* More prominent focus shadow */
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px; /* Reduced from 100px */
+}
+
+/* Radio Buttons and Checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 8px;
+  vertical-align: middle;
+  transform: scale(1); /* Reduced from 1.1, back to normal size */
+  cursor: pointer;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-weight: normal;
+  color: #555;
+  text-align: left; /* Keep these aligned left with their inputs */
+  font-size: 0.9em; /* Reduced from 1em */
+}
+
+/* Specific styling for "Other" text inputs next to checkboxes/radio buttons */
+#otherEventType,
+#otherCakeFlavor,
+#otherCakeFilling,
+#otherHowHear {
+  width: 200px; /* Reduced from 250px */
+  margin-left: 15px; /* More spacing */
+  display: inline-block;
+}
+
+/* File Upload Field */
+input[type="file"] {
+  border: 1px dashed #b5651d; /* Dashed border from your palette */
+  padding: 8px; /* Reduced from 10px */
+  background-color: #fdfdfd;
+  width: 100%; /* Full width */
+  border-radius: 8px; /* Consistent rounded corners */
+  font-size: 0.9em; /* Reduced from 1em */
+  text-align: left; /* Text alignment for file input */
+}
+
+.note {
+  font-size: 0.75em; /* Reduced from 0.85em */
+  color: #777;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  padding-left: 5px;
+  text-align: left;
+}
+
+/* Warning Message for Date */
+#dateWarning {
+  font-size: 0.8em; /* Reduced from 0.9em */
+  color: #d9534f;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  padding-left: 5px;
+  display: none;
+  text-align: left;
+}
+
+/* Submit Button - More prominent */
+button[type="submit"] {
+  display: block;
+  width: 80%; /* Slightly less than 100% to create space */
+  max-width: 250px; /* Reduced from 300px */
+  padding: 15px; /* Reduced from 18px */
+  background-color: #a0522d; /* Sienna/earthy orange */
+  color: white;
+  border: none;
+  border-radius: 12px; /* More rounded button */
+  font-size: 1.1em; /* Reduced from 1.3em */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  margin-top: 30px; /* Reduced from 40px */
+  box-shadow: 0 6px 10px rgba(160, 82, 45, 0.3); /* Subtle shadow */
+}
+
+button[type="submit"]:hover {
+  background-color: #8b4513; /* Darker brown on hover */
+  transform: translateY(-3px); /* More pronounced lift */
+  box-shadow: 0 8px 15px rgba(139, 69, 19, 0.4); /* Stronger shadow on hover */
+}
+
+button[type="submit"]:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Confirmation Message */
+#confirmationMessage {
+  background-color: #e6ffe6;
+  border: 1px solid #4CAF50;
+  color: #333;
+  padding: 25px; /* Reduced from 30px */
+  border-radius: 15px; /* Rounded corners */
+  text-align: center;
+  margin-top: 20px;
+  display: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#confirmationMessage h3 {
+  color: #4CAF50;
+  margin-top: 0;
+  font-size: 1.6em; /* Reduced from 2em */
+}
+
+#confirmationMessage p {
+  font-size: 1em; /* Reduced from 1.2em */
+  line-height: 1.8;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .logo-img {
+    padding: 15px 0;
+  }
+  .logo-img .img1 {
+    max-width: 150px;
+  }
+
+  .background {
+    height: 70vh; /* Adjust hero height for smaller screens */
+    margin-top: 70px; /* Adjust for smaller fixed logo height */
+  }
+
+  .button-group {
+    top: 65%; /* Adjust button position in hero for smaller screens */
+  }
+
+  .button-small {
+    padding: 8px 18px; /* Reduced padding */
+    font-size: 0.8em; /* Reduced from 0.9em */
+  }
+
+  .form {
+    padding: 20px; /* Less padding on smaller screens */
+    width: 90%; /* Wider form on smaller screens */
+    border-radius: 80px / 40px; /* Adjust roundness for smaller screens */
+    margin: 25px auto 25px; /* Adjusted margin after hero */
+  }
+  fieldset {
+    padding: 15px; /* Reduced from 18px */
+    border-radius: 10px;
+  }
+  legend {
+    font-size: 1em; /* Reduced from 1.2em */
+    padding: 3px 10px;
+  }
+  label {
+    font-size: 0.85em; /* Reduced from 1em */
+    margin-top: 12px; /* Reduced from 15px */
+  }
+  input[type="text"], input[type="email"], input[type="tel"],
+  input[type="number"], input[type="date"], textarea, select {
+    padding: 8px 10px; /* Reduced from 10px 12px */
+    border-radius: 6px;
+    font-size: 0.85em; /* Reduced from 0.9em */
+  }
+  button[type="submit"] {
+    width: 90%;
+    padding: 12px; /* Reduced from 15px */
+    font-size: 1em; /* Reduced from 1.1em */
+    border-radius: 10px;
+  }
+  #confirmationMessage {
+      padding: 20px; /* Reduced from 25px */
+  }
+  #confirmationMessage h3 {
+      font-size: 1.4em; /* Reduced from 1.6em */
+  }
+  #confirmationMessage p {
+      font-size: 0.9em; /* Reduced from 1em */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-img {
+    padding: 10px 0;
+  }
+  .logo-img .img1 {
+    max-width: 120px;
+  }
+
+  .background {
+    height: 60vh;
+    margin-top: 60px;
+  }
+
+  .button-small {
+    padding: 6px 12px; /* Reduced from 8px 15px */
+    font-size: 0.7em; /* Reduced from 0.8em */
+  }
+
+  .form {
+    padding: 15px; /* Reduced from 20px */
+    margin: 15px auto 15px; /* Reduced from 20px */
+    border-radius: 60px / 30px;
+  }
+  fieldset {
+    padding: 10px; /* Reduced from 12px */
+  }
+  legend {
+    font-size: 0.9em; /* Reduced from 1em */
+    padding: 2px 8px;
+  }
+  label {
+    font-size: 0.8em; /* Reduced from 0.9em */
+    margin-top: 8px; /* Reduced from 10px */
+  }
+  input[type="text"], input[type="email"], input[type="tel"],
+  input[type="number"], input[type="date"], textarea, select {
+    padding: 6px 8px; /* Reduced from 8px 10px */
+    border-radius: 5px;
+    font-size: 0.8em; /* Reduced from 0.85em */
+  }
+  textarea {
+    min-height: 60px; /* Reduced from 80px */
+  }
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px; /* Reduced from 12px */
+    font-size: 0.9em; /* Reduced from 1em */
+    border-radius: 8px;
+  }
+  #confirmationMessage {
+      padding: 15px; /* Reduced from 20px */
+  }
+  #confirmationMessage h3 {
+      font-size: 1.2em; /* Reduced from 1.4em */
+  }
+  #confirmationMessage p {
+      font-size: 0.8em; /* Reduced from 0.9em */
+  }
 }
 
 input[type="text"]:focus,
