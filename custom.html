@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Daily Crumb - Your Custom Order</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="scroll-wrapper">
+        <div class="logo-img">
+          <img src="logo3.png" alt="Daily Crumb Bakery Logo" class="img1" />
+        </div>
+
+        <div class="background">
+          <div class="button-group">
+            <button class="button-small">Step Inside Our Bakery</button>
+          </div>
+          <img
+            id="dynamicBackground"
+            class="bg-img"
+            src=""
+            alt="Bakery Background Image"
+          />
+          <!-- Any other content that overlays this background (e.g., your logo, tag-line, buttons) -->
+          <!-- would go here, *inside* the .background div but *after* the <img> tag -->
+        </div>
+<div class="form">
+    
+</div>
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const dynamicBackground =
+              document.getElementById("dynamicBackground");
+
+            // Array of image links to cycle through
+            const imageLinks = [
+              "https://images.pexels.com/photos/3468822/pexels-photo-3468822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", // Warm Sourdough Loaves
+              "https://images.pexels.com/photos/1090638/pexels-photo-1090638.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", // Assortment of Pastries
+              "https://images.pexels.com/photos/1327118/pexels-photo-1327118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", // Rustic Baked Goods
+              "https://images.pexels.com/photos/302894/pexels-photo-302894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", // Coffee and Croissant
+              "https://images.pexels.com/photos/1327124/pexels-photo-1327124.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", // Decorated Cake
+              "https://images.pexels.com/photos/1770381/pexels-photo-1770381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", // Flaky Butter Croissant
+              "https://images.pexels.com/photos/265386/pexels-photo-265386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", // Custom Celebration Cake
+              "https://images.pexels.com/photos/4052320/pexels-photo-4052320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", // Hands Working with Dough
+              "https://images.pexels.com/photos/103566/pexels-photo-103566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", // Cozy Bakery Interior
+              "https://images.pexels.com/photos/1640523/pexels-photo-1640523.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", // Rustic Artisan Bread Loaves
+              "https://images.pexels.com/photos/134057/pexels-photo-134057.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", // Freshly Baked Pastries
+              "https://images.pexels.com/photos/4052321/pexels-photo-4052321.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", // Sourdough Crumb Close-up
+              "https://images.pexels.com/photos/4052324/pexels-photo-4052324.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", // Baker's Hands Dusting Flour
+              "https://images.pexels.com/photos/134058/pexels-photo-134058.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", // Variety of Baked Goods
+            ];
+
+            let currentIndex = 0;
+            const fadeDuration = 400; // Matches your CSS transition for opacity (0.4s)
+            const displayDuration = 9600; // 10 seconds total cycle (10000ms - 400ms fade)
+
+            // Set the initial image
+            dynamicBackground.src = imageLinks[currentIndex];
+
+            function changeImage() {
+              // 1. Start fade-out
+              dynamicBackground.classList.add("fade-out");
+
+              // 2. After fade-out completes, change the image source
+              setTimeout(() => {
+                currentIndex = (currentIndex + 1) % imageLinks.length; // Cycle to the next image
+                dynamicBackground.src = imageLinks[currentIndex];
+
+                // 3. Remove fade-out and allow fade-in
+                dynamicBackground.classList.remove("fade-out");
+                // The CSS transition on .bg-img will handle the fade-in automatically
+              }, fadeDuration); // Wait for the fade-out duration
+            }
+
+            // Start the carousel
+            setInterval(changeImage, displayDuration + fadeDuration); // Total cycle time (display + fade)
+          });
+        </script>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
