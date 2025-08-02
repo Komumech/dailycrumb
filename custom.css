@@ -22,23 +22,7 @@ body::-webkit-scrollbar-track {
   background: #f1f1f1; /* Color of the scrollbar track */
   border-radius: 10px;
 }
-body::-webkit-scrollbar-thumb {
-  background: #b5651d; /* Color of the scrollbar thumb (the draggable part) */
-  border-radius: 10px;
-}
-body::-webkit-scrollbar-thumb:hover {
-  background: #8b4513; /* Color of the scrollbar thumb on hover */
-}
-
-
-/* Container for overall layout - No overflow properties here */
-.container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  position: relative;
-  /* Removed overflow: hidden; */ /* Critical for single scrollbar */
-}
+body::-webkit-
 
 /* Scroll Wrapper - This should just wrap content, no scrolling */
 .scroll-wrapper {
