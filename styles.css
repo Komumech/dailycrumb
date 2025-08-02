@@ -1340,7 +1340,19 @@ circle newsletter:hover{
 label{
     border-radius: 50%;
 }
+label{
+    border-radius: 50%;
+    font-size:1.5rem;
+    font-weight:500;
+    display:flex;
+}
 #fllname, #email, #phone{
-    width: 70px;
-    margin: 0 auto;
+    width:600px;
+    padding:70px
+    margin:0 auto;
+}
+.cakeInquiryForm{
+    display:flex;
+    flex-direction:column;
+    
 }
