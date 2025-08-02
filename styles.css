@@ -374,6 +374,7 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
     margin: 0 auto;
     display: flex;
+    height:360px;
     flex-direction: row;
 }
 .order {
@@ -387,7 +388,6 @@ body::-webkit-scrollbar-thumb {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    margin-top: 0px;
     cursor: pointer;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     transition: background-color 0.3s;
