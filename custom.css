@@ -104,6 +104,7 @@ body {
 /* Form Section */
 /* Reconciling your original form styles with the new ones */
 .form {
+    
   /* Using values closer to what you had in the first block for the .form,
      but adding background image properties. */
   background-color: #fffffff7; /* Slightly transparent white for content to be readable over bg image */
