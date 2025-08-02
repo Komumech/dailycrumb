@@ -68,7 +68,8 @@ body::-webkit-scrollbar-thumb:hover {
 }
 .content{
     background-image: url('https://example.com/your-background-image.jpg'); /* Replace withh
-    
+    a valid image URL */
+    back
 }
 /* Background Image Carousel Section - Full viewport height hero */
 .background {
