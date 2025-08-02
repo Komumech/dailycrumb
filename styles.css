@@ -1328,3 +1328,19 @@ circle newsletter:hover{
 
 
 
+
+/*custom.html css*/
+
+.form{
+    background-image: url("bg8.png");
+    height: 700px;
+    padding: 30px;
+    margin: 360px 30px;
+}
+label{
+    border-radius: 50%;
+}
+#fllname, #email, #phone{
+    width: 70px;
+    margin: ;
+}
