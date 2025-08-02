@@ -107,7 +107,7 @@ body {
   /* Using values closer to what you had in the first block for the .form,
      but adding background image properties. */
   background-color: #fffffff7; /* Slightly transparent white for content to be readable over bg image */
-  background-image: url("bg8.png"); /* Your desired background image */
+  background-image: url(https://brilliant-kleicha-4fa21a.netlify.app/bg8.png); /* Your desired background image */
   background-size: cover; /* Cover the entire form area */
   background-position: center; /* Center the background image */
   background-repeat: no-repeat; /* Do not repeat the image */
