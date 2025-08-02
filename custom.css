@@ -109,16 +109,7 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: #b5651d; /* Earthy brown */
   color: #fff;
   padding: 10px 20px; /* Reduced padding */
-  border: none;
-  border-radius: 5px;
-  font-size: 0.8em; /* Further reduced from 0.9em */
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.button-small:hover {
-  background-color: #8b4513; /* Darker brown on hov
+  border: 
 /* Form Section - Styled with a circular/oval aesthetic */
 .form {
   background-color: #fff; /* Solid white background for the form content */
