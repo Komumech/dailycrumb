@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Daily Crumb - Your Artisan Bakery</title>
+</head>
+<body>
+    <div id="splash-screen">
+        <video src="0715.mov" autoplay loop muted playsinline poster="coverimg.png" class="video" preload="auto"></video>
+    </div>
+    <div class="scroll-wrapper">
+        <div class="logo-img">
+            <img src="https://brilliant-kleicha-4fa21a.netlify.app/logo3.png" alt="Daily Crumb Bakery Logo" class="img1">
+        </div>
+        <div class="container">
+            <div class="bg-img">
+                <button class="order-button">Begin Your Culinary Journey</button>
+                <img src="bg.png" alt="Delicious baked goods background" class="background">
+                <div class="button-div">
+                    <button id="change" class="change-button"><img src="arrow.png"></button>
+                </div>
+                <div class="button-group">
+                    <a href="custom.html"><button class="button-large">Craft Your Dream Cake</button></a>
+                    <button class="button-small">Step Inside Our Bakery</button>
+                </div>
+                <p class="tag-line">“Every loaf, every pastry, crafted with passion. We believe in the magic of organic ingredients and the heart that goes into every bake. Experience true artisan quality.”</p>
+            </div>
+            <div class="order-class">
+                <div class="order">
+                    <p>Ready to savor creations born from true passion? Start your order and taste the difference.</p>
+                    <button id="generateIdeaBtn">Get Started</button>
+                    <div id="orderNowFollower">Order Now</div>
+                </div>
+
+                <div id="geminiOutput"></div>
+            </div>
+
+            <div class="onscroll">
+
+            </div>
+        </div>
+        <section class="video-scrollbar">
+            <h2>Fresh From Our Oven: A Glimpse into Daily Crumb</h2>
+            <div class="video-container">
+                <iframe width="315" height="560"
+                    src="https://www.youtube.com/embed/8bfCSdCti0c"
+                    title="Discover the magic behind our bakes"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+                <iframe width="315" height="560" src="https://www.youtube.com/embed/xnLlMnbIwjg" title="The art of perfect pastry at Daily Crumb" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="315" height="560" src="https://www.youtube.com/embed/8bfCSdCti0c" title="Behind the scenes: our daily baking process" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="315" height="560" src="https://www.youtube.com/embed/tzcrzxYGfrI" title="Crafting happiness, one bake at a time" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="315" height="560" src="https://www.youtube.com/embed/GKYIdRenBYk" title="Our passion for baking, shared with you" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="315" height="560" src="https://www.youtube.com/embed/xRrMbEiUyS8" title="Experience the taste of tradition" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="315" height="560" src="https://www.youtube.com/embed/xBaBabcupwk" title="Why our bread is a cut above the rest" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="315" height="560" src="https://www.youtube.com/embed/r-N7Mqtn3Tk" title="The secret to our perfectly proofed dough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                
+                <iframe width="315" height="560" src="https://www.youtube.com/embed/sCDXNC4aXSY" title="Artful baking from our hands to your home" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+        <div class="comm">
+            <div><h2>Hear It From Our Delighted Customers</h2></div><div>
+
+            <div class="comments" id="newcomm">
+
+                <div>
+                    <div class="comment">
+                        <img src="pers1.png" alt="Customer Photo Sarah J." class="customer-photo">
+                        <p>"Daily Crumb is undeniably the heart of baking in this town. Their pastries are a symphony of fresh flavors. A definitive recommendation for anyone seeking pure joy in every bite."</p>
+                        <span>- Sarah J. (Local Food Enthusiast)</span>
+                    </div>
+                    <div class="comment">
+                        <img src="pers4.png" alt="Customer Photo Mike T." class="customer-photo">
+                        <p>"They transformed my birthday into an unforgettable celebration with a cake that was both breathtakingly beautiful and unbelievably delicious."</p>
+                        <span>- Mike T. (Celebration Architect)</span>
+                    </div>
+                    <div class="comment">
+                        <img src="pers5.png" alt="Customer Photo Emily R." class="customer-photo">
+                        <p>"Stepping into Daily Crumb is always an exceptionally warm and inviting experience. From their genuinely kind service to their exquisite array of artisan breads and sweet indulgences."</p>
+                        <span>- Emily R. (Cherished Regular)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="meet-wrapper">
+    <h2>Meet the Talented Hands Behind Daily Crumb</h2>
+    <div class="meet-carousel">
+        <div class="team-member active"
+             data-name="Emily Johnson"
+             data-role="Customer Service Maestro"
+             data-bio="Emily ensures every interaction with Daily Crumb is as warm and comforting as our freshly baked goods. Her dedication to crafting seamless and joyful experiences makes every order a pleasure."
+             data-photo="pers1.png">
+            <img src="emily.png" class="team-photo" alt="Emily Johnson, Customer Service Maestro">
+        </div>
+        <div class="team-member"
+             data-name="Michael Chen"
+             data-role="Artisan Bread Visionary"
+             data-bio="Michael, our master baker, breathes life into every loaf of sourdough and artisan bread. His meticulous craft and embrace of traditional techniques unlock the true soul of each bake."
+             data-photo="pers2.png">
+            <img src="micheal.png" class="team-photo" alt="Michael Chen, Artisan Bread Visionary">
+        </div>
+        <div class="team-member"
+             data-name="Emily R."
+             data-role="Head Pastry Alchemist"
+             data-bio="Emily's boundless creativity and profound expertise transform simple ingredients into edible works of art. She constantly conjures new, enchanting flavors, keeping our pastry counter a realm of delightful discovery."
+             data-photo="pers3.png">
+            <img src="emilyr.png" class="team-photo" alt="Sarah Lee, Head Pastry Alchemist">
+        </div>
+        <div class="team-member"
+             data-name="Jane Smith"
+             data-role="Logistics Architect"
+             data-bio="Jane is the unseen force ensuring our freshly baked treasures reach you perfectly, on time, every time. Her precision and dedication are the foundation of Daily Crumb's seamless journey from our oven to your home."
+             data-photo="pers4.png">
+            <img src="jane.png" class="team-photo" alt="David Green, Logistics Architect">
+        </div>
+        <div class="team-member"
+             data-name="Jessica White"
+             data-role="Flavor Innovator"
+             data-bio="Jessica, our culinary explorer, continuously experiments with the finest organic ingredients to unearth bold, new taste experiences. Her inventive spirit keeps our menu vibrant and our customers delighted with every fresh creation."
+             data-photo="pers5.png">
+            <img src="Gemini_Generated_Image_rt5c8srt5c8srt5c.png" class="team-photo" alt="Jessica White, Flavor Innovator">
+        </div>
+    </div>
+
+    <div class="spotlight-info">
+        <h3 id="spotlight-name"></h3>
+        <p id="spotlight-role"></p>
+        <p class="bio"></p>
+    </div>
+</div>
+
+    <div class="circle-feedback">
+        <div class="circle newsletter" onclick="bringToFront('newsletter')" >
+            <h3>Join Our Journey: The Daily Crumb Newsletter</h3>
+            <p>Unlock a world of exclusive delights: special offers, exciting new creations, and inspiring baking tips, delivered right to your inbox.</p>
+            <input type="email" placeholder="Your Email Address" />
+            <button id="Subscribe">Subscribe Now</button>
+        </div>
+
+       <div class="circle comments" onclick="bringToFront('comments')" id="circomm">
+            <h3>Share Your Feedback</h3>
+            <p>We value your experience at Daily Crumb. Your insights help us enhance our offerings and service.</p>
+            <input type="text" placeholder="Your name" />
+            <textarea placeholder="Your message..." id="message"></textarea>
+            <button id="sendbtn">Send</button>
+        </div>
+    </div>
+
+    <div class="foot">
+        <img src="logo3.png" alt="Daily Crumb Bakery Footer Logo" class="footer-logo">
+        <p>© 2025 Daily Crumb Bakery. All rights reserved. | Crafted with passion, baked with heart in Lagos, Nigeria.</p>
+        <div class="social-links">
+            <a href="#" aria-label="Facebook"><img src="facebook.png" alt="Facebook"></a>
+            <a href="#" aria-label="Instagram"><img src="instagram.png" alt="Instagram"></a>
+            <a href="#" aria-label="Twitter"><img src="twitter.png" alt="Twitter"></a>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>

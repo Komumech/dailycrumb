@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delightful 3D Cake Builder</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background-color: #FFF9F3;
+      font-family: 'Raleway', sans-serif;
+    }
+    canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    #priceDisplay {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: #fff;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      color: #5C3A21;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="renderCanvas"></canvas>
+  <div id="priceDisplay">₦0</div>
+
+  <script src="https://cdn.babylonjs.com/babylon.js"></script>
+  <script src="https://cdn.babylonjs.com/gui/babylon.gui.min.js"></script>
+
+  <div class="cake-layout">
+    <canvas id="renderCanvas"></canvas>
+    <div class="sidebar">
+      <h3>Your Toppings</h3>
+      <button>Add Cherry</button>
+      <button>Add Chocolate</button>
+
+      <h3>Flavor</h3>
+      <select id="flavorSelect">
+        <option>Vanilla</option>
+        <option>Chocolate</option>
+        <option>Strawberry</option>
+      </select>
+
+      <h3>Notes</h3>
+      <textarea placeholder="Extra frosting please..."></textarea>
+
+      <div class="order-summary">📋 Summary here</div>
+      <button class="send">🚀 Send Order</button>
+    </div>
+  </div>
+
+
+  <script>
+    async function createScene() {
+      const canvas = document.getElementById("renderCanvas");
+      const engine = new BABYLON.Engine(canvas, true);
+      const scene = new BABYLON.Scene(engine);
+      scene.clearColor = new BABYLON.Color3(1, 0.98, 0.94);
+
+      const camera = new BABYLON.ArcRotateCamera("camera", Math.PI / 2, Math.PI / 4, 5, BABYLON.Vector3.Zero(), scene);
+      camera.attachControl(canvas, true);
+
+      const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 1, 0), scene);
+
+      // Cake mesh
+      const cake = BABYLON.MeshBuilder.CreateCylinder("cake", { diameter: 2, height: 1 }, scene);
+      cake.position.y = 0.5;
+      const icingMat = new BABYLON.PBRMaterial("icingMat", scene);
+      icingMat.albedoColor = new BABYLON.Color3(1, 0.7, 0.8);
+      icingMat.metallic = 0.1;
+      icingMat.roughness = 0.6;
+      cake.material = icingMat;
+
+      // Bounce animation
+      const bounceAnim = new BABYLON.Animation("bounce", "position.y", 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
+      bounceAnim.setKeys([{ frame: 0, value: 0.5 }, { frame: 15, value: 0.6 }, { frame: 30, value: 0.5 }]);
+      cake.animations = [bounceAnim];
+      scene.beginAnimation(cake, 0, 30, true);
+
+      // GUI setup
+      const gui = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
+
+      // Price
+      let price = 0;
+      function updatePrice(amount) {
+        price += amount;
+        document.getElementById("priceDisplay").innerText = `₦${price}`;
+        updateSummaryEntry(`₦${price}`);
+      }
+
+      // Flavor transition
+      function changeFlavor(flavor) {
+        const flavors = {
+          vanilla: new BABYLON.Color3(1, 0.95, 0.8),
+          chocolate: new BABYLON.Color3(0.4, 0.2, 0.1),
+          strawberry: new BABYLON.Color3(1, 0.7, 0.8),
+          lemon: new BABYLON.Color3(1, 1, 0.6)
+        };
+        const anim = new BABYLON.Animation("flavorChange", "albedoColor", 30, BABYLON.Animation.ANIMATIONTYPE_COLOR3, BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT);
+        anim.setKeys([{ frame: 0, value: icingMat.albedoColor }, { frame: 30, value: flavors[flavor] }]);
+        icingMat.animations = [anim];
+        scene.beginAnimation(icingMat, 0, 30, false);
+        updateSummaryEntry(`Flavor: ${flavor}`);
+      }
+
+      // Summary list
+      const summaryItems = [];
+      function updateSummaryEntry(text) {
+        summaryItems.push(text);
+        const entry = new BABYLON.GUI.TextBlock();
+        entry.text = `• ${text}`;
+        entry.color = "#5C3A21";
+        entry.height = "25px";
+        summaryList.addControl(entry);
+      }
+
+      // Drop animation
+      function dropAnimation(mesh) {
+        const anim = new BABYLON.Animation("drop", "position.y", 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT);
+        anim.setKeys([{ frame: 0, value: mesh.position.y + 0.5 }, { frame: 30, value: mesh.position.y }]);
+        mesh.animations = [anim];
+        scene.beginAnimation(mesh, 0, 30, false);
+      }
+
+      function scatter(count, createFn) {
+        for (let i = 0; i < count; i++) {
+          const angle = Math.random() * Math.PI * 2;
+          const radius = Math.random() * 0.7;
+          const x = Math.cos(angle) * radius;
+          const z = Math.sin(angle) * radius;
+          createFn(new BABYLON.Vector3(x, 1.1, z));
+        }
+      }
+
+      function addTopping(name, createFn, cost) {
+        scatter(5, pos => {
+          const mesh = createFn(pos);
+          dropAnimation(mesh);
+        });
+        updatePrice(cost);
+        updateSummaryEntry(`Added: ${name}`);
+      }
+
+      function createCherry(pos) {
+        const cherry = BABYLON.MeshBuilder.CreateSphere("cherry", { diameter: 0.2 }, scene);
+        cherry.position = pos;
+        const mat = new BABYLON.PBRMaterial("mat", scene);
+        mat.albedoColor = new BABYLON.Color3(0.8, 0, 0);
+        mat.clearCoat.isEnabled = true;
+        mat.clearCoat.intensity = 0.8;
+        cherry.material = mat;
+        return cherry;
+      }
+
+      function createChocolate(pos) {
+        const chip = BABYLON.MeshBuilder.CreateBox("chip", { size: 0.15 }, scene);
+        chip.position = pos;
+        const mat = new BABYLON.PBRMaterial("mat", scene);
+        mat.albedoColor = new BABYLON.Color3(0.3, 0.15, 0.05);
+        mat.clearCoat.isEnabled = true;
+        mat.clearCoat.intensity = 0.6;
+        chip.material = mat;
+        return chip;
+      }
+
+      // GUI left panel
+      const leftPanel = new BABYLON.GUI.StackPanel();
+      leftPanel.width = "220px";
+      leftPanel.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+      leftPanel.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_TOP;
+      leftPanel.top = "20px";
+      leftPanel.paddingLeft = "20px";
+      gui.addControl(leftPanel);
+
+      const toppingButtons = [
+        { label: "🍒 Cherry", fn: createCherry, cost: 200 },
+        { label: "🍫 Chocolate", fn: createChocolate, cost: 250 }
+        // Add more like sprinkles, fruits etc. as needed
+      ];
+
+      toppingButtons.forEach(btn => {
+        const b = BABYLON.GUI.Button.CreateSimpleButton(btn.label, btn.label);
+        b.height = "40px";
+        b.width = "200px";
+        b.cornerRadius = 10;
+        b.color = "#fff";
+        b.background = "#EC97A4";
+        b.fontSize = "18px";
+        b.onPointerUpObservable.add(() => {
+          addTopping(btn.label, btn.fn, btn.cost);
+        });
+        leftPanel.addControl(b);
+      });
+
+      // Flavor buttons
+      const flavorHeader = new BABYLON.GUI.TextBlock();
+      flavorHeader.text = "🎨 Flavor";
+      flavorHeader.height = "30px";
+      flavorHeader.color = "#5C3A21";
+      flavorHeader.marginTop = "20px";
+      leftPanel.addControl(flavorHeader);
+
+      ["vanilla", "chocolate", "strawberry", "lemon"].forEach(f => {
+        const b = BABYLON.GUI.Button.CreateSimpleButton(f, f);
+        b.height = "35px";
+        b.width = "200px";
+        b.cornerRadius = 10;
+                b.color = "#5C3A21";
+        b.background = "#FCEEC4";
+        b.onPointerUpObservable.add(() => {
+          changeFlavor(f);
+        });
+        leftPanel.addControl(b);
+      });
+
+      // Right panel
+      const rightPanel = new BABYLON.GUI.StackPanel();
+      rightPanel.width = "300px";
+      rightPanel.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_RIGHT;
+      rightPanel.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_TOP;
+      rightPanel.top = "20px";
+      rightPanel.paddingRight = "20px";
+      gui.addControl(rightPanel);
+
+      // Comments
+      const commentLabel = new BABYLON.GUI.TextBlock();
+      commentLabel.text = "🗨️ Cake Notes";
+      commentLabel.height = "30px";
+      commentLabel.color = "#5C3A21";
+      rightPanel.addControl(commentLabel);
+
+      const commentBox = new BABYLON.GUI.InputTextArea();
+      commentBox.width = "280px";
+      commentBox.height = "90px";
+      commentBox.color = "#000000";
+      commentBox.background = "#FFF";
+      commentBox.text = "";
+      commentBox.fontSize = "14px";
+      rightPanel.addControl(commentBox);
+
+      ["Add extra frosting", "Make it gluten-free", "Include birthday message"].forEach(suggestion => {
+        const btn = BABYLON.GUI.Button.CreateSimpleButton(suggestion, suggestion);
+        btn.height = "30px";
+        btn.color = "#5C3A21";
+        btn.background = "#ffffff";
+        btn.fontSize = "14px";
+        btn.marginTop = "5px";
+        btn.onPointerUpObservable.add(() => {
+          commentBox.text = suggestion;
+        });
+        rightPanel.addControl(btn);
+      });
+
+      // Summary Label
+      const summaryLabel = new BABYLON.GUI.TextBlock();
+      summaryLabel.text = "📋 Selections";
+      summaryLabel.height = "30px";
+      summaryLabel.color = "#5C3A21";
+      summaryLabel.marginTop = "15px";
+      rightPanel.addControl(summaryLabel);
+
+      // Summary List
+      const summaryList = new BABYLON.GUI.StackPanel();
+      summaryList.width = "280px";
+      rightPanel.addControl(summaryList);
+
+      // Send Button
+      const sendBtn = BABYLON.GUI.Button.CreateSimpleButton("sendOrder", "🚀 Send Order");
+      sendBtn.width = "280px";
+      sendBtn.height = "55px";
+      sendBtn.cornerRadius = 20;
+      sendBtn.color = "#fff";
+      sendBtn.background = "#d9a441";
+      sendBtn.fontSize = "20px";
+      sendBtn.marginTop = "20px";
+      sendBtn.shadowOffsetX = 2;
+      sendBtn.shadowOffsetY = 2;
+      sendBtn.shadowColor = "#aaa";
+      sendBtn.onPointerEnterObservable.add(() => sendBtn.background = "#d9a441");
+      sendBtn.onPointerOutObservable.add(() => sendBtn.background = "#d9a441");
+      sendBtn.onPointerUpObservable.add(() => {
+        console.log("Order submitted:", {
+          flavor: icingMat.albedoColor,
+          comments: commentBox.text,
+          items: summaryItems
+        });
+        alert("Your cake order has been sent!");
+      });
+      rightPanel.addControl(sendBtn);
+
+      // Final scene and resize
+      engine.runRenderLoop(() => scene.render());
+      window.addEventListener("resize", () => engine.resize());
+    }
+
+    createScene();
+  </script>
+</body>
+</html>
