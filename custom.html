@@ -23,16 +23,212 @@
             src=""
             alt="Bakery Background Image"
           />
-          <!-- Any other content that overlays this background (e.g., your logo, tag-line, buttons) -->
-          <!-- would go here, *inside* the .background div but *after* the <img> tag -->
         </div>
-<div class="form">
-    
-</div>
+
+        <div class="form">
+          <h2>Custom Cake Inquiry</h2>
+          <form id="cakeInquiryForm">
+            <fieldset>
+              <legend>Your Contact Information</legend>
+              <label for="fullName">Full Name:</label>
+              <input type="text" id="fullName" name="fullName" required />
+
+              <label for="email">Email Address:</label>
+              <input type="email" id="email" name="email" required />
+
+              <label for="phone">Phone Number:</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                pattern="[0-9]{10,15}"
+                title="Please enter a valid phone number (digits only, 10-15 characters)"
+                required
+              />
+
+              <p>Preferred Contact Method:</p>
+              <input
+                type="radio"
+                id="contactEmail"
+                name="contactMethod"
+                value="Email"
+                checked
+              />
+              <label for="contactEmail">Email</label>
+              <input
+                type="radio"
+                id="contactPhone"
+                name="contactMethod"
+                value="Phone Call"
+              />
+              <label for="contactPhone">Phone Call</label>
+            </fieldset>
+
+            <fieldset>
+              <legend>Event Details</legend>
+              <label for="eventType">Type of Event:</label>
+              <select id="eventType" name="eventType" required>
+                <option value="">--Please choose an option--</option>
+                <option value="Birthday">Birthday</option>
+                <option value="Wedding">Wedding</option>
+                <option value="Anniversary">Anniversary</option>
+                <option value="Corporate">Corporate</option>
+                <option value="Baby Shower">Baby Shower</option>
+                <option value="Graduation">Graduation</option>
+                <option value="Other">Other</option>
+              </select>
+              <input
+                type="text"
+                id="otherEventType"
+                name="otherEventType"
+                placeholder="Please specify event type"
+                style="display: none"
+              />
+
+              <label for="eventDate">Event Date:</label>
+              <input type="date" id="eventDate" name="eventDate" required />
+              <p id="dateWarning" style="color: red; display: none;">
+                Please note: Your event date is less than our recommended 7-14 days lead time.
+              </p>
+
+              <label for="numServings">Number of Servings/Guests:</label>
+              <input
+                type="number"
+                id="numServings"
+                name="numServings"
+                min="1"
+                required
+              />
+
+              <label for="eventLocation">Event Location (Optional):</label>
+              <input
+                type="text"
+                id="eventLocation"
+                name="eventLocation"
+                placeholder="e.g., Venue Name, City"
+              />
+            </fieldset>
+
+            <fieldset>
+              <legend>Cake Design & Flavor</legend>
+              <label>Cake Flavor(s):</label><br />
+              <input type="checkbox" id="flavorVanilla" name="cakeFlavor" value="Vanilla Bean" />
+              <label for="flavorVanilla">Vanilla Bean</label><br />
+              <input type="checkbox" id="flavorChocolate" name="cakeFlavor" value="Rich Chocolate Fudge" />
+              <label for="flavorChocolate">Rich Chocolate Fudge</label><br />
+              <input type="checkbox" id="flavorRedVelvet" name="cakeFlavor" value="Red Velvet" />
+              <label for="flavorRedVelvet">Red Velvet</label><br />
+              <input type="checkbox" id="flavorLemon" name="cakeFlavor" value="Lemon Zest" />
+              <label for="flavorLemon">Lemon Zest</label><br />
+              <input type="checkbox" id="flavorCaramel" name="cakeFlavor" value="Salted Caramel" />
+              <label for="flavorCaramel">Salted Caramel</label><br />
+              <input type="checkbox" id="flavorStrawberry" name="cakeFlavor" value="Strawberry Delight" />
+              <label for="flavorStrawberry">Strawberry Delight</label><br />
+              <input type="checkbox" id="flavorOtherCake" name="cakeFlavor" value="Other" />
+              <label for="flavorOtherCake">Other</label>
+              <input
+                type="text"
+                id="otherCakeFlavor"
+                name="otherCakeFlavor"
+                placeholder="Please specify other cake flavor(s)"
+                style="display: none"
+              /><br /><br />
+
+              <label>Filling(s)/Frosting(s):</label><br />
+              <input type="checkbox" id="fillingVanilla" name="cakeFilling" value="Vanilla Buttercream" />
+              <label for="fillingVanilla">Vanilla Buttercream</label><br />
+              <input type="checkbox" id="fillingChocolateGanache" name="cakeFilling" value="Chocolate Ganache" />
+              <label for="fillingChocolateGanache">Chocolate Ganache</label><br />
+              <input type="checkbox" id="fillingCreamCheese" name="cakeFilling" value="Cream Cheese Frosting" />
+              <label for="fillingCreamCheese">Cream Cheese Frosting</label><br />
+              <input type="checkbox" id="fillingLemonCurd" name="cakeFilling" value="Lemon Curd" />
+              <label for="fillingLemonCurd">Lemon Curd</label><br />
+              <input type="checkbox" id="fillingBerry" name="cakeFilling" value="Berry Compote" />
+              <label for="fillingBerry">Berry Compote</label><br />
+              <input type="checkbox" id="fillingSaltedCaramel" name="cakeFilling" value="Salted Caramel Buttercream" />
+              <label for="fillingSaltedCaramel">Salted Caramel Buttercream</label><br />
+              <input type="checkbox" id="fillingOther" name="cakeFilling" value="Other" />
+              <label for="fillingOther">Other</label>
+              <input
+                type="text"
+                id="otherCakeFilling"
+                name="otherCakeFilling"
+                placeholder="Please specify other filling(s)/frosting(s)"
+                style="display: none"
+              /><br /><br />
+
+              <label for="designDescription">Desired Design/Theme:</label>
+              <textarea
+                id="designDescription"
+                name="designDescription"
+                rows="5"
+                placeholder="Please describe your vision for the cake. Include details about colors, themes, decorations, specific elements, or any inspiration you have."
+                required
+              ></textarea>
+
+              <label for="inspirationImage">Upload Inspiration Image (Optional):</label>
+              <input
+                type="file"
+                id="inspirationImage"
+                name="inspirationImage"
+                accept=".jpg,.png,.jpeg"
+              />
+              <p class="note">Upload any images that inspire your cake design (e.g., invitations, decor, other cake photos).</p>
+
+              <label for="dietaryNeeds">Special Dietary Needs/Allergens (Optional):</label>
+              <textarea
+                id="dietaryNeeds"
+                name="dietaryNeeds"
+                rows="3"
+                placeholder="Please list any allergies (e.g., nuts, dairy, gluten) or dietary restrictions (e.g., vegan, sugar-free) we should be aware of."
+              ></textarea>
+            </fieldset>
+
+            <fieldset>
+              <legend>Additional Information</legend>
+              <label for="budgetRange">Budget Range (Optional):</label>
+              <select id="budgetRange" name="budgetRange">
+                <option value="">--Select your budget--</option>
+                <option value="NGN 30,000 - NGN 50,000">NGN 30,000 - NGN 50,000</option>
+                <option value="NGN 50,001 - NGN 80,000">NGN 50,001 - NGN 80,000</option>
+                <option value="NGN 80,001+">NGN 80,001+</option>
+              </select>
+
+              <label for="howHear">How did you hear about us?:</label>
+              <select id="howHear" name="howHear">
+                <option value="">--Please select--</option>
+                <option value="Google">Google</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Friend/Referral">Friend/Referral</option>
+                <option value="Event">Event</option>
+                <option value="Walk-in">Walk-in</option>
+                <option value="Other">Other</option>
+              </select>
+              <input
+                type="text"
+                id="otherHowHear"
+                name="otherHowHear"
+                placeholder="Please specify"
+                style="display: none"
+              />
+            </fieldset>
+
+            <button type="submit" id="submitInquiry">Submit Inquiry</button>
+          </form>
+
+          <div id="confirmationMessage" style="display: none;">
+            <h3>Thank you for your Custom Cake Inquiry!</h3>
+            <p>
+              We have received your request and will review it shortly. Please
+              allow 1-2 business days for us to get back to you with an initial
+              quote or to schedule a consultation to discuss your dream cake in
+              more detail. We look forward to creating something special for you!
+            </p>
+          </div>
+        </div>
         <script>
           document.addEventListener("DOMContentLoaded", () => {
-            const dynamicBackground =
-              document.getElementById("dynamicBackground");
+            const dynamicBackground = document.getElementById("dynamicBackground");
 
             // Array of image links to cycle through
             const imageLinks = [
@@ -76,6 +272,98 @@
 
             // Start the carousel
             setInterval(changeImage, displayDuration + fadeDuration); // Total cycle time (display + fade)
+
+
+            // Form Logic
+            const eventTypeSelect = document.getElementById("eventType");
+            const otherEventTypeInput = document.getElementById("otherEventType");
+
+            eventTypeSelect.addEventListener("change", () => {
+              if (eventTypeSelect.value === "Other") {
+                otherEventTypeInput.style.display = "block";
+                otherEventTypeInput.setAttribute("required", "required");
+              } else {
+                otherEventTypeInput.style.display = "none";
+                otherEventTypeInput.removeAttribute("required");
+                otherEventTypeInput.value = ""; // Clear the value if "Other" is not selected
+              }
+            });
+
+            const flavorOtherCheckbox = document.getElementById("flavorOtherCake");
+            const otherCakeFlavorInput = document.getElementById("otherCakeFlavor");
+
+            flavorOtherCheckbox.addEventListener("change", () => {
+              if (flavorOtherCheckbox.checked) {
+                otherCakeFlavorInput.style.display = "inline-block";
+              } else {
+                otherCakeFlavorInput.style.display = "none";
+                otherCakeFlavorInput.value = "";
+              }
+            });
+
+            const fillingOtherCheckbox = document.getElementById("fillingOther");
+            const otherCakeFillingInput = document.getElementById("otherCakeFilling");
+
+            fillingOtherCheckbox.addEventListener("change", () => {
+              if (fillingOtherCheckbox.checked) {
+                otherCakeFillingInput.style.display = "inline-block";
+              } else {
+                otherCakeFillingInput.style.display = "none";
+                otherCakeFillingInput.value = "";
+              }
+            });
+
+            const howHearSelect = document.getElementById("howHear");
+            const otherHowHearInput = document.getElementById("otherHowHear");
+
+            howHearSelect.addEventListener("change", () => {
+              if (howHearSelect.value === "Other") {
+                otherHowHearInput.style.display = "block";
+                otherHowHearInput.setAttribute("required", "required");
+              } else {
+                otherHowHearInput.style.display = "none";
+                otherHowHearInput.removeAttribute("required");
+                otherHowHearInput.value = ""; // Clear the value if "Other" is not selected
+              }
+            });
+
+            const eventDateInput = document.getElementById("eventDate");
+            const dateWarningMessage = document.getElementById("dateWarning");
+
+            eventDateInput.addEventListener("change", () => {
+              const selectedDate = new Date(eventDateInput.value);
+              const today = new Date();
+              today.setHours(0, 0, 0, 0); // Normalize today's date to start of day
+
+              const minLeadTimeDays = 7; // Minimum lead time in days
+
+              // Calculate the earliest acceptable date
+              const earliestAcceptableDate = new Date(today);
+              earliestAcceptableDate.setDate(today.getDate() + minLeadTimeDays);
+
+              if (selectedDate < earliestAcceptableDate) {
+                dateWarningMessage.style.display = "block";
+              } else {
+                dateWarningMessage.style.display = "none";
+              }
+            });
+
+            const cakeInquiryForm = document.getElementById("cakeInquiryForm");
+            const confirmationMessage = document.getElementById("confirmationMessage");
+
+            cakeInquiryForm.addEventListener("submit", (event) => {
+              event.preventDefault(); // Prevent default form submission
+
+              // Here you would typically send the form data to your backend
+              // For this example, we'll just show the confirmation message
+              cakeInquiryForm.style.display = "none"; // Hide the form
+              confirmationMessage.style.display = "block"; // Show the confirmation message
+
+              // In a real application, you'd also trigger the automated email here.
+              // This might involve an AJAX request to your server.
+              console.log("Form submitted! (Simulated)");
+            });
+
           });
         </script>
       </div>
