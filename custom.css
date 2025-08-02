@@ -121,7 +121,7 @@ body {
   max-width: 800px;
   width: 80%;
   position: sticky;
-  z-index: 2;
+  z-index: 11;
 
   /* IMPORTANT: Remove max-height and overflow-y from .form */
   /* max-height: 70vh; */ /* This was causing another scrollbar */
