@@ -1332,9 +1332,9 @@ circle newsletter:hover{
 /*custom.html css*/
 
 .form{
-    widt
+    
     padding: 30px;
-}
+    width:100%;
 label{
     border-radius: 50%;
 }
