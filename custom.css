@@ -171,7 +171,7 @@ label {
 input::placeholder,
 textarea::placeholder {
   color: #5C3A21;
-  opacity: 0.6;
+  opacity: 0.6;bo
 }
 
 /* Form Element General Styling (Keep these as they are good) */
