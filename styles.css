@@ -1340,7 +1340,7 @@ circle newsletter:hover{
 .form{
     background-image: url(bg8.png);
     padding: 30px;
-    background-siz ;
+    background-size:auto;
     width:100%;
 label{
     border-radius: 50%;
