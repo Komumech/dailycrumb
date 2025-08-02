@@ -1356,3 +1356,328 @@ label{
     flex-direction:column;
     
 }
+
+/* General Body Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f8f4ed; /* Light cream/off-white for a warm bakery feel */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container for overall layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden; /* Hide overflow from background images */
+}
+
+/* Scroll Wrapper - to ensure content scrolls within the visual area */
+.scroll-wrapper {
+  flex-grow: 1;
+  overflow-y: auto;
+  position: relative;
+  z-index: 1; /* Ensure content is above the background */
+  padding-bottom: 50px; /* Add some padding at the bottom for spacing */
+}
+
+/* Logo Styling */
+.logo-img {
+  text-align: center;
+  padding: 20px 0;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for logo background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10; /* Ensure logo is on top */
+  position: sticky;
+  top: 0;
+}
+
+.logo-img .img1 {
+  max-width: 180px;
+  height: auto;
+}
+
+/* Background Image Carousel Section */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50vh; /* Half of viewport height */
+  overflow: hidden;
+  z-index: 0; /* Behind other content */
+}
+
+.bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the area without distortion */
+  transition: opacity 0.4s ease-in-out; /* Smooth fade effect */
+  opacity: 1;
+}
+
+.bg-img.fade-out {
+  opacity: 0;
+}
+
+/* Button Group (e.g., "Step Inside Our Bakery") */
+.button-group {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5; /* Above background image, below logo */
+  text-align: center;
+  width: 100%;
+}
+
+.button-small {
+  background-color: #b5651d; /* Earthy brown */
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button-small:hover {
+  background-color: #8b4513; /* Darker brown on hover */
+}
+
+/* Form Section */
+.form {
+  background-color: #fff;
+  margin: 40vh auto 20px; /* Adjust margin-top to start below background image */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 90%;
+  position: relative; /* Ensure it respects margin-top correctly */
+  z-index: 2; /* Ensure form is above background */
+}
+
+.form h2 {
+  text-align: center;
+  color: #7b3f00; /* Darker earthy tone for headings */
+  margin-bottom: 25px;
+  font-size: 2em;
+}
+
+/* Fieldset and Legend for grouping form fields */
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 25px;
+  background-color: #fafafa; /* Slightly off-white for fieldset background */
+}
+
+legend {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #a0522d; /* Sienna/earthy orange */
+  padding: 0 10px;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+  margin-top: 15px;
+}
+
+/* Input Fields, Textareas, Selects */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+textarea,
+select {
+  width: calc(100% - 22px); /* Account for padding and border */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #b5651d; /* Highlight on focus */
+  outline: none;
+  box-shadow: 0 0 5px rgba(181, 101, 29, 0.3);
+}
+
+textarea {
+  resize: vertical; /* Allow vertical resizing */
+}
+
+/* Radio Buttons and Checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-weight: normal; /* Override bold from general label */
+}
+
+/* Specific styling for "Other" text inputs next to checkboxes/radio buttons */
+#otherEventType,
+#otherCakeFlavor,
+#otherCakeFilling,
+#otherHowHear {
+  width: auto; /* Allow natural width */
+  min-width: 200px; /* Minimum width for readability */
+  margin-left: 10px;
+  display: inline-block; /* Keep it next to the checkbox/radio label */
+}
+
+/* File Upload Field */
+input[type="file"] {
+  border: 1px dashed #ccc;
+  padding: 10px;
+  background-color: #fdfdfd;
+  width: calc(100% - 22px);
+  border-radius: 4px;
+}
+
+.note {
+  font-size: 0.85em;
+  color: #777;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  padding-left: 5px;
+}
+
+/* Warning Message for Date */
+#dateWarning {
+  font-size: 0.9em;
+  color: #d9534f; /* Red for warnings */
+  margin-top: -10px;
+  margin-bottom: 15px;
+  padding-left: 5px;
+  display: none; /* Hidden by default, controlled by JS */
+}
+
+/* Submit Button */
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #a0522d; /* Sienna/earthy orange */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 30px;
+}
+
+button[type="submit"]:hover {
+  background-color: #8b4513; /* Darker brown on hover */
+  transform: translateY(-2px);
+}
+
+button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* Confirmation Message */
+#confirmationMessage {
+  background-color: #e6ffe6; /* Light green background */
+  border: 1px solid #4CAF50; /* Green border */
+  color: #333;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 20px;
+  display: none; /* Hidden by default, shown on form submission */
+}
+
+#confirmationMessage h3 {
+  color: #4CAF50;
+  margin-top: 0;
+  font-size: 1.8em;
+}
+
+#confirmationMessage p {
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .form {
+    padding: 20px;
+    margin: 35vh auto 20px; /* Adjust for smaller screens */
+  }
+
+  .logo-img .img1 {
+    max-width: 150px;
+  }
+
+  .background {
+    height: 40vh; /* Adjust background height */
+  }
+
+  .button-small {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .form {
+    padding: 15px;
+    margin: 30vh auto 15px; /* Further adjustment for very small screens */
+  }
+
+  .logo-img .img1 {
+    max-width: 120px;
+  }
+
+  .background {
+    height: 35vh; /* Further adjustment for very small screens */
+  }
+
+  h2 {
+    font-size: 1.6em;
+  }
+
+  legend {
+    font-size: 1.1em;
+  }
+
+  button[type="submit"] {
+    font-size: 1em;
+    padding: 12px;
+  }
+}
