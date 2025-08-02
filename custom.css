@@ -172,7 +172,7 @@ input::placeholder,
 textarea::placeholder {
   color: #5C3A21;
   opacity: 0.6;
-  bo
+  bor
 }
 
 /* Form Element General Styling (Keep these as they are good) */
