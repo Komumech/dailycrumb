@@ -21,7 +21,7 @@ body{
       background-color: #d9a441;
       box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
       height: 120vh;
-      width: 100rem;
+      width: 60rem;
       border-radius: 70%;
       
       /* Use flexbox to center the inner content */
@@ -44,7 +44,7 @@ body{
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-right: 3rem; /* Spacing from the HR */
+      margin-right: 9rem; /* Spacing from the HR */
       padding: 2rem;
       text-align: center;
       font-size: 1rem;
