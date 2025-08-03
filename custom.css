@@ -20,7 +20,7 @@ body{
 
 .sect-all {
       background-color: #d9a441;
-      box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+      box-shadow: 30px 30px 30px 30px rgba(0.1, 0.1, 0.1, 0.1);
       height: 120vh;
       width: 60rem;
       border-radius: 70%;
