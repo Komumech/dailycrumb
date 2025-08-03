@@ -31,6 +31,12 @@ body{
       
       /* The margin: 50vh; was removed as it would push the element off-center */
     }
+    p{
+      font-size: 3rem;
+      color: #edece9;
+      text-align: center;
+      margin: 0; /* Remove default margin */
+    }
     
     /* New container to hold the three elements side-by-side */
     .inner-content {
@@ -73,8 +79,3 @@ body{
     }
 
     /* The paragraph inside contact-usdir */
-    .contact-usdir p {
-      margin: 0; /* Remove default margin from paragraph */
-      font-size: 1rem;
-      text-align: center;
-    }
