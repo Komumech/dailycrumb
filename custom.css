@@ -32,19 +32,20 @@ body{
   position:absolute;
   justify-content: center;
   align-items: center;
-  padding:
+  padding:0px;
   margin:45vh;
   font-size: 2rem;
   color: #edece9;
 }
 .fill-form{
-
+  
   margin: 45vh;
   position: absolute;
   justify-content: center;
   align-items: center;
 }
 p{
+  justify-self:center;
   margin:45vh;
   position:absolute;
 }
