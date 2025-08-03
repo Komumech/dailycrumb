@@ -18,41 +18,68 @@ body{
 }
 
 .sect-all {
-  background-color: #d9a441;
-  display:grid;
-  grid-template-columns:50% 50%;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
-  height: 120vh;
-  border-radius: 70%;
-  width: 100rem;
-  justify-content:center;
-  margin: 50vh;
-  /* justify-self: center; is for grid items, not relevant for centering the grid container itself within a flex container */
-}
-.sect-all contact-usdir{
-  position:absolute;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  color: #edece9;
-}
-.fill-form{
-  height:5rem;
-  width:7rem;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-}
-p{
-  justify-self:cen
-  margin:45vh;
-  position:absolute;
-}
-.sect-all hr{
-  width:1rem;
-  height: 20rem;
-  margin: 50vh;
-  justify-self: center;
-  border-radius: 20px;
-  background-color: #edece9;
-}
+      background-color: #d9a441;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+      height: 120vh;
+      width: 100rem;
+      border-radius: 70%;
+      
+      /* Use flexbox to center the inner content */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      /* The margin: 50vh; was removed as it would push the element off-center */
+    }
+    
+    /* New container to hold the three elements side-by-side */
+    .inner-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* The 'fill-form' element, now a simple box */
+    .fill-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 25rem; /* Adjusted size for better visual balance */
+      width: 25rem;
+      background-color: #edece9;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-right: 3rem; /* Spacing from the HR */
+      padding: 2rem;
+      text-align: center;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    /* The vertical HR separator */
+    .sect-all hr {
+      width: 1px;
+      height: 20rem;
+      border: none;
+      background-color: #edece9;
+      border-radius: 20px;
+    }
+    
+    /* The 'contact-usdir' element */
+    .contact-usdir {
+      display: flex;
+      flex-direction: column; /* Stack the content vertically */
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      color: #edece9;
+      margin-left: 3rem; /* Spacing from the HR */
+      text-align: center;
+    }
+
+    /* The paragraph inside contact-usdir */
+    .contact-usdir p {
+      margin: 0; /* Remove default margin from paragraph */
+      font-size: 1rem;
+      text-align: center;
+    }
