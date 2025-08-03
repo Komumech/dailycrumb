@@ -33,8 +33,10 @@ body {
 
 .sect-all{
   display:flex;
+  height: 50;
   flex-direction: column;
   background-color: #d9a441;
+  border-radius: 50%;
 }
 
 
