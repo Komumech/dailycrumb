@@ -31,10 +31,7 @@ body {
 
 
 p {
-  font-size: 3rem;
-  color: #edece9;
-  text-align: center;
-  margin: 0;
+
 }
 
 .inner-content {
@@ -65,13 +62,7 @@ p {
 
 .contact-usdir {
   
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* Removed large margin as parent now uses space-around */
-  font-size: 2rem;
-  color: #edece9;
-  text-align: center;
+  
 }
 
 /* New button styles */
