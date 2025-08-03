@@ -1,84 +1,87 @@
-body{
+body {
   width: 100%;
   background-image: url(https://brilliant-kleicha-4fa21a.netlify.app/coverimg.png);
   background-size: cover;
+  font-family: 'Inter', sans-serif;
 }
-.background{
+
+.background {
   background-size: cover;
   height: 100vh;
-  position: absolute;
+  position: relative; /* Changed from absolute to relative to keep in document flow */
   top: 0;
+  display: flex;
   justify-content: center;
-  margin: 0 auto;
+  align-items: center;
 }
+
+.logo-img {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
 .container {
-  display: flex; /* Make the container a flex container */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  min-height: 100vh; /* Ensure the container takes at least the full viewport height */
-  margin: 0 auto; /* This can still be useful for centering the container itself if it has a defined width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0 auto;
 }
 
 .sect-all {
-      background-color: #d9a441;
-      box-shadow: 30px 30px 30px 30px rgba(0.1, 0.1, 0.1, 0.1);
-      height: 120vh;
-      width: 60rem;
-      border-radius: 70%;
-      
-      /* Use flexbox to center the inner content */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      
-      /* The margin: 50vh; was removed as it would push the element off-center */
-    }
-    p{
-      font-size: 3rem;
-      color: #edece9;
-      text-align: center;
-      margin: 0; /* Remove default margin */
-    }
-    
-    /* New container to hold the three elements side-by-side */
-    .inner-content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  background-color: #d9a441;
+  /* Corrected box-shadow syntax for a visible effect */
+  box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.1); 
+  height: 120vh;
+  width: 60rem;
+  border-radius: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    /* The 'fill-form' element, now a simple box */
-    .fill-form {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-right: 20rem; /* Spacing from the HR */
-      padding: 2rem;
-      text-align: center;
-      font-size: 1rem;
-      color: #333;
-    }
+p {
+  font-size: 3rem;
+  color: #edece9;
+  text-align: center;
+  margin: 0;
+}
 
-    /* The vertical HR separator */
-    .sect-all hr {
-      width: 1rem;
-      height: 20rem;
-      z-index:27;
-      border: none;
-      background-color: #edece9;
-      border-radius: 20px;
-    }
-    
-    /* The 'contact-usdir' element */
-    .contact-usdir {
-      display: flex;
-      flex-direction: column; /* Stack the content vertically */
-      justify-content: center;
-      align-items: center;
-      font-size: 2rem;
-      margin-left: 20rem; 
-      color: #edece9; /* Spacing from the HR */
-      text-align: center;
-    }
+.inner-content {
+  display: flex;
+  justify-content: space-around; /* Changed to space-around for balanced spacing */
+  align-items: center;
+  width: 100%;
+}
 
-    /* The paragraph inside contact-usdir */
+.fill-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Removed large margin as parent now uses space-around */
+  padding: 2rem;
+  text-align: center;
+}
+
+.sect-all hr {
+  width: 1rem;
+  height: 20rem;
+  z-index: 27;
+  border: none;
+  background-color: #edece9;
+  border-radius: 20px;
+}
+
+.contact-usdir {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Removed large margin as parent now uses space-around */
+  font-size: 2rem;
+  color: #edece9;
+  text-align: center;
+}
