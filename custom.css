@@ -20,13 +20,15 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0 auto;
+  width:100%;
+  height:100vh
 }
 
 .sect-all {
   background-color: #d8b97e;
   /* Corrected box-shadow syntax for a visible effect */
   box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.1); 
-  height: 100;
+  height: 100vh;
   width:100%;
   border-radius: 70%;
   display: flex;
