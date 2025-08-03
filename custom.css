@@ -1,6 +1,7 @@
 body{
   width: 100%;
   background-image: url(https://brilliant-kleicha-4fa21a.netlify.app/coverimg.png);
+  background-size: cover;
 }
 .background{
   background-size: cover;
@@ -62,6 +63,7 @@ body{
     .sect-all hr {
       width: 1rem;
       height: 20rem;
+      z-index:7
       border: none;
       background-color: #edece9;
       border-radius: 20px;
