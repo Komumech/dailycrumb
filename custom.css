@@ -36,7 +36,7 @@ body {
   flex-direction: column;
   background-color: #d9a441;
   border-radius: 50%;
-  box-shadow:#c0c0c0 0
+  box-shadow:#c0c0c0 0px 0px 10px 0px
 }
 
 
@@ -65,7 +65,7 @@ p {
 
 .sect-all hr {
   width: 1rem;
-  height: 20rem;
+  height: 15rem;
   z-index: 27;
   border: none;
   background-color: #ffffff;
