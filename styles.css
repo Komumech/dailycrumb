@@ -3,7 +3,7 @@ html {
   body {
   margin: 0 auto;
   padding: 0;
-  height
+  height:fit-content;
   overflow-x: hidden; /* Prevent horizontal scroll */
   font-family: "Cormorant Garamond", serif;
   background-color: #f8f4ed;
