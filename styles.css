@@ -29,6 +29,7 @@ body::-webkit-scrollbar-thumb {
 
 .container {
     margin: 0 auto;
+    height:100vh;
 }
 .container{
   justify-content: center;
