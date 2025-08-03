@@ -67,9 +67,8 @@ body{
       justify-content: center;
       align-items: center;
       font-size: 2rem;
-      margin-right: 20rem; 
-      color: #edece9;
-      margin-left: 3rem; /* Spacing from the HR */
+      margin-left: 20rem; 
+      color: #edece9; /* Spacing from the HR */
       text-align: center;
     }
 
