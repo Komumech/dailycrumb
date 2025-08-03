@@ -1,5 +1,4 @@
 body{
-  overflow:hidden;
   width: 100%;
 }
 .background{
@@ -34,6 +33,7 @@ body{
   justify-content: center;
   align-items: center;
   height: 100%;
+  margin:45vh;
   width: 100%;
   font-size: 2rem;
   color: #edece9;
