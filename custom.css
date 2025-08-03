@@ -8,7 +8,8 @@ body {
 
 .logo-img {
   position: absolute;
-  top: 2rem;
+  top: 4rem;
+  height: 5rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -49,7 +50,7 @@ p {
   align-items: center;
   /* Removed large margin as parent now uses space-around */
   text-align: center;
-  padd
+  padding: 1rem;
 }
 
 .sect-all hr {
