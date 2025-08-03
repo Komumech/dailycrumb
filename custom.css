@@ -36,6 +36,7 @@ body {
   flex-direction: column;
   background-color: #d9a441;
   border-radius: 50%;
+  box-shadow:#c0c0c0 0
 }
 
 
@@ -88,7 +89,7 @@ p {
 
 .button-primary {
   background-color: #edece9;
-  color: #d9a441;
+  color: #5c3a21;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
