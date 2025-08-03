@@ -22,9 +22,9 @@ body{
   background-color: #d9a441;
   
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
-  height: 70rem;
+  height: 150vh;
   border-radius: 60%;
-  width: 150rem;
+  width: 150vh;
 
   margin: 50vh;
   /* justify-self: center; is for grid items, not relevant for centering the grid container itself within a flex container */
