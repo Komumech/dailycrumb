@@ -39,7 +39,8 @@ body{
   color: #edece9;
 }
 .fill-form{
-  
+  height:5rem;
+  width:7rem;
   margin: 45vh;
   position: absolute;
   justify-content: center;
