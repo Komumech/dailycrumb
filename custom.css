@@ -1,5 +1,6 @@
 body {
   width: 100%;
+  margin: 0 auto;
   background-image: url(https://brilliant-kleicha-4fa21a.netlify.app/coverimg.png);
   background-size: cover;
   font-family: 'Inter', sans-serif;
