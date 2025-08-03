@@ -28,15 +28,7 @@ body{
   margin: 50vh;
   /* justify-self: center; is for grid items, not relevant for centering the grid container itself within a flex container */
 }
-.sect-all contact-usdir{
-  position:absolute;
-  justify-content: center;
-  align-items: center;
-  margin:45vh;
-  font-size: 2rem;
-  color: #edece9;
-}
-.sect-all fill-form{
+.sect-all contact-usdir, fill-form{
   position:absolute;
   justify-content: center;
   align-items: center;
