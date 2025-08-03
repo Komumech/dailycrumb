@@ -53,7 +53,7 @@ body{
 
     /* The vertical HR separator */
     .sect-all hr {
-      width: 1px;
+      width: 1rem;
       height: 20rem;
       border: none;
       background-color: #edece9;
@@ -67,7 +67,7 @@ body{
       justify-content: center;
       align-items: center;
       font-size: 2rem;
-      
+      margin-right: 20rem; 
       color: #edece9;
       margin-left: 3rem; /* Spacing from the HR */
       text-align: center;
