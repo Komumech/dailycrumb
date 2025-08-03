@@ -25,18 +25,10 @@ body {
   height:100vh;
 }
 
-.sect-all {
-  background-color: #d8b97e;
-  /* Corrected box-shadow syntax for a visible effect */
-  box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.1); 
-  height: 100vh;
-  margin: 0 auto;
-  width:200%;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.sect-all{
+
 }
+
 
 p {
   font-size: 3rem;
