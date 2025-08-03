@@ -34,7 +34,7 @@ body {
 .sect-all{
   display:flex;
   flex-direction: column;
-  
+  background-color: #d9a441;
 }
 
 
