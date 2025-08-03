@@ -29,13 +29,10 @@ body{
   /* justify-self: center; is for grid items, not relevant for centering the grid container itself within a flex container */
 }
 .sect-all contact-usdir {
-  display: flex;
   position:absolute;
   justify-content: center;
   align-items: center;
-  height: 100%;
   margin:45vh;
-  width: 100%;
   font-size: 2rem;
   color: #edece9;
 }
