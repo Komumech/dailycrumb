@@ -1,8 +1,11 @@
+body{}
 .background{
   background-size: cover;
   height: 100vh;
   position: absolute;
   top: 0;
+  overflow:hidden;
+  width: 100%;
   justify-content: center;
   margin: 0 auto;
 }
@@ -15,12 +18,12 @@
 }
 
 .sect-all {
-  background-color: #edebe6;
+  background-color: #d9a441;
+  
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
   height: 70rem;
   border-radius: 50%;
   width: 70rem;
-  
   /* Remove margin: auto 0; from .sect-all as flexbox will handle centering */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
