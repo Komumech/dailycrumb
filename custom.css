@@ -3,7 +3,11 @@
   height: 100vh;
   position: absolute;
   top: 0;
-  
+  justify-content: center;
+  margin: 0 auto;
+}
+.container{
+  justify-content: center;
   margin: 0 auto;
 }
 .sect-all{
