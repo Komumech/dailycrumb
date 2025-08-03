@@ -30,6 +30,7 @@ body{
 }
 .sect-all contact-usdir {
   display: flex;
+  posit
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -37,6 +38,9 @@ body{
   width: 100%;
   font-size: 2rem;
   color: #edece9;
+}
+p{
+  margin:45vh;
 }
 .sect-all hr{
   width:1rem;
