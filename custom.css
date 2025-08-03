@@ -32,7 +32,8 @@ body {
 }
 
 .sect-all{
-
+  display:flex;
+  flex-direction: ;
 }
 
 
