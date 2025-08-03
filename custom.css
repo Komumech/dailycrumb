@@ -85,3 +85,32 @@ p {
   color: #edece9;
   text-align: center;
 }
+
+/* New button styles */
+.button {
+  padding: 1rem 2rem;
+  border-radius: 9999px; /* This makes the button fully rounded */
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  border: none;
+}
+
+.button-primary {
+  background-color: #edece9;
+  color: #d9a441;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-primary:hover {
+  background-color: #ffffff;
+}
+
+.button-back {
+  background-color: #a0a0a0;
+  color: #edece9;
+}
+
+.button-back:hover {
+  background-color: #c0c0c0;
+}
