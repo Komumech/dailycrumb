@@ -1,30 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-<link rel="stylesheet" href="custom.css"/>
-    <title>Daily Crumb - Your Custom Order</title>
-  </head>
-  <body>
-      <div class="scroll-wrapper">
-        <div class="logo-img">
-            <img src="https://brilliant-kleicha-4fa21a.netlify.app/logo3.png" alt="Daily Crumb Bakery Logo" class="img1">
-        </div>
-         
-    <div class="container">
-  <div class="sect-all">
-     
-     <div class="contact-usdir">
-      <p>contact us </p>
-     </div>
-     <hr>
-     <div class="fill-form">
-      <p>fill</p>
-     </div>
-  </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Daily Crumb</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts for a clean look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Custom font for the entire body */
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f8f8;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+  <!-- Main container for the whole page -->
+  <div id="main-container" class="flex flex-col items-center justify-center w-full max-w-5xl mx-auto">
+    
+    <!-- Logo section -->
+    <div class="mb-8 md:mb-12 text-center text-gray-800">
+      <svg class="w-16 h-16 mx-auto mb-2 text-[#d9a441]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2a10 10 0 100 20A10 10 0 0012 2zm-2 16l-4-4m12 0l-4 4m-4-8h4m-4 4h4m-4-8v8m8-8v8m-4 0v4m0-12v4m4 0h-4m-4-4h4m4 4h-4"/>
+      </svg>
+      <h1 class="text-3xl font-bold tracking-wide">THE DAILY CRUMB</h1>
+      <p class="text-sm uppercase tracking-widest mt-1">ARTISANAL BAKERY</p>
     </div>
-    <script src="script.js"></script>
-  </body>
+
+    <!-- The central section with two options -->
+    <div id="sect-all" class="bg-[#d9a441] text-[#edece9] rounded-[70%] w-full max-w-4xl min-h-[500px] flex items-center justify-center shadow-lg p-8 md:p-16 transition-all duration-500 ease-in-out">
+      
+      <!-- Flex container for the inner content -->
+      <div class="flex flex-col md:flex-row items-center justify-center w-full space-y-8 md:space-y-0 md:space-x-12">
+        
+        <!-- Left side: Contact Us -->
+        <div class="flex-1 flex flex-col items-center justify-center text-center p-4">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Contact Us</h2>
+          <p class="text-lg md:text-xl max-w-xs mb-6">
+            Get in touch with our team for any inquiries or feedback.
+          </p>
+          <button id="contact-btn" class="bg-[#edece9] text-[#d9a441] font-semibold py-3 px-8 rounded-full shadow-md hover:bg-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#d9a441]">
+            Next
+          </button>
+        </div>
+        
+        <!-- Vertical separator line -->
+        <div class="w-1 h-32 md:h-64 bg-[#edece9] rounded-full my-8 md:my-0"></div>
+        
+        <!-- Right side: Fill a Form -->
+        <div class="flex-1 flex flex-col items-center justify-center text-center p-4">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Fill a Form</h2>
+          <p class="text-lg md:text-xl max-w-xs mb-6">
+            Complete the form to place a custom order or reservation.
+          </p>
+          <button id="fill-btn" class="bg-[#edece9] text-[#d9a441] font-semibold py-3 px-8 rounded-full shadow-md hover:bg-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#d9a441]">
+            Next
+          </button>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Hidden section for the Contact Form -->
+    <div id="contact-form" class="hidden absolute top-0 left-0 w-full min-h-screen flex items-center justify-center p-4 bg-gray-100 z-10 transition-all duration-500 ease-in-out">
+      <div class="bg-white p-8 rounded-lg shadow-xl max-w-2xl w-full text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Contact Us</h2>
+        <form id="contact-form-content" class="space-y-6">
+          <div>
+            <label for="name" class="sr-only">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" class="w-full px-4 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#d9a441] transition-colors duration-200" required>
+          </div>
+          <div>
+            <label for="email" class="sr-only">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" class="w-full px-4 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#d9a441] transition-colors duration-200" required>
+          </div>
+          <div>
+            <label for="message" class="sr-only">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Your Message" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d9a441] transition-colors duration-200" required></textarea>
+          </div>
+          <div class="flex justify-center space-x-4">
+            <button type="submit" class="bg-[#d9a441] text-white font-semibold py-3 px-8 rounded-full shadow-md hover:bg-opacity-80 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#d9a441]">
+              Submit
+            </button>
+            <button type="button" id="back-contact-btn" class="bg-gray-200 text-gray-700 font-semibold py-3 px-8 rounded-full hover:bg-gray-300 transition-colors duration-200">
+              Back
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+    <!-- Hidden section for the Custom Order Form, now with just text -->
+    <div id="fill-form" class="hidden absolute top-0 left-0 w-full min-h-screen flex items-center justify-center p-4 bg-gray-100 z-10 transition-all duration-500 ease-in-out">
+      <div class="bg-white p-8 rounded-lg shadow-xl max-w-2xl w-full text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Custom Order Form</h2>
+        <!-- The form elements have been replaced with a simple text block -->
+        <div class="space-y-6">
+          <p class="text-gray-600 text-lg">This is where the content for the "Fill a Form" section goes. You can add any text or static content here to provide information to the user.</p>
+          <div class="flex justify-center">
+            <button type="button" id="back-fill-btn" class="bg-gray-200 text-gray-700 font-semibold py-3 px-8 rounded-full hover:bg-gray-300 transition-colors duration-200">
+              Back
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sectAll = document.getElementById('sect-all');
+      const contactForm = document.getElementById('contact-form');
+      const fillForm = document.getElementById('fill-form');
+
+      const contactBtn = document.getElementById('contact-btn');
+      const fillBtn = document.getElementById('fill-btn');
+      const backContactBtn = document.getElementById('back-contact-btn');
+      const backFillBtn = document.getElementById('back-fill-btn');
+
+      const contactFormContent = document.getElementById('contact-form-content');
+
+      /**
+       * Toggles the visibility of a section.
+       * @param {HTMLElement} showElement The element to show.
+       * @param {HTMLElement} hideElement The element to hide.
+       */
+      const toggleSection = (showElement, hideElement) => {
+        showElement.classList.remove('hidden');
+        hideElement.classList.add('hidden');
+      };
+
+      // Event listener for the "Next" button in the "Contact Us" section
+      contactBtn.addEventListener('click', () => {
+        toggleSection(contactForm, sectAll);
+      });
+
+      // Event listener for the "Next" button in the "Fill a Form" section
+      fillBtn.addEventListener('click', () => {
+        toggleSection(fillForm, sectAll);
+      });
+
+      // Event listener for the "Back" button in the "Contact Us" form
+      backContactBtn.addEventListener('click', () => {
+        toggleSection(sectAll, contactForm);
+      });
+
+      // Event listener for the "Back" button in the "Custom Order Form"
+      backFillBtn.addEventListener('click', () => {
+        toggleSection(sectAll, fillForm);
+      });
+      
+      // Placeholder for form submission handling
+      contactFormContent.addEventListener('submit', (event) => {
+        event.preventDefault();
+        // The alert has been removed. You can add your own form submission logic here.
+        // Instead of an alert, a more user-friendly message could be displayed.
+        // For example:
+        // const message = document.createElement('p');
+        // message.textContent = "Thank you for your message! We will get back to you shortly.";
+        // contactFormContent.appendChild(message);
+        console.log('Contact form submitted!');
+      });
+    });
+  </script>
+
+</body>
 </html>
