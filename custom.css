@@ -25,7 +25,7 @@ body{
   height: 120vh;
   border-radius: 70%;
   width: 100rem;
-
+  justify-content:center;
   margin: 50vh;
   /* justify-self: center; is for grid items, not relevant for centering the grid container itself within a flex container */
 }
@@ -33,15 +33,12 @@ body{
   position:absolute;
   justify-content: center;
   align-items: center;
-  padding:0px;
-  margin:45vh;
   font-size: 2rem;
   color: #edece9;
 }
 .fill-form{
   height:5rem;
   width:7rem;
-  margin: 45vh;
   position: absolute;
   justify-content: center;
   align-items: center;
