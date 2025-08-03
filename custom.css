@@ -41,7 +41,8 @@ body {
 
 
 p {
-  color:#edece9;
+  color:#5c3a21;
+  max-height: 7rem;
   font-size: 1.2rem;
 }
 
@@ -68,7 +69,7 @@ p {
   height: 16rem;
   z-index: 27;
   border: none;
-  background-color: #;
+  background-color: #edece9;
   border-radius: 20px;
 }
 
