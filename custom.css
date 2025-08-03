@@ -5,4 +5,7 @@
   top: 0;
   margin: 0 auto;
 }
-.sect-all
+.sect-all{
+  background-color: #edebe6;
+  box-shadow: 1;
+}
