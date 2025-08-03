@@ -44,10 +44,10 @@ p {
 
 .fill-form {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   /* Removed large margin as parent now uses space-around */
-  padding: 2rem;
   text-align: center;
 }
 
