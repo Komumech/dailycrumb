@@ -44,7 +44,7 @@ body{
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-right: 9rem; /* Spacing from the HR */
+      margin-right: 20rem; /* Spacing from the HR */
       padding: 2rem;
       text-align: center;
       font-size: 1rem;
@@ -67,6 +67,7 @@ body{
       justify-content: center;
       align-items: center;
       font-size: 2rem;
+      
       color: #edece9;
       margin-left: 3rem; /* Spacing from the HR */
       text-align: center;
