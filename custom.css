@@ -1,11 +1,12 @@
-body{}
+body{
+  overflow:hidden;
+  width: 100%;
+}
 .background{
   background-size: cover;
   height: 100vh;
   position: absolute;
   top: 0;
-  overflow:hidden;
-  width: 100%;
   justify-content: center;
   margin: 0 auto;
 }
@@ -24,9 +25,7 @@ body{}
   height: 70rem;
   border-radius: 50%;
   width: 70rem;
-  /* Remove margin: auto 0; from .sect-all as flexbox will handle centering */
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+
   margin: 50vh;
   /* justify-self: center; is for grid items, not relevant for centering the grid container itself within a flex container */
 }
