@@ -63,7 +63,7 @@ body{
     .sect-all hr {
       width: 1rem;
       height: 20rem;
-      z-index:7
+      z-index:27;
       border: none;
       background-color: #edece9;
       border-radius: 20px;
