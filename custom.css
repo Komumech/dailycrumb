@@ -49,6 +49,7 @@ p {
   align-items: center;
   /* Removed large margin as parent now uses space-around */
   text-align: center;
+  padd
 }
 
 .sect-all hr {
@@ -61,7 +62,7 @@ p {
 }
 
 .contact-usdir {
-  
+  padding:1rem;
   
 }
 
