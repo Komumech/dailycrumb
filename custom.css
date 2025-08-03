@@ -33,7 +33,8 @@ body {
 
 .sect-all{
   display:flex;
-  flex-direction: ;
+  flex-direction: column;
+  
 }
 
 
