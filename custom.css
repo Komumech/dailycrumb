@@ -36,6 +36,14 @@ body{
   font-size: 2rem;
   color: #edece9;
 }
+.sect-all fill-form{
+  position:absolute;
+  justify-content: center;
+  align-items: center;
+  margin:45vh;
+  font-size: 2rem;
+  color: #edece9;
+}
 p{
   margin:45vh;
   position:absolute;
