@@ -42,6 +42,7 @@ p {
   justify-content: space-around; /* Changed to space-around for balanced spacing */
   align-items: center;
   width: 100%;
+  margin: 0 auto;
 }
 
 .fill-form {
@@ -63,7 +64,7 @@ p {
 }
 
 .contact-usdir {
-  display: flex;
+  
   flex-direction: column;
   justify-content: center;
   align-items: center;
