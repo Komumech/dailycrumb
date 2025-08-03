@@ -22,5 +22,6 @@
   /* Remove margin: auto 0; from .sect-all as flexbox will handle centering */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  margin: 50vh;
   /* justify-self: center; is for grid items, not relevant for centering the grid container itself within a flex container */
 }
