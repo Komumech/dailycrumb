@@ -65,7 +65,8 @@ p {
   font-size: 1rem;
 }
 .fill-form button{
-  background: ;
+  background-color: #d9a441;
+  border:5px solid #5c3a21;
 }
 
 .sect-all hr {
