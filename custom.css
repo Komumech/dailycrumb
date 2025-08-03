@@ -13,6 +13,7 @@ body {
   z-index: 10;
 }
 
+
 .container {
   display: flex;
   justify-content: center;
@@ -25,8 +26,8 @@ body {
   background-color: #d8b97e;
   /* Corrected box-shadow syntax for a visible effect */
   box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.1); 
-  height: 120vh;
-  width: 60rem;
+  height: 100;
+  width:100%;
   border-radius: 70%;
   display: flex;
   justify-content: center;
