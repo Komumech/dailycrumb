@@ -15,5 +15,7 @@
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
   height:30rem;
   width:40rem;
+  margin:auto 0;
+  display: grid;
   justify-self: center;
 }
