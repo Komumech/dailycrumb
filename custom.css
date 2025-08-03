@@ -44,11 +44,6 @@ body{
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 25rem; /* Adjusted size for better visual balance */
-      width: 25rem;
-      background-color: #edece9;
-      border-radius: 1rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       margin-right: 3rem; /* Spacing from the HR */
       padding: 2rem;
       text-align: center;
