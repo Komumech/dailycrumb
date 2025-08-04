@@ -46,6 +46,7 @@ p {
   max-width: 7rem;
   font-size: 1.2rem;
   padding-bottom: 1rem;
+  font-weight: 800;
 }
 
 .inner-content {
