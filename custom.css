@@ -45,6 +45,7 @@ p {
   color:#5c3a21;
   max-width: 7rem;
   font-size: 1.2rem;
+  padding: 2rem;
 }
 
 .inner-content {
@@ -89,6 +90,8 @@ p {
 
 /* New button styles */
 .button {
+  font-weight: 700;
+
   padding: 1rem 2rem;
   border-radius: 9999px; /* This makes the button fully rounded */
   font-weight: 600;
