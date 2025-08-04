@@ -37,7 +37,7 @@ body {
   background-color: #d9a441;
   border-radius: 50%;
   box-shadow:#c0c0c0 0px 0px 10px 0px;
-  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
