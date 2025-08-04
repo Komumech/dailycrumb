@@ -68,10 +68,10 @@ p {
   background-color: #d9a441;
   border:5px solid #5c3a21;
   color:#5c3a21;
-  padding: 1rem 1.5rem;
+  padding: 0.6rem 2rem;
 }
 
-.sect-all :hover
+.sect-all hr{ 
   width: 0.5rem;
   height: 16rem;
   z-index: 27;
