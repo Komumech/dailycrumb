@@ -273,7 +273,7 @@ body::-webkit-scrollbar-thumb {
     margin: 0 auto;
     color: #f8f4ed;
     position: absolute;
-    font-size: 2rem;
+    font-size: 1rem;
     z-index: 10;
     transition: opacity 0.5s, transform 0.5s;
 }
