@@ -270,10 +270,10 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
     justify-self: center;
     top: 50%;
-    margin: 0 auto;
+    margin: auto;
     color: #f8f4ed;
     position: absolute;
-    font-size: 1rem;
+    font-size: 2rem;
     z-index: 10;
     transition: opacity 0.5s, transform 0.5s;
 }
