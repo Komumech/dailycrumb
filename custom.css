@@ -110,6 +110,7 @@ p {
 
 .button-primary:hover {
   background-color: #ffffff;
+  color: #5c3a21;
 }
 
 .button-back {
