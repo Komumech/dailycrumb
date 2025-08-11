@@ -112,9 +112,9 @@ gsap.to(".video1", {
 // Logo background color change based on scroll
 gsap.fromTo(
     ".logo-img",
-    { backgroundColor: "rgba(217, 164, 65, 0.39)" },
+    { backgroundColor: "rgba(217, 164, 65, 0)" },
     {
-        backgroundColor: "#0f0a0056",
+        backgroundColor: "rgba(217, 164, 65, 0.39)" ",
         scrollTrigger: {
             trigger: ".onscroll",
             start: "top top",
