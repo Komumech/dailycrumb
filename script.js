@@ -51,15 +51,14 @@ gsap.to(".button-group", {
 });
 
 gsap.to(".img1", {
-    scale: 0.9, // This will shrink the element to 90% of its original size
+    scale: 0.9,
     scrollTrigger: {
-        trigger: ".onscroll",
+        trigger: ".img1",
         start: "top top",
         end: "bottom top",
         scrub: true
     }
 });
-
 gsap.to(".button-small", {
     y: 30,
     scale: 0.9555,
