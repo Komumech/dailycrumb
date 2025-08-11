@@ -51,14 +51,16 @@ gsap.to(".button-group", {
 });
 
 gsap.to(".img1", {
-    scale: 0.9,
+    y: -40,
+    scale: 0.5555,
     scrollTrigger: {
-        trigger: ".img1",
+        trigger: ".onscroll",
         start: "top top",
         end: "bottom top",
         scrub: true
     }
 });
+
 gsap.to(".button-small", {
     y: 30,
     scale: 0.9555,
@@ -111,9 +113,9 @@ gsap.to(".video1", {
 // Logo background color change based on scroll
 gsap.fromTo(
     ".logo-img",
-    { backgroundColor: "transparent" },
+    { backgroundColor: "rgba(217, 164, 65, 1)" },
     {
-        backgroundColor: "rgba(217, 164, 65, 1)",
+        backgroundColor: "#0f0a0002",
         scrollTrigger: {
             trigger: ".onscroll",
             start: "top top",
@@ -121,10 +123,10 @@ gsap.fromTo(
             scrub: true,
             onUpdate: self => {
                 const progress = self.progress;
-                if (progress > 0.05 && progress < 0.95) {
+                if (progress > 0.95 || progress < 0.05) {
                     gsap.to(".logo-img", { backgroundColor: "rgba(217, 164, 65, 1)", duration: 0.2, overwrite: "auto" });
                 } else {
-                    gsap.to(".logo-img", { backgroundColor: "transparent", duration: 0.2, overwrite: "auto" });
+                    gsap.to(".logo-img", { backgroundColor: "#d9a441", duration: 0.2, overwrite: "auto" });
                 }
             }
         }
