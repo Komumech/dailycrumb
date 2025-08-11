@@ -123,7 +123,7 @@ gsap.fromTo(
             onUpdate: self => {
                 const progress = self.progress;
                 if (progress > 0.95 || progress < 0.05) {
-                    gsap.to(".logo-img", { backgroundColor: "rgba(217, 164, 65, 1)", duration: 0.2, overwrite: "auto" });
+                    gsap.to(".logo-img", { backgroundColor: "rgba(217, 164, 65, 0.35)", duration: 0.2, overwrite: "auto" });
                 } else {
                     gsap.to(".logo-img", { backgroundColor: "#d9a441", duration: 0.2, overwrite: "auto" });
                 }
