@@ -4,6 +4,7 @@ body {
   background-image: url(https://brilliant-kleicha-4fa21a.netlify.app/coverimg.png);
   background-size: cover;
   background-repeat: no-repeat;
+  color: #5c3a21;
   background-position: center;
   font-family: "Comorant Garmond", serif;
 }
