@@ -51,10 +51,9 @@ gsap.to(".button-group", {
 });
 
 gsap.to(".img1", {
-    y: -40,
-    scale: 0.5555,
+    scale: 0.9,
     scrollTrigger: {
-        trigger: ".onscroll",
+        trigger: ".img1",
         start: "top top",
         end: "bottom top",
         scrub: true
