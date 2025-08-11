@@ -113,9 +113,9 @@ gsap.to(".video1", {
 // Logo background color change based on scroll
 gsap.fromTo(
     ".logo-img",
-    { backgroundColor: "rgba(217, 164, 65, 1)" },
+    { backgroundColor: "transparent" },
     {
-        backgroundColor: "#0f0a0002",
+        backgroundColor: "rgba(217, 164, 65, 1)",
         scrollTrigger: {
             trigger: ".onscroll",
             start: "top top",
@@ -123,10 +123,10 @@ gsap.fromTo(
             scrub: true,
             onUpdate: self => {
                 const progress = self.progress;
-                if (progress > 0.95 || progress < 0.05) {
+                if (progress > 0.05 && progress < 0.95) {
                     gsap.to(".logo-img", { backgroundColor: "rgba(217, 164, 65, 1)", duration: 0.2, overwrite: "auto" });
                 } else {
-                    gsap.to(".logo-img", { backgroundColor: "#d9a441", duration: 0.2, overwrite: "auto" });
+                    gsap.to(".logo-img", { backgroundColor: "transparent", duration: 0.2, overwrite: "auto" });
                 }
             }
         }
