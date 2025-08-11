@@ -115,7 +115,7 @@ gsap.fromTo(
     ".logo-img",
     { backgroundColor: "rgba(217, 164, 65, 1)" },
     {
-        backgroundColor: "#d9a441",
+        backgroundColor: "#0f0a0002",
         scrollTrigger: {
             trigger: ".onscroll",
             start: "top top",
