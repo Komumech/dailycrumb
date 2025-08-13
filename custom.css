@@ -124,7 +124,8 @@ p {
 }
 .sub-header{
   position: absolute;
-  
+  left:0%;
+  right:0%;
   font-size: 2rem;
   color: #5c3a21;
   margin: 0 auto;
