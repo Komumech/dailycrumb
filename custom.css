@@ -124,5 +124,6 @@ p {
 }
 .sub-header{
   position: absolute;
-  font-size: ;
+  font-size: 2rem;
+  color: #5c3a21;
 }
