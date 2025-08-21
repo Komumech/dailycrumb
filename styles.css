@@ -383,7 +383,7 @@ body::-webkit-scrollbar-thumb {
     margin: 0 auto;
     width: 100vh;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: ;
 }
 .order {
     width: 350px;
