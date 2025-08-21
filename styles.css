@@ -1372,7 +1372,7 @@ circle newsletter:hover{
 f
 .footerp{
     position: absolute;
-    margin
+    bottom: 0;
     line-height: 2rem;
     z-index:20;
     font-size: 5rem;
