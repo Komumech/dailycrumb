@@ -135,3 +135,6 @@ p {
   padding:20px;
   max-width: 12rem;
 }
+@media min-width {
+  
+}
