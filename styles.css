@@ -91,7 +91,7 @@ body::-webkit-scrollbar-thumb {
             height: 100vh; /* Example fixed height for the background area */
             position: relative; /* Needed for absolute positioning of image inside */
  /* Hide overflow if image doesn't perfectly fit */
-            border-radius: 20px; /* From your original CSS */
+            border-radius: 10px; /* From your original CSS */
             filter: brightness(50%); /* From your original CSS */
             /* The transition for opacity is crucial for the fade effect */
             transition: opacity 0.4s ease-in-out; /* Matches your original CSS transition duration */
@@ -99,12 +99,12 @@ body::-webkit-scrollbar-thumb {
 
         .bg-img {
             width: 100%;
-            height: 100%;
+            height: 100vh;
             object-fit: cover; /* Ensures image covers the area */
             position: absolute; /* Positions the image absolutely within .background */
             top: 0;
             left: 0;
-            border-radius: 20px; /* Apply border-radius to the image itself */
+            border-radius: 10px; /* Apply border-radius to the image itself */
             opacity: 1; /* Start fully visible */
             transition: opacity 0.4s ease-in-out; /* Use this for the fade effect */
         }
