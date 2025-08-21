@@ -500,7 +500,7 @@ p {
     .order-class {
         margin: ;
         margin-left: ;
-        display: grid;
+    
         height: 30rem;
         grid-template-columns: ;
     }
@@ -510,6 +510,7 @@ p {
         height: 200px;
         padding: 10px;
         margin: 0 auto;
+        left: 50%;
 
         /* Center 
   } the order element */
