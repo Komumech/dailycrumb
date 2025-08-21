@@ -1371,5 +1371,8 @@ circle newsletter:hover{
 } 
 f
 .foot p{
-    posi
+    position: absolute;
+    bottom: 90%;
+    margin: 0 aut;
 }
+.foot
