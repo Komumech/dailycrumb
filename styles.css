@@ -1374,6 +1374,7 @@ f
     position: absolute;
     bottom: 0%;
     line-height: 2rem;
+    z-index:20;
     
     margin: 0 auto;
 }
