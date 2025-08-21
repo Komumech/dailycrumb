@@ -464,7 +464,7 @@ body::-webkit-scrollbar-thumb {
     margin: 0 auto;
     display: grid;
     height: 30rem;
-    grid-template-columns: 50% 50%;
+    
 }
 
 #geminiOutput.visible {
@@ -492,6 +492,7 @@ p {
         margin-left: auto;
         margin-right: auto;
         width: 100vh;
+        justify-cony: baseline;
         height: 300px;
         text-align: center;
     }
