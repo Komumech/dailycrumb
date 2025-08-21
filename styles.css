@@ -1369,6 +1369,7 @@ circle newsletter:hover{
     display: grid;
     grid-template-rows:100% ;
     line-height: 2rem;
+    padding: 2rem;
 } 
 
 .footerp{
