@@ -44,7 +44,7 @@ body {
 
 p {
   color:#5c3a21;
-  max-width: 17rem;
+  max-width: 7rem;
   font-size: 1.2rem;
   padding-bottom: 1rem;
   font-weight: 800;
@@ -133,5 +133,5 @@ p {
   text-align: center;
   font-weight: 700;
   padding:20px;
-
+  max-width: 12rem;
 }
