@@ -1373,7 +1373,8 @@ f
 .foot p{
     position: absolute;
     bottom: 0%;
-    margin: 0 aut;
+    line-height: ;
+    margin: 0 auto;
 }
 .foot{
     color:#5C3A21;
