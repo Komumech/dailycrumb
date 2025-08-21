@@ -1375,7 +1375,8 @@ circle newsletter:hover{
     bottom: 0;
     line-height: 2rem;
     z-index:20;
-    font-weight: ;
+    max-width: 9rem;
+    font-weight: 400;
     font-size: 1rem;
     
 }
