@@ -1365,5 +1365,6 @@ circle newsletter:hover{
 }
 
 .social-links{
-    positio
+    position: absolute;
+    display: ;
 } 
