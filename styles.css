@@ -491,8 +491,8 @@ p {
         /* Single column layout */
         margin-left: auto;
         margin-right: auto;
-        width: 100px;
-        height: 100px;
+        width: 100vh;
+        height: 300px;
         text-align: center;
     }
 
