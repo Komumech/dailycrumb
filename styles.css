@@ -497,11 +497,11 @@ p {
     }
 
     .order-class {
-        margin: 0 auto;
+        margin: ;
         margin-left: ;
         display: grid;
         height: 30rem;
-        grid-template-columns: 100%;
+        grid-template-columns: ;
     }
 
     .order {
@@ -509,6 +509,7 @@ p {
         height: 400px;
         padding: 10px;
         margin: 0 auto;
+        
         /* Center 
   } the order element */
     }
