@@ -492,7 +492,7 @@ p {
         margin-left: auto;
         margin-right: auto;
         width: 100vh;
-        justify-cony: baseline;
+        justify-content: center;
         height: 300px;
         text-align: center;
     }
