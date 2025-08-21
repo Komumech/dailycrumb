@@ -379,11 +379,11 @@ body::-webkit-scrollbar-thumb {
 
 .order-class{
     position: absolute;
-    top: 120%;
+    top: 130%;
     margin: 0 auto;
     width: 100%;
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 50% 50%;
 }
 .order {
     width: 350px;
