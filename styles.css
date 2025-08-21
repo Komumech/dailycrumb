@@ -1366,5 +1366,6 @@ circle newsletter:hover{
 
 .social-links{
     position: absolute;
-    display: ;
+    display: grid;
+    grid-template-rows:100% ;
 } 
