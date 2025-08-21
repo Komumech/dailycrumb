@@ -1355,8 +1355,8 @@ circle newsletter:hover{
     background-image: url(bg8.png);
     padding: 30px;
     background-size:auto;
-    width:100%;
-label{
+    width:100%;}
+.label{
     border-radius: 50%;
 }
 #fllname, #email, #phone{
@@ -1364,4 +1364,6 @@ label{
     margin: ;
 }
 
-{}
+.social-links{
+    positio
+} 
