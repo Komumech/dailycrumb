@@ -1373,7 +1373,8 @@ f
 .foot p{
     position: absolute;
     bottom: 0%;
-    line-height: ;
+    line-height: 2rem;
+    
     margin: 0 auto;
 }
 .foot{
