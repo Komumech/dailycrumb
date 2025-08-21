@@ -388,6 +388,7 @@ body::-webkit-scrollbar-thumb {
 .order {
     width: 350px;
     height: 350px;
+    margin: 0 auto;
     background-color: #d9a441;
     border-radius: 50%;
     justify-content: center;
