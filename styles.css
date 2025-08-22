@@ -1367,7 +1367,8 @@ circle newsletter:hover{
 .social-links{
     position: absolute;
     display: grid;
-    
+    top: 30%;
+    left: 50©;
     grid-template-rows:100% ;
     line-height: 2rem;
     padding: 2rem;
