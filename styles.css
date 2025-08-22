@@ -1373,8 +1373,7 @@ circle newsletter:hover{
     left: 50%;
     right: 50%;
     grid-template-rows:100% ;
-    line-height: 2rem;
-    padding: 2rem;
+    
     margin: 0 auto;
 }  
 
