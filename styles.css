@@ -1395,7 +1395,7 @@ circle newsletter:hover{
     text-decoration: underline;
     font-weight: 600;
     line-height: 2rem;
-    padding:30px;
-    margin:0 auto
+    padding:12px;
+    margin:0 auto;
     display:grid;
 }
