@@ -9,7 +9,7 @@ body {
   font-family: "Comorant Garmond", serif;
 }
 .img1{
-  width: 4rem;
+  width: rem;
 }
 
 .logo-img {
@@ -126,12 +126,12 @@ p {
   position: absolute;
   left:0%;
   right:0%;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #5c3a21;
   margin:0 auto;
-  top:20%;
+  top:40%;
   text-align: center;
-  font-weight: 700;
+  font-weight: 500;
   padding:20px;
   max-width: 35rem;
 }
