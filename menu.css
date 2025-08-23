@@ -50,6 +50,7 @@ body::-webkit-scrollbar-thumb {
 .scroll-img{
   width:10rem;
   height: 10rem;
+  mar
   padding:10px;
   border-radius: 5px;
   background-image: url(bg.png);
