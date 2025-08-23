@@ -130,7 +130,7 @@ gsap.fromTo(
                 gsap.to(".logo-img", {
   backgroundColor: "#f8f4ed8d",
   duration: 0.2,
-  boxShadow: "0px 0px 12px #f8f4ed",
+  boxShadow: "0px 0px 12px #f8f4ed07",
   overwrite: "auto"
 });
 
