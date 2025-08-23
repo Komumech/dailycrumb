@@ -38,9 +38,9 @@ body {
   height: 10rem;
 }
 .scroll{
-  display: grid;
-  grid-template-rows;100%
+  display: flex;
   width:100%;
+  padding: 20px
   overflow-x: scroll;
   height:12rem;
 }
