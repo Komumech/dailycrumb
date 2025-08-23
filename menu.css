@@ -53,7 +53,10 @@ body::-webkit-scrollbar-thumb {
   padding:10px;
   border-radius: 5px;
   background-image: url(bg.png);
-  background-repeat: ;
+  background-size: cover;
+}
+.scroll-img:hover{
+  
 }
 .scroll{
   margin-top:3rem;
