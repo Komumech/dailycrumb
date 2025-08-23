@@ -49,6 +49,7 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
     margin: 0;
     padding: 0;
+    backdrop-filter: blur(20px);
 }
 
 .logo-img:hover>img {
