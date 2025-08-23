@@ -55,10 +55,11 @@ button:hover {
   position: absolute;
   height:20rem;
   top:30%;
- box-shadow: #f8f4ed 24px 24px 38px 38px;
+ box-shadow: #f8f4ed 14px 14px 30px 30px;
+ transition: all 0.5s ease-in-out;
 }
 .breakfast:hover{
-   box-shadow: #f8f4ed 24px 24px 38px 40px;
+   box-shadow: #f8f4ed 24px 24px 38px 38px;
 }
 .sub-head{
   position: absolute;
