@@ -27,5 +27,5 @@ body {
   top:30%;
 }
 .breakfast p{
-  top:0%;
+  position: absolute;
 }
