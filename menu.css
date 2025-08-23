@@ -20,6 +20,7 @@ body {
   height:100vh;
 }
 .ourmenu-img{
-    width: 100%;
+    width: 20%;
+   padding-top:10rem ;
     margin: 0 auto;
 }
