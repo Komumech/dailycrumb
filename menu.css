@@ -31,30 +31,5 @@ body {
   border-radius:50%;
 }
 .circle2{
-  height: 200vh;
-  position: absolute;
-  right:-20% ;
-  width:200vh;
-  background-color:#f8f4ed;
-  border-radius:50%;
-}
-@media (max-width: 768px) {
-  .circle {
-    height: 200%;
-    top: 80%;
-    left: 0%;
-    right: 0%;
-    margin: 0 auto;
-    position: absolute;
-    width: 200vh;
-  }
-  .circle2 {
-    left: 0%;
-    position: absolute;
-    right: 0%;
-    height: 200%;
-    width: 200vh;
-    margin: 0 auto;
-    bottom: 0%;
-  }
+
 }
