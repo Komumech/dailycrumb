@@ -59,11 +59,14 @@ body::-webkit-scrollbar-thumb {
   filter: brightness(50%);
 
 }
-.scroll-img > p:hover{
+.scroll-img:hover > p {
   visibility: visible;
 }
+
 .scroll-img > p{
   visibility: hidden;
+  color: #f8f4ed;
+  margin: ;
 }
 .scroll{
   margin-top:3rem;
