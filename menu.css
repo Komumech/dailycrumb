@@ -23,17 +23,16 @@ body::-webkit-scrollbar-thumb {
     border-radius: 20px;
 }
 button {
-    background-color: #d9a441;
+  background: transparent;
     color: #5c3a21;
-    border: none;
+    border: 2px solid #5c3a21;
     border-radius: 8px;
     font-family: "Raleway", sans-serif;
     font-weight: 600;
     font-size: 1rem;
-    margin: 1rem;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s;
+    margin-top: 1rem;
 }
 button:hover {
    background-color: #ffffff;
