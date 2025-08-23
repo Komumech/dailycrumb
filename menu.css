@@ -14,21 +14,12 @@ body {
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0 auto;
-  width:100%;
-  height:100vh;
+
 }
 .circle{
-  height: 120%;
-  position: absolute;
-  left: -20%;
-  width:150vh;
-  background-color:#5c3a21;
-  border-radius:50%;
+  width: 100%;
+  height: 100%;
+  background-color: #5c3a21;
 }
 .circle2{
 
