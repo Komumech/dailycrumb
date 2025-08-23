@@ -66,7 +66,9 @@ body::-webkit-scrollbar-thumb {
 .scroll-img > p{
   visibility: hidden;
   color: #f8f4ed;
-  margin: ;
+  margin: 0 auto;
+  padding-top: 3rem;
+  justify-self: center;
 }
 .scroll{
   margin-top:3rem;
