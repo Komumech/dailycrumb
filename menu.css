@@ -76,6 +76,7 @@ button:hover {
   transition: all 0.5s ease-in-out;
   display: grid;
   place-items: center;
+  box-shadow: #5C3A21 0 4px 8px;
 }
 .scroll-img::before {
   content: "";
@@ -116,6 +117,7 @@ button:hover {
   display: grid;
   font-size: 1.5rem;
   font-weight: 500;
+  box-shadow: #5C3A21 0 4px 8px;
 }
 .scroll-img > p > button{
   visibility: hidden;
