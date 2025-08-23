@@ -131,8 +131,9 @@ button:hover {
   justify-self: center;
   display: flex;
   width:90%;
-  background-color: #fbf5eb;
+  background-color: #f9f1e3b0;
   overflow-x: scroll;
+  box-shadow: #23211db0 0 4px 8px;
   height:12rem;
 }
 .scroll::-webkit-scrollbar {
