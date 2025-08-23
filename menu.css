@@ -126,6 +126,7 @@ button:hover {
   display: grid;
   font-size: 1.5rem;
   font-weight: 500;
+  transform: translateY(-1rem);
 }
 .scroll-img > p > button{
   visibility: hidden;
