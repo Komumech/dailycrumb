@@ -22,7 +22,7 @@ body::-webkit-scrollbar-thumb {
     /* Oven Gold */
     border-radius: 20px;
 }
-.button-large {
+button {
     background-color: #d9a441;
     color: #5c3a21;
     border: none;
@@ -30,9 +30,14 @@ body::-webkit-scrollbar-thumb {
     font-family: "Raleway", sans-serif;
     font-weight: 600;
     font-size: 1rem;
+    margin: 1rem;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s;
+}
+button:hover {
+   background-color: #ffffff;
+    color: #5C3A21;
 }
 .logo-img{
   z-index: 30;
@@ -71,8 +76,10 @@ body::-webkit-scrollbar-thumb {
   transition: all 0.5s ease-in-out;
 }
 .scroll-img:hover{
-  filter: brightness(80%);
   transition: all 0.5s ease-in-out;
+}
+.scroll-img::before{
+  transition: filter 0.5 ;
 }
 .scroll-img:hover > p {
   visibility: visible;
