@@ -22,3 +22,9 @@ body {
     border-radius: 50%;
     background-color: #f8f4ed;
 }
+.circle2{
+    height: 90%;
+    width: 90vh;
+    border-radius: 50%;
+    background-color: #5c3a21;
+}
