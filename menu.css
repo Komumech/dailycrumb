@@ -56,6 +56,10 @@ button:hover {
   height:20rem;
   top:30%;
  box-shadow: #f8f4ed 24px 24px 38px 38px;
+}
+.breakfast:hover{
+   box-shadow: #f8f4ed 24px 24px 38px 40px;
+}
 .sub-head{
   position: absolute;
   top: 20%;
