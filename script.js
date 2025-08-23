@@ -114,7 +114,7 @@ gsap.fromTo(
     ".logo-img",
     { backgroundColor: "rgba(217, 164, 65, 0)" }, // Transparent at start
     {
-        backgroundColor: "#f8f4edbe", // Colored after top
+        backgroundColor: "#f8f4ed", // Colored after top
         scrollTrigger: {
             trigger: ".onscroll",
             start: "top top",
@@ -122,7 +122,7 @@ gsap.fromTo(
             scrub: true,
             onUpdate: self => {
                 const progress = self.progress;
-                if (progress < 0.45) {
+                if (progress < 20.45) {
                     // Transparent only at the very top (first 5%)
                     gsap.to(".logo-img", { backgroundColor: "rgba(217, 164, 65, 0)", duration: 0.2, overwrite: "auto" });
                 } else {
