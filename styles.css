@@ -1369,7 +1369,7 @@ circle newsletter:hover{
 .social-links{
     display: grid;
     color: #5C3A21;
-    text-decoration: underline;
+    
 }  
 
 .footerp{
@@ -1386,15 +1386,16 @@ circle newsletter:hover{
     color:#5C3A21;
 }
 .social-links a{
-  
+    text-decoration: none;
+    color: #5C3A21;
 }
 .contact-links{
-    text-decoration: underline;
     display: grid;
     color: #5C3A21;
 }
 .contact-links a{
-  
+     text-decoration: none;
+    
 }
 .links{
     display: grid;
