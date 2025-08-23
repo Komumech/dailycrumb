@@ -114,7 +114,7 @@ gsap.fromTo(
     ".logo-img",
     { backgroundColor: "rgba(217, 164, 65, 0)" }, // Transparent at start
     {
-        backgroundColor: "#f8f4edbe", // Colored after top
+        backgroundColor: "#f8f4ed0a", // Colored after top
         scrollTrigger: {
             trigger: ".onscroll",
             start: "top top",
