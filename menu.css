@@ -99,6 +99,7 @@ button:hover {
 }
 .scroll-img:hover > p {
   visibility: visible;
+  opacity: 1;
   transition: all 0.5s ease-in-out;
   filter:brightness(100%);
 }
