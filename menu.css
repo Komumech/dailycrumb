@@ -1,6 +1,9 @@
 body {
   width: 100%;
   margin: 0 auto;
+  background-image: url(bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   color: #5c3a21;
   background-position: center;
   font-family: "Comorant Garmond", serif;
