@@ -21,7 +21,8 @@ body {
 }
 .circle{
   height: 90%;
-  width:90%;
+  margin-right: 0px;
+  width:90vh;
   background-color:#5c3a21;
   border-radius:50%;
 }
