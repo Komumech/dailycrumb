@@ -6,6 +6,7 @@ body {
   background-position: center;
   background-attachment: fixed; /* 👈 Keeps the background in place */
   color: #5c3a21;
+  overflow-y: hidden;
   font-family: "Cormorant Garamond", serif;
 }
 
@@ -20,7 +21,7 @@ body {
   height:100vh;
 }
 .circle{
-  height: 5%;
+  height: 120%;
   position: absolute;
   left: -20%;
   width:150vh;
