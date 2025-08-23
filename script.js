@@ -128,9 +128,9 @@ gsap.fromTo(
                 } else {
                     // Colored for the rest of the scroll
                 gsap.to(".logo-img", {
-  backgroundColor: "#f8f4ed",
+  backgroundColor: "#f8f4ed8d",
   duration: 0.2,
-  boxShadow: "0px 4px 12px #f8f4ed",
+  boxShadow: "0px 0px 12px #f8f4ed",
   overwrite: "auto"
 });
 
