@@ -52,6 +52,7 @@ body::-webkit-scrollbar-thumb {
   height: 10rem;
   padding:10px;
   border-radius: 5px;
+  background-image: url(bg.png);
 }
 .scroll{
   margin-top:3rem;
@@ -77,5 +78,5 @@ body::-webkit-scrollbar-thumb {
     border-radius: 20px;
 }
 .item1{
-  
+
 }
