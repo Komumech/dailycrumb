@@ -56,7 +56,10 @@ body::-webkit-scrollbar-thumb {
   background-size: cover;
 }
 .scroll-img:hover{
-  
+
+}
+.scroll-img > text1{
+  visibility: hiden;
 }
 .scroll{
   margin-top:3rem;
