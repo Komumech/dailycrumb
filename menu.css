@@ -78,8 +78,8 @@ button:hover {
 .scroll-img:hover{
   transition: all 0.5s ease-in-out;
 }
-.scroll-img::before{
-  transition: filter 0.5s ease-in-out;
+.scroll-img:hover::before{
+  filter: brightness(80%);
 }
 .scroll-img:hover > p {
   visibility: visible;
