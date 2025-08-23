@@ -51,12 +51,14 @@ body::-webkit-scrollbar-thumb {
   width:10rem;
   height: 10rem;
   padding:10px;
+  border-radius: 5px;
 }
 .scroll{
   margin-top:3rem;
   justify-self: center;
   display: flex;
-  width:100%;
+  width:90%;
+  background-color: #f8f4ed;
   overflow-x: scroll;
   height:12rem;
 }
