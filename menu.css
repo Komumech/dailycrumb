@@ -43,6 +43,6 @@ body {
 }
 .cir-all{
     position: fixed;
-    height: fit-content;
-    width: fit-content;
+    height: 70%;
+    width: 90%;
 }
