@@ -1373,6 +1373,7 @@ circle newsletter:hover{
     left: 0;
     padding: 50px;
     width: 110px;
+    z-index: 90;
 }
 
 .footerp{
