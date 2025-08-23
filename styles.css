@@ -1399,3 +1399,20 @@ circle newsletter:hover{
     margin:0 auto;
     display:grid;
 }
+.contact-links{
+    position: absolute;
+    display: grid;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    margin: 0 auto;
+}
+.social-links a{
+    color: #5C3A21;
+    text-decoration: underline;
+    font-weight: 600;
+    line-height: 2rem;
+    padding:12px;
+    margin:0 auto;
+    display:grid;
+}
