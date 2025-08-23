@@ -29,4 +29,6 @@ body {
 .sub-head{
   position: absolute;
   top: 20%;
+  margin: 0 auto;
+  justify-self: center;
 }
