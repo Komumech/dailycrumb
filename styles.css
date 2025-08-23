@@ -1393,7 +1393,7 @@ circle newsletter:hover{
 }
 .foot a{
     font-weight: 400;
-    
+    text-decoration: underline;
 }
 .social-links a{
     text-decoration: none;
