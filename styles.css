@@ -1391,6 +1391,10 @@ circle newsletter:hover{
 .foot{
     color:#5C3A21;
 }
+.foot a{
+    font-weight: 400;
+    
+}
 .social-links a{
     text-decoration: none;
     color: #5C3A21;
