@@ -1,0 +1,12 @@
+.img1{
+  width: 6rem;
+}
+
+.logo-img {
+  position: absolute;
+  top: 0%;
+  height: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
