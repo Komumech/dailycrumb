@@ -112,6 +112,7 @@ button:hover {
   opacity: 1;
   transition: all 0.5s ease-in-out;
   filter:brightness(100%);
+  transform: translateY(-1rem);
 }
 
 .scroll-img > p{
@@ -126,7 +127,6 @@ button:hover {
   display: grid;
   font-size: 1.5rem;
   font-weight: 500;
-  transform: translateY(-3rem);
 }
 .scroll-img > p > button{
   visibility: hidden;
