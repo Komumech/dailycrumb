@@ -1375,13 +1375,13 @@ circle newsletter:hover{
 .footerp{
     position: absolute;
     bottom: 0;
-    left: 50%;
-    right: 50%;
+    left: 100%;
     line-height: 2rem;
     z-index:20;
     max-width: 90vh;
     font-weight: 400;
     font-size: 1rem;
+    margin: 0 auto;
 }
 .foot{
     color:#5C3A21;
