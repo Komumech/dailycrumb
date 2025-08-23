@@ -54,13 +54,15 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
   background-image: url(bg.png);
   background-size: cover;
+  transition: all 0.5s ease-in-out;
 }
 .scroll-img:hover{
   filter: brightness(50%);
-
+  transition: all 0.5s ease-in-out;
 }
 .scroll-img:hover > p {
   visibility: visible;
+  transition: all 0.5s ease-in-out;
 }
 
 .scroll-img > p{
@@ -69,6 +71,7 @@ body::-webkit-scrollbar-thumb {
   margin: 0 auto;
   padding-top: 3rem;
   justify-self: center;
+  transition: all 0.5s ease-in-out;
 }
 .scroll{
   margin-top:3rem;
