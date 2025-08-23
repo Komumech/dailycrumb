@@ -28,7 +28,7 @@ body {
   border-radius:50%;
 }
 .circle2{
-  height: 200%;
+  height: 200vh;
   position: absolute;
   width:200vh;
   margin-right: -12rem;
