@@ -22,13 +22,14 @@ body {
   background-color:#f8f4ed;
   width: 100%;
   position: absolute;
-  height:10rem;
+  height:20rem;
   top:30%;
 }
 .sub-head{
   position: absolute;
   top: 20%;
   margin: 0 auto;
-  font
+  font-size: 2rem;
+  font-weight: 700;
   justify-self: center;
 }
