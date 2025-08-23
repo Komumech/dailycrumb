@@ -35,9 +35,9 @@ button {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s;
 }
-button-large:hover {
-    background-color: #803c3c;
-    color: #f8f4ed;
+button:hover {
+   background-color: #ffffff;
+    color: #5C3A21;
 }
 .logo-img{
   z-index: 30;
