@@ -75,15 +75,17 @@ button:hover {
   flex-shrink: 0;
   transition: all 0.5s ease-in-out;
 }
-.scroll-img:hover{
-  transition: all 0.5s ease-in-out;
-}
 .scroll-img::before{
   
+}
+.scroll-img:hover{
+  filter: brightness(80%);
+  transition: all 0.5s ease-in-out;
 }
 .scroll-img:hover > p {
   visibility: visible;
   transition: all 0.5s ease-in-out;
+  filter:brightness(100%);
 }
 
 .scroll-img > p{
