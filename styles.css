@@ -1402,7 +1402,7 @@ circle newsletter:hover{
 }
 .links{
     display: grid;
-    
+    padding-top: 9rem;
     grid-template-columns: 50% 50%;
     height: 16rem;
     justify-content: center;
