@@ -114,7 +114,7 @@ gsap.fromTo(
     ".logo-img",
     { backgroundColor: "rgba(217, 164, 65, 0)" }, // Transparent at start
     {
-        backgroundColor: "rgba(217, 164, 65, 0.39)", // Colored after top
+        backgroundColor: "#f8f4edbe", // Colored after top
         scrollTrigger: {
             trigger: ".onscroll",
             start: "top top",
@@ -127,7 +127,7 @@ gsap.fromTo(
                     gsap.to(".logo-img", { backgroundColor: "rgba(217, 164, 65, 0)", duration: 0.2, overwrite: "auto" });
                 } else {
                     // Colored for the rest of the scroll
-                    gsap.to(".logo-img", { backgroundColor: "rgba(217, 164, 65, 0.39)", duration: 0.2, overwrite: "auto" });
+                    gsap.to(".logo-img", { backgroundColor: "#f8f4edbe", duration: 5, overwrite: "auto" });
                 }
             }
         }
