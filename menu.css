@@ -107,7 +107,7 @@ button:hover {
 }
 .scroll-img:hover::before{
   filter: brightness(70%);
-  transform: translateY(-1rem);
+  
 }
 .scroll-img:hover > p {
   visibility: visible;
