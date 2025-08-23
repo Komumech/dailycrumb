@@ -26,6 +26,7 @@ body {
   height:10rem;
   top:30%;
 }
-.breakfast p{
+.sub-head{
   position: absolute;
+  top: 20%;
 }
