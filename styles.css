@@ -43,7 +43,7 @@ body::-webkit-scrollbar-thumb {
     top: 0;
     left: 0;
     width: 100%;
-    height: 30px;
+    height: 100px;
     background-color: transparent;
     z-index: 10;
     justify-content: center;
@@ -1371,7 +1371,7 @@ circle newsletter:hover{
 .footer-logo{
     position: absolute;
     left: 0;
-    padding: 40px;
+    padding: 70px;
     width: 110px;
 }
 
