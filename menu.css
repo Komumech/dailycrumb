@@ -94,7 +94,7 @@ button:hover {
   transition: all 0.5s ease-in-out;
 }
 .scroll-img:hover::before{
-  filter: brightness(80%);
+  filter: brightness(70%);
 }
 .scroll-img:hover > p {
   visibility: visible;
@@ -106,6 +106,7 @@ button:hover {
   visibility: hidden;
   color: #f8f4ed;
   margin: 0 auto;
+  font-style: oblique;
   padding-top: 3rem;
   justify-self: center;
   transition: all 0.5s ease-in-out;
