@@ -26,3 +26,11 @@ body {
   background-color:#5c3a21;
   border-radius:50%;
 }
+.circle2{
+  height: 90%;
+  margin-right: 90px;
+  width:90vh;
+  position: absolute;
+  background-color:#f47012;
+  border-radius:50%;
+}
