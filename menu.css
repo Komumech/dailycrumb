@@ -20,10 +20,10 @@ body {
   height:100vh;
 }
 .circle{
-  height: 200%;
+  height: 100%;
   position: absolute;
   left: -20%;
-  width:200vh;
+  width:100vh;
   background-color:#5c3a21;
   border-radius:50%;
 }
@@ -32,6 +32,6 @@ body {
   position: absolute;
   right:-20% ;
   width:200vh;
-  background-color:#f86800;
+  background-color:#f8f4ed;
   border-radius:50%;
 }
