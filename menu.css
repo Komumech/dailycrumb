@@ -55,7 +55,7 @@ button:hover {
   position: absolute;
   height:20rem;
   top:30%;
-}
+ box-shadow: #f9f1e3fe 0 24px 38px;
 .sub-head{
   position: absolute;
   top: 20%;
@@ -117,7 +117,6 @@ button:hover {
   display: grid;
   font-size: 1.5rem;
   font-weight: 500;
-  box-shadow: #5C3A21 0 4px 8px;
 }
 .scroll-img > p > button{
   visibility: hidden;
