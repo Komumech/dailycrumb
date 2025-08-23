@@ -50,11 +50,12 @@ body::-webkit-scrollbar-thumb {
 .scroll-img{
   width:10rem;
   height: 10rem;
-  mar
+  margin-right: 1rem;
   padding:10px;
   border-radius: 5px;
   background-image: url(bg.png);
   background-size: cover;
+  flex-shrink: 0;
   transition: all 0.5s ease-in-out;
 }
 .scroll-img:hover{
