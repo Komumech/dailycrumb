@@ -9,7 +9,9 @@ body {
   overflow-y: hidden;
   font-family: "Cormorant Garamond", serif;
 }
-l
+.logo-img{
+  z-index: 30;
+}
 
 .container {
   display: flex;
