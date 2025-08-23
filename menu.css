@@ -59,7 +59,8 @@ button:hover {
  transition: all 0.5s ease-in-out;
 }
 .breakfast:hover{
-   box-shadow: #f8f4ed 24px 24px 38px 38px;
+   box-shadow: #f8f4ed 24px 24px 18px 18px;
+   
 }
 .sub-head{
   position: absolute;
