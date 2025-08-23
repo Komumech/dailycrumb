@@ -39,6 +39,8 @@ body {
   padding:10px;
 }
 .scroll{
+  margin-top:3r
+  justify-self: center;
   display: flex;
   width:100%;
   overflow-x: scroll;
