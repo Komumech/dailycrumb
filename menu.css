@@ -22,6 +22,8 @@ body {
   height: 100vh;
   background-color: #5c3a21;
   border-radius: 50%;
+    right: -10%;
+  top: -20%;
 }
 .circle2{
   width: 70%;
@@ -29,5 +31,6 @@ body {
   background-color: #f4e3d2;
   border-radius: 50%;
   position: absolute;
- margin-right: ;
+  right: -10%;
+  top: -20%;
 }
