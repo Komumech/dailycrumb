@@ -22,17 +22,16 @@ body {
 .circle{
   height: 200%;
   position: absolute;
-  margin-right: 0px;
-  width:90vh;
+  margin-right: 400px;
+  width:200vh;
   background-color:#5c3a21;
   border-radius:50%;
 }
 .circle2{
   height: 200%;
   position: absolute;
-  margin-right: 0px;
-  width:90vh;
-  margin-left: 12rem;
+  width:200vh;
+  margin-right: -12rem;
   background-color:#f86800;
   border-radius:50%;
 }
