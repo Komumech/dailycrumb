@@ -17,7 +17,8 @@ body {
   height:100vh;
 }
 .circle{
-    height: 90vh;
+    height: 90%;
     width: 90vh;
-    background-color: ;
+    border-radius: 50%;
+    background-color: #f8f4ed;
 }
