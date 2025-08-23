@@ -36,11 +36,11 @@ body {
 .scroll-img{
   width:10rem;
   height: 10rem;
+  padding:10px;
 }
 .scroll{
   display: flex;
   width:100%;
-  padding: 20px
   overflow-x: scroll;
   height:12rem;
 }
