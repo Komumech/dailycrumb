@@ -106,6 +106,7 @@ button:hover {
 
 .scroll-img > p{
   visibility: hidden;
+  opacity: 0;
   color: #f8f4ed;
   margin: 0 auto;
   font-style: oblique;
@@ -126,7 +127,7 @@ button:hover {
   transition: all 0.5s ease-in-out;
 }
 .scroll{
-  margin-top:3rem;
+  margin-top:4rem;
   justify-self: center;
   display: flex;
   width:90%;
