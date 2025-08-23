@@ -1,5 +1,4 @@
 body {
-  width: 100rem;
   margin: 0 auto;
   background-size: cover;
   background-repeat: no-repeat;
@@ -27,7 +26,7 @@ body {
 .circle2{
   height: 90%;
   width:90vh;
-  margin: 7rem;
+  top
   position: absolute;
   background-color:#f47012;
   border-radius:50%;
