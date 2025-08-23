@@ -31,3 +31,12 @@ body {
     border-radius: 50%;
     background-color: #5c3a21;
 }
+.circle0{
+    height: 90%;
+    z-index: 2;
+    transform: translateX(40%);
+    position: absolute;
+    width: 90vh;
+    border-radius: 50%;
+    background-color: ; 
+}
