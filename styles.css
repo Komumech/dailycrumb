@@ -468,7 +468,7 @@ body::-webkit-scrollbar-thumb {
     margin: 0 auto;
     display: grid;
     height: 30rem;
-    
+    width: 100%;
 }
 
 #geminiOutput.visible {
@@ -1402,6 +1402,7 @@ circle newsletter:hover{
 }
 .links{
     display: grid;
+    
     grid-template-columns: 50% 50%;
     height: 16rem;
     justify-content: center;
