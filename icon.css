@@ -1,13 +1,13 @@
 .img1{
   position: absolute;
-  left: 50%;
+  left: 35%;
   right: 50%;
   width: 6rem;
   margin: 0 auto;
 }
 
 .logo-img {
-  height
+  height: 7rem;
   position: absolute;
   margin: 0 auto;
 }
