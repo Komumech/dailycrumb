@@ -1,9 +1,6 @@
 body {
   width: 100%;
   margin: 0 auto;
-  background-image: url(https://brilliant-kleicha-4fa21a.netlify.app/coverimg.png);
-  background-size: cover;
-  background-repeat: no-repeat;
   color: #5c3a21;
   background-position: center;
   font-family: "Comorant Garmond", serif;
@@ -20,7 +17,7 @@ body {
   height:100vh;
 }
 .menu-img{
-    width: 20%;
+    width: 80%;
    padding-top:1rem ;
     margin: 0 auto;
 }
