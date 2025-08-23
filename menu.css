@@ -49,19 +49,22 @@ button:hover {
   margin: 0 auto;
   width:100%;
 }
-.breakfast{
-  background-color:#f8f4ed;
+.breakfast {
+  background-color: #f8f4ed;
   width: 100%;
   position: absolute;
-  height:20rem;
-  top:30%;
- box-shadow: #f8f4ed 14px 14px 30px 30px;
- transition: all 0.5s ease-in-out;
+  height: 20rem;
+  top: 30%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* 👈 Soft neutral shadow */
+  border-radius: 12px; /* 👈 Adds smooth corners */
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
 }
-.breakfast:hover{
-   box-shadow: #f8f4ed 24px 24px 18px 18px;
-   
+
+.breakfast:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15); /* 👈 Deeper shadow on hover */
+  transform: translateY(-4px); /* 👈 Slight lift effect */
 }
+
 .sub-head{
   position: absolute;
   top: 20%;
