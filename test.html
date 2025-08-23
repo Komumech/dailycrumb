@@ -9,7 +9,6 @@
     <style>
     .menuu:hover{
         grid-template-rows: 100%;
-        margin: 10px;
         width: 95%;
         background-color: #f8f4ed;
         height: 100vh;
@@ -25,14 +24,14 @@
     .menuitem{
         height: 4rem;
         width: 4rem;
-        transition: ;
-        margin-left: 60px;
+        transition: all 0.5s ease-in-out ;
         font-weight: 700;
         text-decoration: none;
         color: #5C3A21;
         font-size: 2rem;
         z-index: 80;
         visibility: hidden;
+        transition: visibility 0.5s ease-in-out ;
     }
     .menuu:hover .menuitem{
         visibility: visible;
