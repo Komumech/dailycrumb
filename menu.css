@@ -76,6 +76,10 @@ body::-webkit-scrollbar-thumb {
   justify-self: center;
   transition: all 0.5s ease-in-out;
 }
+.scroll-img > p > button{
+  visibility: hidden;
+}
+.scroll-img > p > button
 .scroll{
   margin-top:3rem;
   justify-self: center;
