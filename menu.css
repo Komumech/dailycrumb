@@ -33,10 +33,11 @@ body {
 }
 .circle0{
     height: 90%;
-    z-index: 2;
-    transform: translateX(40%);
+    z-index: -3;
+    transform: translateX(-70%);
     position: absolute;
     width: 90vh;
     border-radius: 50%;
-    background-color: ; 
+    background-color: ;
+    border: 5px solid #dea846bd; 
 }
