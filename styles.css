@@ -1369,9 +1369,6 @@ circle newsletter:hover{
 .social-links{
     position: absolute;
     display: grid;
-    top: 30%;
-    left: 50%;
-    right: 50%;
     
     
     margin: 0 auto;
@@ -1402,9 +1399,6 @@ circle newsletter:hover{
 .contact-links{
     position: absolute;
     display: grid;
-    top: 50%;
-    left: 50%;
-    right: 50%;
     margin: 0 auto;
 }
 .contact-links a{
