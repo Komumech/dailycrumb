@@ -8,6 +8,20 @@ body {
   overflow-y: hidden;
   font-family: "Cormorant Garamond", serif;
 }
+body::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #f8f4ed;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #dea846bd;
+    /* Oven Gold */
+    border-radius: 20px;
+}
 .logo-img{
   z-index: 30;
 }
@@ -39,7 +53,7 @@ body {
   padding:10px;
 }
 .scroll{
-  margin-top:3r
+  margin-top:3rem;
   justify-self: center;
   display: flex;
   width:100%;
