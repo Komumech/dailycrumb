@@ -33,3 +33,7 @@ body {
   font-weight: 700;
   justify-self: center;
 }
+.scroll-img{
+  width:10rem;
+  height: 10rem;
+}
