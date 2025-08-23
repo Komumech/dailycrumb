@@ -21,20 +21,20 @@ body {
 }
 .circle{
   height: 90%;
-  margin-right: 0px;
   width:90vh;
   background-color:#5c3a21;
   border-radius:50%;
 }
 .circle2{
   height: 90%;
-  margin-right: 90px;
   width:90vh;
   position: absolute;
   background-color:#f47012;
   border-radius:50%;
 }
 .cir{
+  display:grid;
+  grid-template-columns: 50% 50%;
   width: 100%;
   height: 100vh;
 }
