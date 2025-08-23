@@ -4,45 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      .menu-toggle {
-        cursor: pointer;
-        display: block;
-      }
-    </style>
 </head>
 <body>
-<nav class="flex justify-between items-center p-4 bg-gray-800 text-white shadow-lg">
-        <div>
-            <a href="#" class="text-2xl font-bold hover:text-gray-400 transition-colors duration-300">BrandName</a>
+    <style>
+    .menuu:hover{
+        display: grid;
+        grid-template-rows: 100%;
+        margin: 10px;
+        width: 95%;
+        height: 100vh;
+        position: fixed;
+        transition:all 0.5s ease-in-out ;
+    }
+    .menuu{
+        width: 4rem;
+        height: 4rem;
+        background-color: #f8f4ed;
+        border: 8px solid #5C3A21;
+        z-index: 70;
+        margin-top: 0px;
+    }
+    .menuitem{
+        height: 4rem;
+        width: 4rem;
+        margin: 0px;
+        z-index: 80;
+        visibility: hidden;
+    }
+    .menuu:hover .menuitem{
+        visibility: visible;
+        transition:all 0.5s ease-in-out ;
+        margin: 0 auto;
+    }
+</style>
+<div class="menuu">
+            <a href="" class="menuitem"> hello me</a>
+ <a href="hime" class="menuitem"></a>
         </div>
-        <div id="menu-links" class="flex flex-col md:flex md:flex-row md:space-x-8 md:items-center space-y-4 md:space-y-0 hidden md:block">
-            <a href="#" class="text-lg font-medium hover:text-blue-400 transition-colors duration-300">Home</a>
-            <a href="#" class="text-lg font-medium hover:text-blue-400 transition-colors duration-300">About</a>
-            <a href="#" class="text-lg font-medium hover:text-blue-400 transition-colors duration-300">Services</a>
-            <a href="#" class="text-lg font-medium hover:text-blue-400 transition-colors duration-300">Contact</a>
-        </div>
-        <div class="md:hidden">
-            <button id="menu-toggle" class="text-white focus:outline-none p-2 rounded-md hover:bg-gray-700 transition-colors duration-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
-        </div>
-    </nav>
-    <main class="p-8 text-center">
-        <h1 class="text-4xl font-bold text-gray-800">Welcome to the Website</h1>
-        <p class="mt-4 text-xl text-gray-600">This is a fully responsive navigation menu.</p>
-    </main>
-    <script>
-      window.onload = function() {
-          const menuToggle = document.getElementById('menu-toggle');
-          const menuLinks = document.getElementById('menu-links');
-          menuToggle.addEventListener('click', () => {
-              menuLinks.classList.toggle('hidden');
-          });
-      };
-    </script>
 </body>
 </html>
