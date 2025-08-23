@@ -1367,11 +1367,7 @@ circle newsletter:hover{
 }
 
 .social-links{
-    position: absolute;
     display: grid;
-    
-    
-    margin: 0 auto;
 }  
 
 .footerp{
@@ -1388,27 +1384,12 @@ circle newsletter:hover{
     color:#5C3A21;
 }
 .social-links a{
-    color: #5C3A21;
-    text-decoration: underline;
-    font-weight: 600;
-    line-height: 2rem;
-    padding:12px;
-    margin:0 auto;
-    display:grid;
+  
 }
 .contact-links{
-    position: absolute;
-    display: grid;
-    margin: 0 auto;
 }
 .contact-links a{
-    color: #5C3A21;
-    text-decoration: underline;
-    font-weight: 600;
-    line-height: 2rem;
-    padding:12px;
-    margin:0 auto;
-    display:grid;
+  
 }
 .links{
     display: grid;
