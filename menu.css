@@ -39,5 +39,5 @@ body {
 }
 .scroll{
   display: grid;
-  grid-template-columns: ;
+  grid-template-columns: 20% 20% 20% 20% 20%;
 }
