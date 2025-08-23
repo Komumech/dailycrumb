@@ -16,10 +16,13 @@ body {
 .container {
   height:100vh;
   display:grid;
+  margin: 0 auto;
   width:100%;
 }
 .breakfast{
   background-color:#f8f4ed;
   width: 100%;
+  position: absolute;
   height:10rem;
+  top:50%;
 }
