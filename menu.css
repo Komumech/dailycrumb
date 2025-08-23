@@ -1,5 +1,4 @@
 body {
-  width: 100rem;
   margin: 0 auto;
   background-size: cover;
   background-repeat: no-repeat;
@@ -30,5 +29,6 @@ body {
   position: absolute;
   top: 20%;
   margin: 0 auto;
+  font
   justify-self: center;
 }
