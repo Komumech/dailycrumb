@@ -1416,3 +1416,7 @@ circle newsletter:hover{
     margin:0 auto;
     display:grid;
 }
+.links{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
