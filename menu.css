@@ -111,6 +111,8 @@ button:hover {
   justify-self: center;
   transition: all 0.5s ease-in-out;
   display: grid;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 .scroll-img > p > button{
   visibility: hidden;
