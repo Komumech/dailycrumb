@@ -29,6 +29,6 @@ body {
   background-color: #f4e3d2;
   border-radius: 50%;
   position: absolute;
-  right: 0;
-  top: 20px;
+  left: -80%;
+  top: -20%;
 }
