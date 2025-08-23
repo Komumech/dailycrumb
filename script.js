@@ -127,7 +127,7 @@ gsap.fromTo(
                     gsap.to(".logo-img", { backgroundColor: "rgba(217, 164, 65, 0)", duration: 0.2, overwrite: "auto" });
                 } else {
                     // Colored for the rest of the scroll
-                    gsap.to(".logo-img", { backgroundColor: "#f8f4edbe", duration: 5, overwrite: "auto", boxShadow: #f8f4ed });
+                    gsap.to(".logo-img", { backgroundColor: "#f8f4edbe", duration: , overwrite: "auto" });
                 }
             }
         }
