@@ -34,7 +34,7 @@ body {
 .circle0{
     height: 90%;
     z-index: -3;
-    transform: translateX(-70%);
+    transform: translateX(-48%);
     position: absolute;
     width: 90vh;
     border-radius: 50%;
