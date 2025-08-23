@@ -40,4 +40,6 @@ body {
 .scroll{
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
+  width:100%;
+  overflow-x: scroll;
 }
