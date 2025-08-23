@@ -20,7 +20,7 @@ body {
   height:100vh;
 }
 .circle{
-  height: 90%;
+  height: 200%;
   position: absolute;
   margin-right: 0px;
   width:90vh;
@@ -28,11 +28,11 @@ body {
   border-radius:50%;
 }
 .circle2{
-  height: 90%;
+  height: 200%;
   position: absolute;
   margin-right: 0px;
   width:90vh;
-  margin-left: ;
+  margin-left: 12rem;
   background-color:#f86800;
   border-radius:50%;
 }
