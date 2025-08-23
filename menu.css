@@ -27,12 +27,8 @@ body {
 .circle2{
   height: 90%;
   width:90vh;
+  margin: 7rem;
   position: absolute;
   background-color:#f47012;
   border-radius:50%;
-}
-.cir{
-  display:grid;
-  width: 100%;
-  height: 100vh;
 }
