@@ -42,5 +42,7 @@ body {
     border: 5px solid #dea846bd; 
 }
 .cir-all{
-    
+    position: fixed;
+    height: fit-content;
+    width: fit-content;
 }
