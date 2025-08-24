@@ -22,6 +22,11 @@ body::-webkit-scrollbar-thumb {
     /* Oven Gold */
     border-radius: 20px;
 }
+hr{
+  color: #5C3A21;
+  width: 50%;
+  margin: 0 auto;
+}
 button {
   background: transparent;
     color: #f8f4ed;
