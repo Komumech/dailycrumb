@@ -25,7 +25,7 @@ body::-webkit-scrollbar-thumb {
 hr {
   margin-top: 1rem;
   transform: rotate(90deg);
-  border: none;
+  border: 5px solid;
   background: linear-gradient(to right, #5C3A21, #DEA846, #5C3A21);
   margin-bottom: 1rem;
 }
