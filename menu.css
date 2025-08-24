@@ -27,7 +27,7 @@ hr{
   height: 1px;
   background: #5C3A21;
   margin-top: 1rem;
-  transform: rotate('angle');
+  transform: rotate('180deg');
   margin-bottom: 1rem;
 }
 button {
