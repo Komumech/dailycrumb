@@ -23,6 +23,12 @@ body::-webkit-scrollbar-thumb {
     border-radius: 20px;
 }
 hr{
+  border: 0;
+  height: 1px;
+  background: #5C3A21;
+  margin-top: 1rem;
+  transform: rotate('angle');
+  margin-bottom: 1rem;
 }
 button {
   background: transparent;
