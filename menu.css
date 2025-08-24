@@ -22,12 +22,12 @@ body::-webkit-scrollbar-thumb {
     /* Oven Gold */
     border-radius: 20px;
 }
-hr{
+hr {
   border: 0;
   height: 1px;
   background: #5C3A21;
   margin-top: 1rem;
-  transform: rotate('180deg');
+  transform: rotate(180deg);
   margin-bottom: 1rem;
 }
 button {
