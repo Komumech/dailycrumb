@@ -110,6 +110,7 @@ button:hover {
 .scroll-img:hover{
   transition: all 0.5s ease-in-out;
   transform: translateY(-1rem);
+  transform: translateX(-1rem);
 }
 .scroll-img:hover::before{
   filter: brightness(70%);
