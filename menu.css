@@ -24,7 +24,7 @@ body::-webkit-scrollbar-thumb {
 }
 hr {
   background: #5C3A21;
-  transform: rotate(180deg);
+  transform: rotate(90deg);
 }
 button {
   background: transparent;
