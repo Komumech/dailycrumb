@@ -26,7 +26,6 @@ hr {
   border: none;
   height: 5px; /* Adjust thickness */
   background: linear-gradient(to right, transparent, #5C3A21, transparent);
-  margin: 1rem 0;
 }
 button {
   background: transparent;
