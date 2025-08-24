@@ -23,9 +23,6 @@ body::-webkit-scrollbar-thumb {
     border-radius: 20px;
 }
 hr{
-  color: #5C3A21;
-  margin: 0 auto;
-  border: 1px solid #5C3A21;
 }
 button {
   background: transparent;
