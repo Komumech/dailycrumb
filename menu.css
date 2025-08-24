@@ -24,7 +24,7 @@ body::-webkit-scrollbar-thumb {
 }
 hr {
   border: none;
-  
+  position:
   height: 5px; /* Adjust thickness */
   background: linear-gradient(to right, transparent, #5C3A21, transparent);
 }
