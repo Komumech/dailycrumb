@@ -26,6 +26,7 @@ hr{
   color: #5C3A21;
   width: 50%;
   margin: 0 auto;
+  border: 1px solid #5C3A21;
 }
 button {
   background: transparent;
