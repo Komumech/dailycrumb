@@ -6,14 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    <style>
+ <style>
     .menuu:hover{
         grid-template-rows: 100%;
-        width: 95%;
-        background-color: #f8f4ed;
+        width: 75%;
+        background-color: #f8f4edbe;
         height: 100vh;
+        z-index: 90;
         position: fixed;
         transition:width 0.5s ease-in-out ;
+        backdrop-filter: blur(20px);
+        box-shadow: #f8f4ed 0px 0px 40px 0px;
     }
     .menuu{
         width: 4rem;
@@ -31,7 +34,7 @@
         font-size: 2rem;
         z-index: 80;
         visibility: hidden;
-        transition: visibility 0.5s ease-in-out ;
+        transition: all 0.5s ease-in-out ;
     }
     .menuu:hover .menuitem{
         visibility: visible;
@@ -50,9 +53,12 @@
         margin: 0 auto;
         justify-self: center;
         padding-left: 10px;
+        z-index: 90;
+        margin-top: 0px;
+        position: fixed;
     }
     .menuu:hover .menu-icon{
-        m
+        
     }
 </style>
 <div class="menuu">
@@ -60,7 +66,7 @@
     <div class="menu-links">
             <a href="" class="menuitem"> Home</a>
             <a href="" class="menuitem"> Order</a>
-            <a href="" class="menuitem"> Menu</a>
+            <a href="menu.html" class="menuitem"> Menu</a>
             <a href="" class="menuitem"> Specials</a>
             <a href="" class="menuitem"> Home</a>
             </div>
