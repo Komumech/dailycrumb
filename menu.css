@@ -23,11 +23,9 @@ body::-webkit-scrollbar-thumb {
     border-radius: 20px;
 }
 hr {
-  background: #5C3A21;
   margin-top: 1rem;
   transform: rotate(90deg);
-  height: 5px;
-  ba
+  background: linear-gradient(to right, #5C3A21, #DEA846, #5C3A21);
   margin-bottom: 1rem;
 }
 button {
