@@ -138,7 +138,7 @@ button:hover {
 .scroll-img:hover > p > button{
   visibility: visible;
   transition: all 0.5s ease-in-out;
-  transform: ;
+  transform: translateX(10px);
 }
 .scroll{
   margin-top:4rem;
