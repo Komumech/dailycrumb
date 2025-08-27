@@ -5,7 +5,6 @@ body {
   background-position: center;
   background-attachment: fixed; /* 👈 Keeps the background in place */
   color: #5c3a21;
-  overflow-y: hidden;
   font-family: "Cormorant Garamond", serif;
 }
 body::-webkit-scrollbar {
