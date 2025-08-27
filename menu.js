@@ -1,1 +1,2 @@
-price=
+var price
+function click()
