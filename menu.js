@@ -1,2 +1,4 @@
 var price
-function click()
+function click-cinammon(){
+    price=
+}
