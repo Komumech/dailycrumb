@@ -1,0 +1,60 @@
+.foot{
+    bottom: 100;
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    position: absolute;
+    background-color: #f8f4ed;
+    text-align: center;
+    line-height: 50px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+}
+.footer-logo{
+    position: absolute;
+    left: 0;
+    padding: 50px;
+    width: 110px;
+    z-index: 90;
+}
+
+.footerp{
+    position: absolute;
+    bottom: 0;
+    justify-self: center;
+    line-height: 2rem;
+    z-index:20;
+    max-width: 90vh;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1rem;
+    margin: 0 auto;
+}
+.foot{
+    color:#5C3A21;
+}
+.foot a{
+    font-weight: 400;
+    text-decoration: underline;
+}
+.social-links a{
+    text-decoration: none;
+    color: #5C3A21;
+}
+.contact-links{
+    display: grid;
+    color: #5C3A21;
+}
+.contact-links a{
+     text-decoration: none;
+    color: #5C3A21;
+}
+.links{
+    display: grid;
+    padding-top: 9rem;
+    grid-template-columns: 50% 50%;
+    height: 16rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
