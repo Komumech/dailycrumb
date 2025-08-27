@@ -1,4 +1,4 @@
 var price
 function click-cinammon(){
-    price=
+    price=+700;
 }
