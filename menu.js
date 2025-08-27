@@ -1,4 +1,5 @@
 var price
-function click-cinammon(){
+function clickCinammon(){
     price=+700;
+    console.log(price)
 }
