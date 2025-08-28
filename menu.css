@@ -84,9 +84,9 @@ button:hover {
   border: 3px #dea846 solid;
   border-radius: 10px;
   height:1.5rem;
-  width:10rem;
+  width:70%;
   position:fixed;
-  left: 10%;
+  margin:0 auto;
   z-index: 34;
 
   text-align: center;
