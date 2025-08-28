@@ -98,6 +98,10 @@ button:hover {
   right: 0%;
   transition: width ease-in-out;
 }
+.order-all > p{
+  visibility:hidden;
+}
+
 .logo-img{
   z-index: 30;
 }
