@@ -97,7 +97,7 @@ button:hover {
   position:fixed;
   right: 0%;
   text-align: center;
-  
+  font-size:1.3rem;
   transition: width ease-in-out;
 }
 .order-all > p{
