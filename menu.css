@@ -103,7 +103,7 @@ button:hover {
 .order-all > p{
   visibility:hidden;
 }
-.order-all:hover >p{
+.order-all:hover >p {
   visibility: visible;
 }
 .logo-img{
