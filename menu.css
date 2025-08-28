@@ -51,8 +51,7 @@ button:hover {
   transition: all 0.3s;
 }
 .price:hover{
-  background-color: #ffffff;
-  transition: all 0.3s;
+  
 }
 .order {
   text-align:center;
