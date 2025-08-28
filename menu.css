@@ -101,7 +101,9 @@ button:hover {
 .order-all > p{
   visibility:hidden;
 }
-
+.order-all:hover >p{
+  visibility: visible;
+}
 .logo-img{
   z-index: 30;
 }
