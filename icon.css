@@ -2,7 +2,7 @@
   position: absolute;
   left: 40%;
   height: fit-content;
-  width: 6rem;
+  width: 9rem;
   margin: 0 auto;
 }
 
@@ -10,4 +10,5 @@
   height: 9rem;
   position: absolute;
   margin: 0 auto;
+  z-index: 99;
 }
