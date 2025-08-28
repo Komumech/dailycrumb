@@ -110,8 +110,8 @@ button:hover {
   position: absolute;
   top: 20%;
   margin: 0 auto;
-  font-size: 2rem;
-  max-width: 22rem;
+  font-size: 1.7rem;
+  max-width: 30rem;
   font-weight: 700;
   justify-self: center;
   z-index:4;
