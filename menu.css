@@ -102,9 +102,7 @@ button:hover {
 }
 .order-all:hover > div {
   visibility: visible;
-  padding:10px;
-  position:absolute;
-  margin:0 auto;
+
 }
 
 .logo-img{
