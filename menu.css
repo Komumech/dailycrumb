@@ -88,14 +88,16 @@ button:hover {
   transition: width ease-in-out;
 }
 .order-all{
-  position:absolute;
   top:0%;
   background-color: #dea846;
   padding: 10px;
   border: 3px #dea846 solid;
   border-radius: 10px;
   height: 3rem;
+  position:fixed;
   right: 0%;
+  text-align: center;
+  
   transition: width ease-in-out;
 }
 .order-all > p{
