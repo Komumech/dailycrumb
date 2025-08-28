@@ -78,10 +78,10 @@ button:hover {
 .order-all{
   top:10%;
   background-color: #dea846;
-  padding: 10px;
+  padding: 5px;
   border: 3px #dea846 solid;
   border-radius: 10px;
-  height:rem;
+  height:1.5rem;
   width:10rem;
   position:fixed;
   left: 10%;
