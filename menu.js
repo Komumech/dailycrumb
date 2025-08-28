@@ -1,8 +1,8 @@
 var price = 0;
 var order= [];
-function clickCinnamon(){
+function CountrySourdough(){
     price += 700;
-    order.push("Cinnamon Roll");
+    order.push("Country Sourdough");
     document.querySelector(".order").innerHTML = order.join(", ");
     console.log(price);
     const counts = {};
