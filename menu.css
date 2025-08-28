@@ -85,6 +85,7 @@ button:hover {
 }
 
 .container {
+  height:00vh;
   display:grid;
   margin: 0 auto;
   width:100%;
