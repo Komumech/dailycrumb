@@ -75,7 +75,7 @@ button:hover {
 }
 .ordercl{
   z-index:75;
-  
+  margin:0 auto;
   display:grid;
   border-radius: 10px;;
   width:80vh;
