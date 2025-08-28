@@ -94,7 +94,7 @@ button:hover {
 .order-all > div {
   visibility:hidden;
   transition: width 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out
+  transition: opacity 0.5s ease-in-out;
 }
 .order-all:hover > div {
   visibility: visible;
