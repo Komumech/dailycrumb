@@ -47,7 +47,7 @@ function RosemarySourdough(){
 }
 function MultigrainSourdough(){
     price += 5500;
-    order.push("Olive & Rosemary Sourdough");
+    order.push("Multigrain Sourdough");
     document.querySelector(".order").innerHTML = order.join(", ");
     console.log(price);
     const counts = {};
