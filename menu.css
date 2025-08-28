@@ -96,6 +96,7 @@ button:hover {
 }
 .order-all:hover > div {
   visibility: visible;
+  transition: width ease-in-out;
 
 }
 
