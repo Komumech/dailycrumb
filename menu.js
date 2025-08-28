@@ -75,9 +75,9 @@ function Baguettes(){
     document.querySelector(".order").innerHTML = displayOrder;
     document.querySelector(".price").innerHTML = "N "+ price;
 }
-function RosemarySourdough(){
-    price += 5500;
-    order.push("Olive & Rosemary Sourdough");
+function ButterCroissant(){
+    price += 2200;
+    order.push("Butter Croissant");
     document.querySelector(".order").innerHTML = order.join(", ");
     console.log(price);
     const counts = {};
