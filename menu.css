@@ -46,7 +46,8 @@ button:hover {
 .price{
   position:absolute;
   right:90%;
-  font-
+  font-size:1.7rem;
+  background-color: #dea846bd;
 }
 .logo-img{
   z-index: 30;
