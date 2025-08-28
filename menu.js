@@ -5,5 +5,6 @@ function clickCinnamon(){
     order.push("Cinnamon Roll");
     document.querySelector(".order").innerHTML = order.join(", ");
     console.log(price);
+    
     document.querySelector(".price").innerHTML = "N "+ price;
 }
