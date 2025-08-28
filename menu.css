@@ -46,7 +46,7 @@ button:hover {
 .price{ 
  margin:0 auto;
  border-radius: 10px;
-  width: 7rem;
+  width: 70%;
   font-size:1.7rem;
   transition: all 0.3s;
 }
