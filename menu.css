@@ -45,10 +45,11 @@ button:hover {
 }
 .price{
   position:absolute;
- left:0%;
- padding: 10px;
+ right:0%;
+ padding: 5px;
  border : 3px #dea846bd solid;
  border-radius: 10px;
+ margin-
   font-size:1.7rem;
   background-color: #dea946;
 }
