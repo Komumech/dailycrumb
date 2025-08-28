@@ -75,10 +75,8 @@ button:hover {
   transition: all 0.3s;
 
 }
-.order-stuff{
-  height: 7rem;
-  display: flex;
-  flex-direction: rows;
+.order-all{
+  
 }
 .logo-img{
   z-index: 30;
