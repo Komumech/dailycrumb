@@ -88,7 +88,9 @@ button:hover {
   
 }
 .order-all{
-  position:a
+  position:absolute;
+  top:100%;
+  right:0%;
 }
 .logo-img{
   z-index: 30;
