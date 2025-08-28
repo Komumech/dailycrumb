@@ -79,7 +79,6 @@ button:hover {
   height: 7rem;
   display: flex;
   flex-direction: rows;
-  align-items: flex-end;
 }
 .logo-img{
   z-index: 30;
