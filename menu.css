@@ -81,7 +81,7 @@ button:hover {
   padding: 10px;
   border: 3px #dea846 solid;
   border-radius: 10px;
-  height:3rem;
+  height:rem;
   width:10rem;
   position:fixed;
   left: 10%;
