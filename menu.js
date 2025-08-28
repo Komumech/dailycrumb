@@ -17,7 +17,7 @@ function CountrySourdough(){
 }
 function WheatSourdough(){
     price += 5000;
-    order.push("WheatSourdough");
+    order.push("Whole Wheat Sourdough");
     document.querySelector(".order").innerHTML = order.join(", ");
     console.log(price);
     const counts = {};
