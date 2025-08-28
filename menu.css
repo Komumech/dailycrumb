@@ -45,6 +45,8 @@ button:hover {
 }
 .price{ 
  padding: 5px;
+ margin:0 auto;
+ height
  border : 3px #dea846bd solid;
  border-radius: 10px;
   width: 7rem;
@@ -60,7 +62,7 @@ button:hover {
   text-align:center;
   padding: 5px;
   width: 7rem;
-  margin:0 auto
+  margin:0 auto;
   border: 3px #dea846 solid;
   border-radius: 10px;
   font-size: 1.3rem;
