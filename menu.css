@@ -45,7 +45,7 @@ button:hover {
 }
 .price{
   position:absolute;
-  right:70%;
+ left:30%;
   font-size:1.7rem;
   background-color: #dea946;
 }
