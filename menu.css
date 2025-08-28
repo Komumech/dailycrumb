@@ -74,7 +74,7 @@ button:hover {
   height:80vh;
   box-shadow: #000000 0 8px 24px rgba(0, 0, 0, 0.1);
   background-color: #f8f4ed;
-  transition: width 0.5s;
+  transition: width 0.5s ease-in-out;
 }
 .order-all{
   top:10%;
