@@ -46,7 +46,7 @@ function RosemarySourdough(){
     document.querySelector(".price").innerHTML = "N "+ price;
 }
 function MultigrainSourdough(){
-    price += 5500;
+    price += 5200;
     order.push("Multigrain Sourdough");
     document.querySelector(".order").innerHTML = order.join(", ");
     console.log(price);
@@ -61,7 +61,7 @@ function MultigrainSourdough(){
     document.querySelector(".price").innerHTML = "N "+ price;
 }
 function Baguettes(){
-    price += 5500;
+    price += 2000;
     order.push("Baguettes");
     document.querySelector(".order").innerHTML = order.join(", ");
     console.log(price);
