@@ -92,6 +92,7 @@ button:hover {
   height: 3rem;
   position:fixed;
   right: 20%;
+  z-index: 99;
   text-align: center;
   font-size:1.3rem;
   transition: width ease-in-out;
