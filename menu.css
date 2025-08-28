@@ -73,7 +73,7 @@ button:hover {
 .order:hover {
   background-color: #ffffff;
 }
-.order-all:hover{
+.ordercl{
   z-index:75;
   margin:0 auto;
   display:grid;
@@ -97,10 +97,10 @@ button:hover {
   font-size:1.3rem;
   transition: width ease-in-out;
 }
-.order-all > d {
+.order-all > div {
   visibility:hidden;
 }
-.order-all:hover > p {
+.order-all:hover > div {
   visibility: visible;
   padding:10px;
 }
