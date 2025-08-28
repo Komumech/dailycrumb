@@ -44,10 +44,7 @@ button:hover {
     color: #5C3A21;
 }
 .price{ 
- padding: 5px;
  margin:0 auto;
-  height: 3rem;
- border : 3px #dea846bd solid;
  border-radius: 10px;
   width: 7rem;
   font-size:1.7rem;
