@@ -76,7 +76,7 @@ button:hover {
   display:grid;
   border-radius: 10px;;
   width:80vh;
-  height:80vh;
+  height:70vh;
   background-color: aliceblue;
   transition: width ease-in-out;
 }
