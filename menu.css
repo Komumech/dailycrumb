@@ -97,7 +97,7 @@ button:hover {
   font-size:1.3rem;
   transition: width ease-in-out;
 }
-.order-all > p {
+.order-all > d {
   visibility:hidden;
 }
 .order-all:hover > p {
