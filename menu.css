@@ -89,9 +89,9 @@ button:hover {
   padding: 10px;
   border: 3px #dea846 solid;
   border-radius: 10px;
-  
+  height:3rem;
   position:fixed;
-  right: 10%;
+  
   z-index: 99;
   text-align: center;
   font-size:1.3rem;
