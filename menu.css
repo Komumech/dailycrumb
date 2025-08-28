@@ -61,7 +61,7 @@ button:hover {
 .order {
   position: absolute;
   right: 0%;
-  margin-top: 5rem;
+  text-align:center;
   padding: 5px;
   border: 3px #dea846 solid;
   border-radius: 10px;
