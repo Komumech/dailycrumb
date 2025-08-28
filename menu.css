@@ -132,6 +132,16 @@ button:hover {
   justify-self: center;
   z-index:4;
 }
+.sub-head2{
+  position: absolute;
+  top: 70%;
+  margin: 0 auto;
+  font-size: 1.7rem;
+  max-width: 30rem;
+  font-weight: 700;
+  justify-self: center;
+  z-index:4;
+}
 .scroll-img {
   position: relative;
   width: 10rem;
