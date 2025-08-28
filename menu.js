@@ -90,7 +90,7 @@ function ButterCroissant(){
     document.querySelector(".order").innerHTML = displayOrder;
     document.querySelector(".price").innerHTML = "N "+ price;
 }
-function RosemarySourdough(){
+function PainauChocolat(){
     price += 5500;
     order.push("Olive & Rosemary Sourdough");
     document.querySelector(".order").innerHTML = order.join(", ");
