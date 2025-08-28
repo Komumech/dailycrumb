@@ -62,6 +62,7 @@ button:hover {
   text-align:center;
   padding: 5px;
   width: 7rem;
+  display:grid;
   margin:0 auto;
   border: 3px #dea846 solid;
   border-radius: 10px;
