@@ -100,10 +100,10 @@ button:hover {
   font-size:1.3rem;
   transition: width ease-in-out;
 }
-.order-all > p{
+.order-all > p {
   visibility:hidden;
 }
-.order-all:hover >p {
+.order-all:hover > p {
   visibility: visible;
 }
 .logo-img{
