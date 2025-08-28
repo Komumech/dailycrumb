@@ -77,9 +77,10 @@ button:hover {
   z-index:75;
   margin:0 auto;
   display:grid;
-  bottom:0%;
+  position:fixed;
+
   width:80%;
-  height:80%;
+  height:80vh;
   background-color: aliceblue;
   transition: width ease-in-out;
 }
