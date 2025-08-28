@@ -146,7 +146,7 @@ button:hover {
   margin: 0 auto;
   font-size: 1.7rem;
   max-width: 30rem;
-  font-weight: 700;
+  font-weight: 600;
   justify-self: center;
   z-index:4;
 }
