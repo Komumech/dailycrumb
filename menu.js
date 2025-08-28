@@ -60,9 +60,9 @@ function MultigrainSourdough(){
     document.querySelector(".order").innerHTML = displayOrder;
     document.querySelector(".price").innerHTML = "N "+ price;
 }
-function RosemarySourdough(){
+function Baguettes(){
     price += 5500;
-    order.push("Olive & Rosemary Sourdough");
+    order.push("Baguettes");
     document.querySelector(".order").innerHTML = order.join(", ");
     console.log(price);
     const counts = {};
