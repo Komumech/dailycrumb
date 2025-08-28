@@ -15,9 +15,9 @@ function CountrySourdough(){
     document.querySelector(".order").innerHTML = displayOrder;
     document.querySelector(".price").innerHTML = "N "+ price;
 }
-function CountrySourdough(){
-    price += 700;
-    order.push("Country Sourdough");
+function WheatSourdough(){
+    price += 5000;
+    order.push("WheatSourdough");
     document.querySelector(".order").innerHTML = order.join(", ");
     console.log(price);
     const counts = {};
