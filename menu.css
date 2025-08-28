@@ -81,6 +81,9 @@ button:hover {
   position: absolute;
   top:50%;
   bottom:50%;
+  width:80%;
+  height:80%;
+  background-color: aliceblue;
 }
 .logo-img{
   z-index: 30;
