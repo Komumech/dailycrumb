@@ -60,6 +60,7 @@ button:hover {
   text-align:center;
   padding: 5px;
   width: 7rem;
+  margin:0 auto
   border: 3px #dea846 solid;
   border-radius: 10px;
   font-size: 1.3rem;
