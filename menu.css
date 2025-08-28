@@ -76,8 +76,8 @@ button:hover {
 .ordercl{
   z-index:75;
   
-  display
-
+  display:grid;
+  border-radius: 10px;;
   width:80vh;
   height:80vh;
   background-color: aliceblue;
