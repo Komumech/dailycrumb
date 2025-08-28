@@ -1,7 +1,7 @@
 var price = 0;
 var order= [];
 function CountrySourdough(){
-    price += 700;
+    price += 4500;
     order.push("Country Sourdough");
     document.querySelector(".order").innerHTML = order.join(", ");
     console.log(price);
