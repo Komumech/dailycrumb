@@ -111,8 +111,10 @@ button:hover {
   top: 20%;
   margin: 0 auto;
   font-size: 2rem;
+  max-width: 22rem;
   font-weight: 700;
   justify-self: center;
+  
 }
 .scroll-img {
   position: relative;
