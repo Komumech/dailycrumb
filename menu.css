@@ -75,7 +75,6 @@ button:hover {
 }
 .order-all:hover{
   z-index:75;
-  margin: 0 auto;
   margin-top:25vh;
   position: fixed;
   top:50%;
