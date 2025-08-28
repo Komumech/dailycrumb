@@ -135,6 +135,7 @@ button:hover {
 .sub-head2{
   position: absolute;
   top: 70%;
+  padding-top: 10rem;
   margin: 0 auto;
   font-size: 1.7rem;
   max-width: 30rem;
