@@ -76,7 +76,7 @@ button:hover {
 .ordercl{
   z-index:75;
   
-
+  display
 
   width:80vh;
   height:80vh;
@@ -90,6 +90,7 @@ button:hover {
   border: 3px #dea846 solid;
   border-radius: 10px;
   height:3rem;
+  width:10rem;
   position:fixed;
   
   z-index: 99;
