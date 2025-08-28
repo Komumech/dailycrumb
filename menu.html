@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="foot.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Menu</title>
+    <title>The Daily Crumb Menu</title>
 </head>
 <body>
     <div class="logo-img">
@@ -80,75 +80,151 @@
     }
 </style>
 
+  <h1 style="text-align:center;">The Daily Crumb - Menu</h1>
+  <hr>
+  
 
+    <!-- Artisan Breads -->
+    <div class="sub-head">Artisan Breads (Sourdough Focus)</div>
+    <div class="scroll">
+      <div class="scroll-img">
+        <img src="bread1.png" alt="Classic Country Sourdough" width="100">
+        <p>
+          Classic Country Sourdough<br>
+          <small>Rustic, naturally leavened bread. Vegan.</small><br>
+          <button onclick="addToOrder('Classic Country Sourdough', 4500)">Order NGN 4,500</button>
+        </p>
+      </div>
+      <div class="scroll-img">
+        <img src="bread2.png" alt="Whole Wheat Sourdough" width="100">
+        <p>
+          Whole Wheat Sourdough<br>
+          <small>Hearty, 100% whole wheat. Vegan.</small><br>
+          <button onclick="addToOrder('Whole Wheat Sourdough', 5000)">Order NGN 5,000</button>
+        </p>
+      </div>
+      <div class="scroll-img">
+        <img src="bread3.png" alt="Olive & Rosemary Sourdough" width="100">
+        <p>
+          Olive & Rosemary Sourdough<br>
+          <small>With Kalamata olives & rosemary. Vegan.</small><br>
+          <button onclick="addToOrder('Olive & Rosemary Sourdough', 5500)">Order NGN 5,500</button>
+        </p>
+      </div>
+      <div class="scroll-img">
+        <img src="bread4.png" alt="Multigrain Sourdough" width="100">
+        <p>
+          Multigrain Sourdough<br>
+          <small>Flax, sunflower, pumpkin seeds. Vegan.</small><br>
+          <button onclick="addToOrder('Multigrain Sourdough', 5200)">Order NGN 5,200</button>
+        </p>
+      </div>
+      <div class="scroll-img">
+        <img src="baguette.png" alt="Baguette" width="100">
+        <p>
+          Baguette<br>
+          <small>Classic French-style. Vegan.</small><br>
+          <button onclick="addToOrder('Baguette', 2000)">Order NGN 2,000</button>
+        </p>
+      </div>
+    </div>
 
- <p class="price">Your Order</p>
- <p class="order"> your order</p>
+    <!-- Pastries & Sweets -->
+    <div class="sub-head" style="top: 45%;">Pastries & Sweets</div>
+    <div class="scroll">
+      <div class="scroll-img">
+        <img src="croissant.png" alt="Butter Croissant" width="100">
+        <p>
+          Butter Croissant<br>
+          <small>Flaky, golden, buttery.</small><br>
+          <button onclick="addToOrder('Butter Croissant', 2200)">Order NGN 2,200</button>
+        </p>
+      </div>
+      <div class="scroll-img">
+        <img src="painchoc.png" alt="Pain au Chocolat" width="100">
+        <p>
+          Pain au Chocolat<br>
+          <small>Croissant dough, dark chocolate.</small><br>
+          <button onclick="addToOrder('Pain au Chocolat', 2500)">Order NGN 2,500</button>
+        </p>
+      </div>
+      <div class="scroll-img">
+        <img src="almondcroissant.png" alt="Almond Croissant" width="100">
+        <p>
+          Almond Croissant<br>
+          <small>Frangipane, toasted almonds.</small><br>
+          <button onclick="addToOrder('Almond Croissant', 2800)">Order NGN 2,800</button>
+        </p>
+      </div>
+      <div class="scroll-img">
+        <img src="cinnamonroll.png" alt="Cinnamon Roll" width="100">
+        <p>
+          Cinnamon Roll<br>
+          <small>Cream cheese glaze.</small><br>
+          <button onclick="addToOrder('Cinnamon Roll', 2000)">Order NGN 2,000</button>
+        </p>
+      </div>
+      <div class="scroll-img">
+        <img src="blueberrymuffin.png" alt="Blueberry Muffin" width="100">
+        <p>
+          Blueberry Muffin<br>
+          <small>Fresh blueberries, lemon.</small><br>
+          <button onclick="addToOrder('Blueberry Muffin', 1800)">Order NGN 1,800</button>
+        </p>
+      </div>
+      <div class="scroll-img">
+        <img src="cookie.png" alt="Chocolate Chip Cookie" width="100">
+        <p>
+          Chocolate Chip Cookie<br>
+          <small>Chewy, dark chocolate.</small><br>
+          <button onclick="addToOrder('Chocolate Chip Cookie', 1500)">Order NGN 1,500</button>
+        </p>
+      </div>
+      <div class="scroll-img">
+        <img src="tart.png" alt="Seasonal Fruit Tart" width="100">
+        <p>
+          Seasonal Fruit Tart<br>
+          <small>Shortbread, pastry cream, fruit.</small><br>
+          <button onclick="addToOrder('Seasonal Fruit Tart', 3500)">Order NGN 3,500</button>
+        </p>
+      </div>
+    </div>
 
-   <p class="sub-head">Breakfast</p>
-   <hr>
-   <div class="breakfast">
+    <!-- Custom Cakes -->
+    <div class="sub-head" style="top: 70%;">Custom Cakes (Pre-Order Only)</div>
+    <div class="breakfast" style="top: 75%; height: 10rem;">
+      <p>
+        <b>Bespoke cakes for all occasions.</b><br>
+        <small>Starting from NGN 30,000. <br>
+        <a href="custom-cake-form.html" target="_blank">Submit a cake inquiry &rarr;</a></small>
+      </p>
+    </div>
 
- <div class="scroll">
-  <div class="scroll-img">
-   <p>Butter Croissant<button onclick="clickCinnamon();"> Order This</button> </p>
-   </div>
+    <!-- Beverages -->
+    <div class="sub-head" style="top: 88%;">Beverages (In-Store Pickup Only)</div>
+    <div class="scroll">
+      <div class="scroll-img">
+        <img src="coffee.png" alt="Coffee" width="100">
+        <p>
+          Freshly Brewed Coffee<br>
+          <button onclick="addToOrder('Coffee', 1500)">Order NGN 1,500</button>
+        </p>
+      </div>
+      <div class="scroll-img">
+        <img src="tea.png" alt="Assorted Teas" width="100">
+        <p>
+          Assorted Teas<br>
+          <button onclick="addToOrder('Tea', 1200)">Order NGN 1,200</button>
+        </p>
+      </div>
+    </div>
 
-  <div class="scroll-img">
-   <p>Butter Croissant<button> Order This</button> </p>
-   </div>
-
-  <div class="scroll-img">
-   <p>Butter Croissant<button> Order This</button> </p>
-   </div>
-
-  <div class="scroll-img">
-   <p>Butter Croissant<button> Order This</button> </p>
-   </div>
-
-  <div class="scroll-img">
-   <p>Butter Croissant<button> Order This</button> </p>
-   </div>
-
-  <div class="scroll-img">
-   <p>Butter Croissant<button> Order This</button> </p>
-   </div>
-
-  <div class="scroll-img">
-   <p>Butter Croissant<button> Order This</button> </p>
-   </div>
-
-  <div class="scroll-img">
-   <p>Butter Croissant<button> Order This</button> </p>
-   </div>
-
-  <div class="scroll-img">
-   <p>Butter Croissant<button> Order This</button> </p>
-   </div>
-
-  <div class="scroll-img">
-   <p>Butter Croissant<button> Order This</button> </p>
-   </div>
-
-  <div class="scroll-img">
-   <p>Butter Croissant<button> Order This</button> </p>
-   </div>
-
-  <div class="scroll-img">
-   <p>Butter Croissant<button> Order This</button> </p>
-   </div>
-
-
-
-
-
- </div> 
-</div>
-
-</div>
-
-
-          </div>
+    <!-- Order Summary -->
+    <div class="order-stuff">
+      <div class="order" style="width:60%;">Your order will appear here.</div>
+      <div class="price">N 0</div>
+    </div>
+  </div>
            <div class="foot">
         <img src="TC.png" alt="Daily Crumb Bakery Footer Logo" class="footer-logo">
            <div class="links">

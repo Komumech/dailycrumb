@@ -1,17 +1,18 @@
-var price = 0;
-var order= [];
-function clickCinnamon(){
-    price += 700;
-    order.push("Cinnamon Roll");
-    document.querySelector(".order").innerHTML = order.join(", ");
-    console.log(price);
+let price = 0;
+let order = [];
+
+function addToOrder(item, itemPrice) {
+    price += itemPrice;
+    order.push(item);
+    // Count items
     const counts = {};
-    order.forEach(item => {
-        counts[item] = (counts[item] || 0) + 1;
+    order.forEach(i => {
+        counts[i] = (counts[i] || 0) + 1;
     });
+    // Format order summary
     const displayOrder = Object.entries(counts)
         .map(([item, count]) => count > 1 ? `${item} (${count})` : item)
         .join(", ");
-    document.querySelector(".order").innerHTML = displayOrder;
-    document.querySelector(".price").innerHTML = "N "+ price;
+    document.querySelector(".order").innerHTML = displayOrder || "Your order will appear here.";
+    document.querySelector(".price").innerHTML = "N " + price;
 }
