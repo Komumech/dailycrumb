@@ -51,10 +51,12 @@ button:hover {
  border-radius: 10px;
  margin-right: 40px;
   font-size:1.7rem;
+  transition: all 0.3s;
   background-color: #dea946;
 }
 .price:hover{
   background-color: #ffffff;
+  transition: all 0.3s;
 }
 .logo-img{
   z-index: 30;
