@@ -85,7 +85,7 @@ button:hover {
   width:80%;
   height:80%;
   background-color: aliceblue;
-  
+  transition: width ease-in-out;
 }
 .order-all{
   position:absolute;
@@ -95,7 +95,8 @@ button:hover {
   border: 3px #dea846 solid;
   border-radius: 10px;
   height: 3rem;
-  right:0%;
+  right: 0%;
+  transition: width ease-in-out;
 }
 .logo-img{
   z-index: 30;
