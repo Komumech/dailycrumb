@@ -30,9 +30,9 @@ function WheatSourdough(){
     document.querySelector(".order").innerHTML = displayOrder;
     document.querySelector(".price").innerHTML = "N "+ price;
 }
-function CountrySourdough(){
-    price += 700;
-    order.push("Country Sourdough");
+function RosemarySourdough(){
+    price += 5500;
+    order.push("Olive & Rosemary Sourdough");
     document.querySelector(".order").innerHTML = order.join(", ");
     console.log(price);
     const counts = {};
