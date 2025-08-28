@@ -76,8 +76,9 @@ button:hover {
 
 }
 .order-stuff{
+  height: 7rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: rows;
   align-items: flex-end;
 }
 .logo-img{
