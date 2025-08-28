@@ -47,7 +47,7 @@ button:hover {
  padding: 5px;
  border : 3px #dea846bd solid;
  border-radius: 10px;
- 
+  width: 7rem;
   font-size:1.7rem;
   transition: all 0.3s;
   background-color: #dea846;
@@ -59,6 +59,7 @@ button:hover {
 .order {
   text-align:center;
   padding: 5px;
+  width: 7rem;
   border: 3px #dea846 solid;
   border-radius: 10px;
   font-size: 1.3rem;
