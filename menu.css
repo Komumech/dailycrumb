@@ -75,11 +75,9 @@ button:hover {
 }
 .ordercl{
   z-index:75;
-  margin:0 auto;
-  display:grid;
-  position:absolute;
-  left:50%;
-  right:50%;
+  
+
+
   width:80vh;
   height:80vh;
   background-color: aliceblue;
@@ -108,7 +106,7 @@ button:hover {
   position:absolute;
   margin:0 auto;
 }
-}
+
 .logo-img{
   z-index: 30;
 }
