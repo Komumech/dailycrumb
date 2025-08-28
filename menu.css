@@ -77,8 +77,8 @@ button:hover {
   z-index:75;
   margin:0 auto;
   display:grid;
-  position:fixed;
-  
+  position:a absolute
+  left
   width:80vh;
   height:80vh;
   background-color: aliceblue;
