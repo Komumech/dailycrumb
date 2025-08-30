@@ -181,7 +181,7 @@ function AlmondCroissant(){
     document.querySelector(".price").innerHTML = "N "+ price;
 }
 function SeasonalFruitTarts(){
-    price += 2800;
+    price += 3500;
     order.push("Seasonal Fruit Tarts");
     document.querySelector(".order").innerHTML = order.join(", ");
     console.log(price);
@@ -195,4 +195,5 @@ function SeasonalFruitTarts(){
     document.querySelector(".order").innerHTML = displayOrder;
     document.querySelector(".price").innerHTML = "N "+ price;
 }
-
+function resetOrder(){
+    price = 0;
