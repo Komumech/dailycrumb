@@ -150,7 +150,7 @@ function BlueberryMuffins(){
     document.querySelector(".order").innerHTML = displayOrder;
     document.querySelector(".price").innerHTML = "N "+ price;
 }
-function AlmondCroissant(){
+function Chocolate Chip Cookies(){
     price += 2800;
     order.push("Almond Croissant");
     document.querySelector(".order").innerHTML = order.join(", ");
