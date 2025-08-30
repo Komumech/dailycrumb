@@ -52,7 +52,8 @@ button:hover {
 }
 .price:hover{
 .resetorder{
-  text
+  text-decoration: underline;
+  cursor: pointer;
 }
 }
 .order {
