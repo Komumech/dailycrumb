@@ -199,4 +199,5 @@ function SeasonalFruitTarts(){
 function resetOrder(){
     price = 0;
     order= [];
+    
 }
