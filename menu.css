@@ -78,7 +78,7 @@ button:hover {
   box-shadow: #000000 0 8px 24px rgba(0, 0, 0, 0.1);
   background-color: #f8f4ed;
   transition: height 0.5s ease-in-out;
-  transition-property: all 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, height 0.5s ease-in-out;
 }
 .order-all{
   top:10%;
@@ -94,7 +94,7 @@ button:hover {
   justify-self: center;
   text-align: center;
   font-size:1.3rem;
-  transition: height 0.5s ease-in-out;
+  
 }
 .order-all > div {
   visibility:hidden;
@@ -102,8 +102,7 @@ button:hover {
 }
 .order-all:hover > div {
   visibility: visible;
-  transition-property: height 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, height 0.5s ease-in-out;
   box-shadow: #000000 0 8px 24px rgba(0, 0, 0, 0.1) ;
 }
 
