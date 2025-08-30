@@ -66,7 +66,8 @@ button:hover {
   transition: all 0.3s;
 }
 .bracket{
-  width:1rem;
+  width:3rem;
+  display: inline;
   position:relative;
   padding: 20px;
   z-index: 59;
