@@ -88,7 +88,7 @@ Certainly! Here is the comprehensive menu for The Daily Crumb, as requested.
 Let me know if you need anything else!
 ---
 Website Page List
-Home: The main landing page. This page should capture our brand's essence with the welcome message, a hero image, a brief intro to our philosophy, and links to other key pages.
+Home (check): The main landing page. This page should capture our brand's essence with the welcome message, a hero image, a brief intro to our philosophy, and links to other key pages.
 
 About Us: A dedicated page for The Daily Crumb's story, including the "Our Story" text you have, a photo of the team, and a more detailed look at our values and commitment to our craft.
 
