@@ -242,6 +242,7 @@ button:hover {
 .scroll{
   margin-top:4rem;
   justify-self: center;
+  justify-content: center;
   display: flex;
   width:90%;
   border-radius: 6px;
