@@ -123,6 +123,7 @@ button:hover {
   background-color: #f8f4ed;
   width: 100%;
   position: absolute;
+  justify-content: center;
   height: 20rem;
   top:30%;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* 👈 Soft neutral shadow */
