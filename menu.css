@@ -87,11 +87,11 @@ button:hover {
   border: 3px #dea846 solid;
   border-radius: 10px;
   height:1.5rem;
-  width:100%;
+  width:70%;
   position:fixed;
   margin:0 auto;
   z-index: 37;
-
+  justify-self: center;
   text-align: center;
   font-size:1.3rem;
   transition: width ease-in-out;
