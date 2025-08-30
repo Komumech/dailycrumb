@@ -87,3 +87,15 @@ Certainly! Here is the comprehensive menu for The Daily Crumb, as requested.
 
 Let me know if you need anything else!
 ---
+Website Page List
+Home: The main landing page. This page should capture our brand's essence with the welcome message, a hero image, a brief intro to our philosophy, and links to other key pages.
+
+About Us: A dedicated page for The Daily Crumb's story, including the "Our Story" text you have, a photo of the team, and a more detailed look at our values and commitment to our craft.
+
+Menu / Shop: The primary page for showcasing our products. This will be the home for the Artisan Breads and Pastries & Sweets sections, with high-quality images and descriptions. This is where customers will browse and add items to their carts.
+
+Custom Cakes: A dedicated page for our bespoke cake service. It should feature a gallery of past work and the custom cake inquiry form we've outlined. This page needs to clearly communicate that these are not "add-to-cart" items but require a consultation.
+
+Contact Us: A simple page with our physical address, business hours, phone number, and a general contact form for all other inquiries.
+
+Cart / Checkout: The functional pages for the online ordering system. The Cart page will allow customers to review their selections, and the Checkout page will handle the payment and order confirmation process.
