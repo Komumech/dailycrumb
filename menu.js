@@ -135,3 +135,33 @@ function AlmondCroissant(){
     document.querySelector(".order").innerHTML = displayOrder;
     document.querySelector(".price").innerHTML = "N "+ price;
 }
+function Blueberry Muffins(){
+    price += 2800;
+    order.push("Almond Croissant");
+    document.querySelector(".order").innerHTML = order.join(", ");
+    console.log(price);
+    const counts = {};
+    order.forEach(item => {
+        counts[item] = (counts[item] || 0) + 1;
+    });
+    const displayOrder = Object.entries(counts)
+        .map(([item, count]) => count > 1 ? `${item} (${count})` : item)
+        .join(", ");
+    document.querySelector(".order").innerHTML = displayOrder;
+    document.querySelector(".price").innerHTML = "N "+ price;
+}
+function AlmondCroissant(){
+    price += 2800;
+    order.push("Almond Croissant");
+    document.querySelector(".order").innerHTML = order.join(", ");
+    console.log(price);
+    const counts = {};
+    order.forEach(item => {
+        counts[item] = (counts[item] || 0) + 1;
+    });
+    const displayOrder = Object.entries(counts)
+        .map(([item, count]) => count > 1 ? `${item} (${count})` : item)
+        .join(", ");
+    document.querySelector(".order").innerHTML = displayOrder;
+    document.querySelector(".price").innerHTML = "N "+ price;
+}
