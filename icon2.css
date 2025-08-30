@@ -17,11 +17,11 @@
 }
 
 .img1 {
-    left:5% ;
+    left:3% ;
     top: 5%;
     margin: 0 auto;
     position: absolute;
     padding: 0px;
-    width: 15px;
+    width: 130px;
     transition: all 1s ease-in-out;
 }
