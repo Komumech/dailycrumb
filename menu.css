@@ -69,7 +69,7 @@ button:hover {
   width:3rem;
   display: inline;
   position:relative;
-  padding: 20px;
+  padding: 0px;
   z-index: 59;
 }
 .order:hover {
