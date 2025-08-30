@@ -252,12 +252,13 @@ button:hover {
   height:12rem;
 }
 .scroll::-webkit-scrollbar {
-    height: 30px;
+    height: 10px;
     width: 10px;
 }
 
 .scroll::-webkit-scrollbar-track {
     background: #f8f4ed;
+    height: 13px;
 }
 
 .scroll::-webkit-scrollbar-thumb {
