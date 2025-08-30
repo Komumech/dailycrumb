@@ -69,6 +69,7 @@ button:hover {
   width:1rem;
   position:relative;
   padding: 20px;
+  z-index: 59;
 }
 .order:hover {
 
