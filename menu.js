@@ -199,5 +199,5 @@ function SeasonalFruitTarts(){
 function resetOrder(){
     price = 0;
     order= [];
-    
+    document.querySelector(".order").innerHTML ="Or something to ee it here"
 }
