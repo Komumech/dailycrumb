@@ -193,7 +193,9 @@ function SeasonalFruitTarts(){
         .map(([item, count]) => count > 1 ? `${item} (${count})` : item)
         .join(", ");
     document.querySelector(".order").innerHTML = displayOrder;
-    document.querySelector(".price").innerHTML = "N "+ price;
+    document.querySelect
+    or(".price").innerHTML = "N "+ price;
 }
 function resetOrder(){
     price = 0;
+    order= [];
