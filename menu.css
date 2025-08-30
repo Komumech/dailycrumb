@@ -87,7 +87,7 @@ button:hover {
   border: 3px #dea846 solid;
   border-radius: 10px;
   height:1.5rem;
-  width:70%;
+  width:100%;
   position:fixed;
   margin:0 auto;
   z-index: 37;
