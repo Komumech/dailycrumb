@@ -94,7 +94,7 @@ button:hover {
   justify-self: center;
   text-align: center;
   font-size:1.3rem;
-  transition: width ease-in-out;
+  transition: height 0.5s ease-in-out;
 }
 .order-all > div {
   visibility:hidden;
