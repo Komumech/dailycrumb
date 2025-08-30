@@ -135,9 +135,9 @@ function AlmondCroissant(){
     document.querySelector(".order").innerHTML = displayOrder;
     document.querySelector(".price").innerHTML = "N "+ price;
 }
-function Blueberry Muffins(){
-    price += 2800;
-    order.push("Almond Croissant");
+function BlueberryMuffins(){
+    price += 1800;
+    order.push("Blueberry Muffins");
     document.querySelector(".order").innerHTML = order.join(", ");
     console.log(price);
     const counts = {};
