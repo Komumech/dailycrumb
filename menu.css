@@ -64,9 +64,9 @@ button:hover {
   margin:0 auto;
   font-size: 1.3rem;
   transition: all 0.3s;
-}
+} 
 .bracket{
-  width:3rem;
+  width:2.7rem;
   display: inline;
   position:relative;
   padding: 0px;
