@@ -65,6 +65,11 @@ button:hover {
   font-size: 1.3rem;
   transition: all 0.3s;
 }
+.bracket{
+  width:1rem;
+  position:relative;
+  padding: 20px;
+}
 .order:hover {
 
 }
