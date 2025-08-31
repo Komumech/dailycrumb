@@ -113,7 +113,7 @@ button:hover {
   box-shadow: #000000 0 8px 24px rgba(0, 0, 0, 0.1) ;
 }
 .order-all:hover > .bracket{
-  translate: Rotate
+  translate: Rotate(180deg);
 }
 .logo-img{
   z-index: 30;
