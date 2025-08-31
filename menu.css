@@ -49,6 +49,8 @@ button:hover {
   width: 70%;
   font-size:1.7rem;
   transition: all 0.3s;
+  padding-top:3rem;
+  justify-content:center;
 }
 .price:hover{
 .resetorder{
@@ -281,4 +283,9 @@ button:hover {
 }
 .item1{
 
+}
+@media(min-width: 768px){
+    .scroll{
+     justify-content: center;
+}
 }
