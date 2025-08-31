@@ -82,6 +82,7 @@ button:hover {
   margin:0 auto;
   display:grid;
   border-radius: 10px;
+  font-weight:800;
   width:100%;
   height:70vh;
   box-shadow: #000000 0 8px 24px rgba(0, 0, 0, 0.1);
