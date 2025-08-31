@@ -23,8 +23,3 @@
     width: 130px;
     transition: all 1s ease-in-out;
 }
-@media (max-width: 480px){
-    .img1 {
-        margin-left:25%;
-    }
-}
