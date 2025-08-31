@@ -82,7 +82,6 @@ button:hover {
   margin:0 auto;
   display:grid;
   border-radius: 10px;
-  font-weight:800;
   width:100%;
   height:70vh;
   box-shadow: #000000 0 8px 24px rgba(0, 0, 0, 0.1);
@@ -94,6 +93,7 @@ button:hover {
   top:21%;
   background-color: #dea846;
   padding: 5px;
+  font-weight:800;
   border: 3px #dea846 solid;
   border-radius: 10px;
   height:1.5rem;
@@ -102,6 +102,7 @@ button:hover {
   margin:0 auto;
   z-index: 37;
   justify-self: center;
+  justify-content:center;
   text-align: center;
   font-size:1.3rem;
   transition: all 0.5s ease-in-out;
