@@ -40,4 +40,9 @@
      left:30%;
 }
 }
+@media(min-width: 1024px){
+    .img1{
+     left:35%;
+}
+}
 
