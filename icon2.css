@@ -25,24 +25,3 @@
     width: 130px;
     transition: all 1s ease-in-out;
 }
-@media(max-width: 768px){
-    .img1{
-     left:40%;
-}
-}
-@media(max-width: 508px){
-    .img1{
-     left:50%;
-}
-}
-@media(max-width: 414px){
-    .img1{
-     left:30%;
-}
-}
-@media(min-width: 1024px){
-    .img1{
-     left:35%;
-}
-}
-
