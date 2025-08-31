@@ -35,3 +35,9 @@
      left:50%;
 }
 }
+@media(min-width: 414px){
+    .img1{
+     left:50%;
+}
+}
+
