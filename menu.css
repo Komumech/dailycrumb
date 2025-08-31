@@ -50,6 +50,7 @@ button:hover {
   font-size:1.7rem;
   transition: all 0.3s;
   padding-top: 3rem;
+  text-align: center;
 }
 .price:hover{
 .resetorder{
