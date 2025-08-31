@@ -93,7 +93,7 @@ button:hover {
   top:21%;
   background-color: #dea846;
   padding: 5px;
-  font-weight:800;
+  font-weight:400;
   border: 3px #dea846 solid;
   color: #f8f4ed;
   border-radius: 10px;
@@ -102,7 +102,7 @@ button:hover {
   position:fixed;
   margin:0 auto;
   text-align:center;
-  
+  margin-top:10px;
   z-index: 37;
   justify-self: center;
   justify-content:center;
