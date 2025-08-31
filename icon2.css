@@ -30,8 +30,8 @@
      left:45%;
 }
 }
-@media(min-width: 768px){
+@media(max-width: 508px){
     .img1{
-     left:45%;
+     left:50%;
 }
 }
