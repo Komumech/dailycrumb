@@ -284,6 +284,6 @@ button:hover {
 }
 @media(min-width: 768px){
     .scroll{
-     justify-content: ;
+     justify-content: center;
 }
 }
