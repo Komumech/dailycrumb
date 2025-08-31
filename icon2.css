@@ -25,9 +25,9 @@
     width: 130px;
     transition: all 1s ease-in-out;
 }
-@media(min-width: 768px){
+@media(max-width: 768px){
     .img1{
-     left:45%;
+     left:40%;
 }
 }
 @media(max-width: 508px){
@@ -35,9 +35,9 @@
      left:50%;
 }
 }
-@media(min-width: 414px){
+@media(max-width: 414px){
     .img1{
-     left:50%;
+     left:30%;
 }
 }
 
