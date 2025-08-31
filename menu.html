@@ -2,186 +2,681 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="icon2.css">
-    <link rel="stylesheet" href="menu.css">
-    <link rel="stylesheet" href="foot.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Menu</title>
+    <title>Daily Crumb Menu</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap');
+
+        body {
+            margin: 0 auto;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            color: #5c3a21;
+            font-family: "Cormorant Garamond", serif;
+            background-color: #f8f4ed; /* Added a background color for consistency */
+        }
+
+        body::-webkit-scrollbar {
+            height: 10px;
+            width: 10px;
+        }
+
+        body::-webkit-scrollbar-track {
+            background: #f8f4ed;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: #dea846bd;
+            border-radius: 20px;
+        }
+
+        hr {
+            border: none;
+            height: 5px;
+            background: linear-gradient(to right, transparent, #5C3A21, transparent);
+        }
+
+        button {
+            background: transparent;
+            color: #f8f4ed;
+            border: 2px solid #f8f4ed;
+            border-radius: 8px;
+            font-family: "Raleway", sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 1rem;
+        }
+
+        button:hover {
+            background-color: #ffffff;
+            color: #5C3A21;
+        }
+
+        .price {
+            margin: 0 auto;
+            border-radius: 10px;
+            width: 70%;
+            font-size: 1.7rem;
+            transition: all 0.3s;
+        }
+
+        .price:hover {
+            transform: scale(1.05);
+        }
+        
+        .resetOrder {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .order {
+            text-align: center;
+            padding: 5px;
+            width: 70%;
+            margin: 0 auto;
+            font-size: 1.3rem;
+            transition: all 0.3s;
+        }
+
+        .bracket {
+            width: 2.7rem;
+            display: inline;
+            position: relative;
+            padding: 0;
+            z-index: 59;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .order-all > .ordercl {
+            visibility: hidden;
+            transition: opacity 0.5s ease-in-out, height 0.5s ease-in-out;
+        }
+
+        .order-all:hover > .ordercl {
+            visibility: visible;
+            height: 70vh;
+            opacity: 1;
+            box-shadow: #000000 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .order-all:hover > .bracket {
+            transform: rotate(180deg);
+        }
+
+        .ordercl {
+            z-index: 75;
+            margin: 0 auto;
+            display: grid;
+            border-radius: 10px;
+            width: 100%;
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+            box-shadow: #000000 0 8px 24px rgba(0, 0, 0, 0.1);
+            background-color: #f8f4ed;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .order-all {
+            top: 21%;
+            background-color: #dea846;
+            padding: 5px;
+            border: 3px #dea846 solid;
+            border-radius: 10px;
+            height: 1.5rem;
+            width: 50%;
+            position: fixed;
+            margin: 0 auto;
+            z-index: 37;
+            justify-self: center;
+            text-align: center;
+            font-size: 1.3rem;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .logo-img {
+            z-index: 30;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .img1 {
+            width: 150px;
+            height: auto;
+        }
+
+        .container {
+            height: 300vh;
+            display: grid;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .breakfast {
+            background-color: #f8f4ed;
+            width: 100%;
+            position: absolute;
+            justify-content: center;
+            height: 20rem;
+            top: 30%;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            transition: box-shadow 0.4s ease, transform 0.4s ease;
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .breakfast:hover {
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .breakfast2 {
+            background-color: #f8f4ed;
+            width: 100%;
+            position: absolute;
+            height: 20rem;
+            top: 70%;
+            margin-top: 13rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            transition: box-shadow 0.4s ease, transform 0.4s ease;
+            animation: fadeInUp 1s ease-out forwards;
+            animation-delay: 0.3s;
+        }
+
+        .breakfast2:hover {
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .sub-head {
+            position: absolute;
+            top: 25%;
+            text-align: center;
+            padding: 20px;
+            margin: 0 auto;
+            font-size: 1.7rem;
+            max-width: 30rem;
+            font-weight: 600;
+            justify-self: center;
+            z-index: 4;
+        }
+
+        .sub-head2 {
+            position: absolute;
+            top: 70%;
+            padding-top: 10rem;
+            margin: 0 auto;
+            font-size: 1.7rem;
+            max-width: 30rem;
+            font-weight: 700;
+            justify-self: center;
+            z-index: 4;
+        }
+
+        .scroll-img {
+            position: relative;
+            width: 10rem;
+            height: 10rem;
+            margin-right: 1rem;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            flex-shrink: 0;
+            transition: all 0.5s ease-in-out;
+            display: grid;
+            place-items: center;
+            box-shadow: #5C3A21 0 4px 8px;
+        }
+
+        .scroll-img::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(bg.png);
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+            transition: all 0.5s ease-in-out;
+            z-index: 0;
+        }
+
+        .scroll-img:hover {
+            transition: all 0.5s ease-in-out;
+            transform: translateY(-1rem);
+        }
+
+        .scroll-img:hover::before {
+            filter: brightness(70%);
+        }
+
+        .scroll-img:hover > p {
+            visibility: visible;
+            opacity: 1;
+            transition: all 0.5s ease-in-out;
+            filter: brightness(100%);
+            transform: translateY(-1rem);
+        }
+
+        .scroll-img > p {
+            visibility: hidden;
+            opacity: 0;
+            color: #f8f4ed;
+            margin: 0 auto;
+            font-style: oblique;
+            padding-top: 3rem;
+            justify-self: center;
+            transition: all 0.5s ease-in-out;
+            display: grid;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .scroll-img > p > button {
+            visibility: hidden;
+            display: grid;
+        }
+
+        .scroll-img:hover > p > button {
+            visibility: visible;
+            transition: all 0.5s ease-in-out;
+            transform: translateX(10px);
+        }
+
+        .scroll {
+            margin-top: 4rem;
+            justify-self: center;
+            display: flex;
+            width: 90%;
+            border-radius: 6px;
+            background-color: #f9f1e3b0;
+            overflow-x: scroll;
+            box-shadow: #f9f1e3fe 0 24px 38px;
+            height: 13.5rem;
+        }
+
+        .scroll::-webkit-scrollbar {
+            height: 10px;
+            width: 10px;
+        }
+
+        .scroll::-webkit-scrollbar-track {
+            background: #f8f4ed;
+            height: 13px;
+        }
+
+        .scroll::-webkit-scrollbar-thumb {
+            background-color: #dea846bd;
+            border-radius: 20px;
+        }
+
+        .item1 {
+            transition: all 0.4s ease;
+        }
+
+        .item1:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+        }
+
+        .menuu:hover {
+            grid-template-rows: 100%;
+            width: 75%;
+            background-color: #f8f4edbe;
+            height: 100vh;
+            z-index: 99;
+            position: fixed;
+            transition: width 0.5s ease-in-out;
+            backdrop-filter: blur(20px);
+            box-shadow: #f8f4ed 0px 0px 40px 0px;
+        }
+
+        .menuu {
+            width: 4rem;
+            height: 4rem;
+            z-index: 70;
+            margin-top: 0px;
+        }
+
+        .menuitem {
+            height: 4rem;
+            width: 4rem;
+            transition: all 0.5s ease-in-out;
+            font-weight: 700;
+            text-decoration: none;
+            color: #5C3A21;
+            font-size: 2rem;
+            z-index: 80;
+            opacity: 0%;
+            visibility: hidden;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .menuu:hover .menuitem {
+            visibility: visible;
+            opacity: 100%; /* Changed from 0% to 100% */
+            transition: all 0.5s ease-in-out;
+            margin-left: 30px;
+            padding-top: 0px;
+        }
+
+        .menu-links {
+            display: grid;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .menuu .menu-icon {
+            width: 3rem;
+            height: 3rem;
+            margin: 0 auto;
+            justify-self: center;
+            padding-left: 10px;
+            z-index: 90;
+            margin-top: 0px;
+            position: fixed;
+        }
+
+        .menuu:hover .menu-icon {}
+
+        .foot {
+            background-color: #5C3A21;
+            padding: 2rem 0;
+            margin-top: 2rem;
+            color: #F8F4ED;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-logo {
+            width: 150px;
+            margin-bottom: 1rem;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 1rem;
+        }
+
+        .links a {
+            color: #DEA846;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .links a:hover {
+            color: #f8f4ed;
+        }
+
+        .footerp {
+            font-size: 0.8rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-links p, .social-links p {
+            font-weight: 600;
+            font-family: "Raleway", sans-serif;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
 </head>
 <body>
     <div class="logo-img">
-      <img src="https://brilliant-kleicha-4fa21a.netlify.app/logo3.png" alt="Daily Crumb Bakery Logo" class="img1">
+        <img src="https://brilliant-kleicha-4fa21a.netlify.app/logo3.png" alt="Daily Crumb Bakery Logo" class="img1">
     </div>
+    
     <div class="scroll-wrapper">
-          <div class="container">
+        <div class="container">
             <div class="menuu">
-    <img src="menu-icon.png" alt="" class="menu-icon">
-    <div class="menu-links">
-            <a href="home.html" class="menuitem"> Home</a>
-            <a href="" class="menuitem"> Order</a>
-            <a href="menu.html" class="menuitem"> Menu</a>
-            <a href="" class="menuitem"> Specials</a>
+                <svg class="menu-icon" width="48" height="48" viewBox="0 0 24 24" fill="#5C3A21" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6H20M4 12H20M4 18H20" stroke="#5C3A21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="menu-links">
+                    <a href="home.html" class="menuitem">Home</a>
+                    <a href="#" class="menuitem">Order</a>
+                    <a href="menu.html" class="menuitem">Menu</a>
+                    <a href="#" class="menuitem">Specials</a>
+                </div>
+            </div>
+
+            <div class="order-all">
+                Your Order
+                <svg class="bracket" width="24" height="24" viewBox="0 0 24 24" fill="#F8F4ED" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 10L12 14L8 10" stroke="#F8F4ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="ordercl">
+                    <p class="price" id="totalPrice"></p>
+                    <p class="order" id="orderList">Order something<br>to see it here</p>
+                    <button class="resetOrder" onclick="resetOrder()">Reset Order</button>
+                    <p id="userIdDisplay" style="font-size: 0.8rem; color: #5C3A21; text-align: center; word-break: break-all; margin: 1rem;"></p>
+                </div>
+            </div>
+
+            <p class="sub-head">Artisan Breads (Sourdough Focus)</p>
+            <hr>
+            <div class="breakfast">
+                <div class="scroll">
+                    <div class="scroll-img">
+                        <p>Country Sourdough <br> NGN 4,500 <button onclick="addToOrder('Country Sourdough', 4500)"> Order This</button> </p>
+                    </div>
+                    <div class="scroll-img">
+                        <p>Wheat Sourdough <br> NGN 5,000 <button onclick="addToOrder('Wheat Sourdough', 5000)"> Order This</button> </p>
+                    </div>
+                    <div class="scroll-img">
+                        <p>Olive & Rosemary Sourdough <br> NGN 5,500 <button onclick="addToOrder('Olive & Rosemary Sourdough', 5500)"> Order This</button> </p>
+                    </div>
+                    <div class="scroll-img">
+                        <p>Multigrain Sourdough <br> NGN 5,200 <button onclick="addToOrder('Multigrain Sourdough', 5200)"> Order This</button> </p>
+                    </div>
+                    <div class="scroll-img">
+                        <p>Baguettes <br> NGN 2,000 <button onclick="addToOrder('Baguettes', 2000)"> Order This</button> </p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="sub-head2">Pastries & Sweets</p>
+            <hr>
+            <div class="breakfast2">
+                <div class="scroll">
+                    <div class="scroll-img">
+                        <p>Butter Croissant <br> NGN 2,200 <button onclick="addToOrder('Butter Croissant', 2200)"> Order This</button> </p>
+                    </div>
+                    <div class="scroll-img">
+                        <p>Pain au Chocolat <br> NGN 2,500 <button onclick="addToOrder('Pain au Chocolat', 2500)"> Order This</button> </p>
+                    </div>
+                    <div class="scroll-img">
+                        <p>Almond Croissant <br> NGN 2,800 <button onclick="addToOrder('Almond Croissant', 2800)"> Order This</button> </p>
+                    </div>
+                    <div class="scroll-img">
+                        <p>Cinnamon Rolls <br> NGN 2,000 <button onclick="addToOrder('Cinnamon Rolls', 2000)"> Order This</button> </p>
+                    </div>
+                    <div class="scroll-img">
+                        <p>Blueberry Muffins <br> NGN 1,800 <button onclick="addToOrder('Blueberry Muffins', 1800)"> Order This</button> </p>
+                    </div>
+                    <div class="scroll-img">
+                        <p>Chocolate Chip Cookies <br> NGN 1,500 <button onclick="addToOrder('Chocolate Chip Cookies', 1500)"> Order This</button> </p>
+                    </div>
+                    <div class="scroll-img">
+                        <p>Baguettes <br> NGN 2,000 <button onclick="addToOrder('Baguettes', 2000)"> Order This</button> </p>
+                    </div>
+                    <div class="scroll-img">
+                        <p>Seasonal Fruit Tarts <br> NGN 3,500 <button onclick="addToOrder('Seasonal Fruit Tarts', 3500)"> Order This</button> </p>
+                    </div>
+                </div>
             </div>
         </div>
-   <style>
-    .menuu:hover{
-        grid-template-rows: 100%;
-        width: 75%;
-        background-color: #f8f4edbe;
-        height: 100vh;
-        z-index: 99;
-        position: fixed;
-        transition:width 0.5s ease-in-out ;
-        backdrop-filter: blur(20px);
-        box-shadow: #f8f4ed 0px 0px 40px 0px;
-    }
-    .menuu{
-        width: 4rem;
-        height: 4rem;
-        z-index: 70;
-        margin-top: 0px;
-    }
-    .menuitem{
-        height: 4rem;
-        width: 4rem;
-        transition: all 0.5s ease-in-out ;
-        font-weight: 700;
-        text-decoration: none;
-        color: #5C3A21;
-        font-size: 2rem;
-        z-index: 80;
-        opacity:0%;
-        visibility: hidden;
-        transition: all 0.5s ease-in-out ;
-    }
-    .menuu:hover .menuitem{
-        visibility: visible;
-        opacity:100%;
-        transition:all 0.5s ease-in-out ;
-        margin-left: 30px;
-        padding-top: 0px;
-    }
-    .menu-links{
-        display: grid;
-        text-align: center;
-        margin-top: 3rem;
-    }
-    .menuu .menu-icon{
-        width: 3rem;
-        height: 3rem;
-        margin: 0 auto;
-        justify-self: center;
-        padding-left: 10px;
-        z-index: 90;
-        margin-top: 0px;
-        position: fixed;
-    }
-    .menuu:hover .menu-icon {
-        
-    }
-</style>
+    </div>
 
-
-<div class="order-all">Your Order <img src="bracket.png" alt="" class="bracket">
-    <div class="ordercl">
- <p class="price">(N) 0</p>
- <p class="order">Order something<br>to see it here</p>
- <button class="resetOrder" onclick="
- resetOrder();
- "> Reset Order</button>
-</div></div>
-   <p class="sub-head">Artisan Breads (Sourdough Focus)</p>
-   <hr>
-   <div class="breakfast">
-
- <div class="scroll">
-<div class="scroll-img">
-   <p>Country Sourdough <br> NGN 4,500 <button onclick="CountrySourdough();"> Order This</button> </p>
-</div>
-
-<div class="scroll-img">
-   <p>Wheat Sourdough <br> NGN 5,000 <button onclick="WheatSourdough();"> Order This</button> </p>
-</div>
-
-<div class="scroll-img">
-   <p>Olive & Rosemary Sourdough <br> NGN 5,500 <button onclick="RosemarySourdough();"> Order This</button> </p>
-</div>
-
-<div class="scroll-img">
-   <p>Multigrain Sourdough <br> NGN 5,200 <button onclick="MultigrainSourdough();"> Order This</button> </p>
-</div>
-
-<div class="scroll-img">
-   <p>Baguettes <br> NGN 2,000 <button onclick="Baguettes"> Order This</button> </p>
-</div>
-
-</div> 
-</div>
-<p class="sub-head2">Pastries & Sweets</p>
-<div class="breakfast2">
-
-<div class="scroll">
- <div class="scroll-img">
-   <p>Butter Croissant <br> NGN 2,200 <button onclick="ButterCroissant();"> Order This</button> </p>
- </div>
-
- <div class="scroll-img">
-   <p>Pain au Chocolat <br> NGN 2,500 <button onclick="PainAuChocolat();"> Order This</button> </p>
- </div>
-
- <div class="scroll-img">
-   <p>Almond Croissant <br> NGN 2,800 <button onclick="AlmondCroissant();"> Order This</button> </p>
- </div>
-
- <div class="scroll-img">
-   <p>Cinnamon Rolls <br> NGN 2,000 <button onclick="CinnamonRolls();"> Order This</button> </p>
- </div>
-
- <div class="scroll-img">
-   <p>Blueberry Muffins <br> NGN 1,800 <button onclick="BlueberryMuffins"> Order This</button> </p>
- </div>
- <div class="scroll-img">
-   <p>Chocolate Chip Cookies <br> NGN 1,500 <button onclick="ChocolateChipCookies"> Order This</button> </p>
- </div>
- <div class="scroll-img">
-   <p>Baguettes <br> NGN 2,000 <button onclick="Baguettes"> Order This</button> </p>
- </div>
- <div class="scroll-img">
-   <p>Seasonal Fruit Tarts <br> NGN 3,500 <button onclick="Baguettes"> Order This</button> </p>
- </div>
- </div> 
-</div>
-
-</div>
-
-
-          </div>
-           <div class="foot">
-        <img src="TC.png" alt="Daily Crumb Bakery Footer Logo" class="footer-logo">
-           <div class="links">
+    <div class="foot">
+        <img src="https://brilliant-kleicha-4fa21a.netlify.app/TC.png" alt="Daily Crumb Bakery Footer Logo" class="footer-logo">
+        <div class="links">
             <div class="social-links">
-            <p>Follow Us</p>
-            <a href="#">Instgram</a>
-            <a href="#">hello me</a>
-            <a href="#">Twitter</a>
-        </div>
-        <div class="contact-links">
-            <p>Contact Us</p>
-            <a href="#">Instagram</a>
-            <a href="#">hello me</a>
-            <a href="#">Twitter</a>
-        </div>
+                <p>Follow Us</p>
+                <a href="#">Instagram</a>
+                <a href="#">hello me</a>
+                <a href="#">Twitter</a>
+            </div>
+            <div class="contact-links">
+                <p>Contact Us</p>
+                <a href="#">Instagram</a>
+                <a href="#">hello me</a>
+                <a href="#">Twitter</a>
+            </div>
         </div>
         <p class="footerp">© 2025 Daily Crumb Bakery. All rights reserved. | Crafted with passion, baked with heart in Lagos, Nigeria.</p>
-        
-     
     </div>
-    </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.babylonjs.com/babylon.js"></script>
 
-    <script src="script.js"></script>
-    <script src="menu.js"></script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, doc, onSnapshot, setDoc, updateDoc, collection, addDoc, getDocs, query, deleteDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // Global variables for Firebase
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : '';
+
+        // UI elements
+        const totalPriceEl = document.getElementById('totalPrice');
+        const orderListEl = document.getElementById('orderList');
+        const userIdDisplayEl = document.getElementById('userIdDisplay');
+
+        let db;
+        let auth;
+        let userId;
+
+        // Initialize Firebase on DOMContentLoaded
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const app = initializeApp(firebaseConfig);
+                db = getFirestore(app);
+                auth = getAuth(app);
+
+                if (initialAuthToken) {
+                    await signInWithCustomToken(auth, initialAuthToken);
+                } else {
+                    await signInAnonymously(auth);
+                }
+
+                onAuthStateChanged(auth, (user) => {
+                    if (user) {
+                        userId = user.uid;
+                        userIdDisplayEl.textContent = `User ID: ${userId}`;
+                        setupRealtimeListener();
+                    } else {
+                        userId = crypto.randomUUID();
+                        userIdDisplayEl.textContent = `User ID: ${userId}`;
+                        setupRealtimeListener();
+                    }
+                });
+
+            } catch (error) {
+                console.error("Error initializing Firebase:", error);
+            }
+        });
+
+        // Setup real-time listener for the user's cart
+        function setupRealtimeListener() {
+            if (!userId) {
+                console.error("User ID is not defined.");
+                return;
+            }
+            const cartRef = collection(db, `artifacts/${appId}/users/${userId}/cart`);
+            onSnapshot(cartRef, (snapshot) => {
+                const cart = [];
+                snapshot.forEach((doc) => {
+                    cart.push({ id: doc.id, ...doc.data() });
+                });
+                updateUI(cart);
+            }, (error) => {
+                console.error("Error fetching cart data: ", error);
+            });
+        }
+
+        // Add a new item to the Firestore cart
+        window.addToOrder = async (itemName, itemPrice) => {
+            if (!db || !userId) {
+                console.error("Firebase is not initialized or user not authenticated.");
+                return;
+            }
+            try {
+                const cartRef = collection(db, `artifacts/${appId}/users/${userId}/cart`);
+                await addDoc(cartRef, {
+                    name: itemName,
+                    price: itemPrice,
+                    quantity: 1
+                });
+            } catch (error) {
+                console.error("Error adding item to cart:", error);
+            }
+        };
+
+        // Reset the entire order by deleting all documents in the cart collection
+        window.resetOrder = async () => {
+            if (!db || !userId) {
+                console.error("Firebase is not initialized or user not authenticated.");
+                return;
+            }
+            try {
+                const cartRef = collection(db, `artifacts/${appId}/users/${userId}/cart`);
+                const snapshot = await getDocs(query(cartRef));
+                const deletePromises = snapshot.docs.map(doc => deleteDoc(doc.ref));
+                await Promise.all(deletePromises);
+            } catch (error) {
+                console.error("Error resetting order:", error);
+            }
+        };
+
+        // Update the UI based on the cart data from Firestore
+        function updateUI(cart) {
+            let total = 0;
+            let orderHtml = '';
+
+            if (cart.length === 0) {
+                orderHtml = 'Order something<br>to see it here';
+            } else {
+                cart.forEach(item => {
+                    total += item.price * item.quantity;
+                    orderHtml += `<span style="display:block;">${item.name} - NGN ${item.price.toLocaleString()}</span>`;
+                });
+            }
+
+            totalPriceEl.textContent = `(N) ${total.toLocaleString()}`;
+            orderListEl.innerHTML = orderHtml;
+        }
+    </script>
 </body>
 </html>
