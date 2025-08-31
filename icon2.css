@@ -17,7 +17,7 @@
 }
 
 .img1 {
-    left:30% ;
+    left:30%;
     top: 5%;
     margin: 0 auto;
     position: absolute;
@@ -27,6 +27,6 @@
 }
 @media(min-width: 768px){
     .img1{
-     left:5%;
+     left:45%;
 }
 }
