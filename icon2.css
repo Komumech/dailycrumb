@@ -17,5 +17,6 @@
 .img1 {
     width: 130px;
     justify-self:center;
-    positi
+    position:absoute;
+    left:50vh;
 }
