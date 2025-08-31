@@ -282,3 +282,8 @@ button:hover {
 .item1{
 
 }
+@media(min-width: 768px){
+    .scroll{
+     justify-content: ;
+}
+}
