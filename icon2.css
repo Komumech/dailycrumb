@@ -1,13 +1,11 @@
 .logo-img {
     position: fixed;
     top: 0;
-    left: 0;
     width: 100vh;
     height: 140px;
     background-color: transparent;
     z-index: 10;
     justify-content: center;
-    margin: 0 auto;
     padding: 0;
     backdrop-filter: blur(5px);
 }
@@ -18,5 +16,5 @@
 
 .img1 {
     width: 130px;
-    justify
+    justify-self:center;
 }
