@@ -116,7 +116,7 @@ button:hover {
   transform: rotate(180deg);
 }
 .order-all > img{
-  tran
+  transition: transform 0.5s ease-in-out;
 }
 .logo-img{
   z-index: 30;
