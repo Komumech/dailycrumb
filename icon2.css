@@ -1,7 +1,6 @@
 .logo-img {
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
     height: 140px;
     background-color: transparent;
@@ -20,6 +19,6 @@
     justify-self: center;
     margin: 0 auto;
     padding: 0px;
-    width: 200px;
+    width: 130px;
     transition: all 1s ease-in-out;
 }
