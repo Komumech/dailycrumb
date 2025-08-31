@@ -105,10 +105,12 @@ button:hover {
 }
 .order-all > .ordercl {
   visibility:hidden;
+  opacity: 0%;
   transition: all 0.5s ease-in-out;
 }
 .order-all:hover > .ordercl {
   visibility: visible;
+  opacity:100%;
   transition: all 0.5s ease-in-out;
   box-shadow: #000000 0 8px 24px rgba(0, 0, 0, 0.1) ;
 }
