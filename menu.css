@@ -47,6 +47,7 @@ button:hover {
  margin:0 auto;
  border-radius: 10px;
   width: 70%;
+  color: #5C3A21;
   font-size:1.7rem;
   transition: all 0.3s;
   padding-top:1rem;
@@ -62,7 +63,7 @@ button:hover {
   text-align:center;
   padding: 5px;
   width: 70%;
-
+  color:#5C3A21;
   margin:0 auto;
   font-size: 1.3rem;
   transition: all 0.3s;
