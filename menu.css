@@ -93,6 +93,7 @@ button:hover {
   top:21%;
   background-color: #dea846;
   padding-bottom: 6px;
+  padding-left: 6px;
   font-weight:400;
   border: 3px #dea846 solid;
   color: #f8f4ed;
